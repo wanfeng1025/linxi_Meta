@@ -126,3 +126,15 @@ pnpm run check
 - 用自由文本、AI 或随机结果替代确定性规则计算；
 - 把 API 密钥、`.env`、证书、签名材料或用户隐私数据写入仓库；
 - 以占位内容、示例数据或被跳过的测试冒充功能完成。
+
+## 已验证部署基线（灵犀 Meta P0）
+
+以下版本组合已完成构建、跨浏览器验收和 Vercel Production 部署。后续升级这些关键版本时，必须重新执行本文件中的质量门禁与线上验收，不得仅凭本地开发服务器结论发布：
+
+- 项目版本：`@liuyao/web@0.1.0`，提交 `e4855d39539959ab2afaf082bda0782fa5426948`；PR：[wanfeng1025/linxi_Meta#1](https://github.com/wanfeng1025/linxi_Meta/pull/1)；
+- Web 技术栈：Next.js `16.2.11`、React/React DOM `19.2.3`、GSAP `3.15.0`、TypeScript `6.0.3`、Playwright `1.61.1`（锁文件解析版本）；
+- 运行与包管理：Node.js `22.x`（`.node-version` 与 Vercel 项目配置）、pnpm `11.9.0`（`packageManager` 声明）；
+- Vercel：项目 `linxi-meta`，Root Directory 为 `apps/web`，框架为 Next.js，Production Node.js 为 `22.x`；部署客户端 Vercel CLI `57.0.0`，远端构建日志使用 Vercel CLI `59.16.0`；
+- 已验证部署：Preview `https://linxi-meta-r4dahca5b-wanan3.vercel.app`，Production `https://linxi-meta.vercel.app`，Production deployment `dpl_95v6HqLL222Cua4Tr1KFWkTM5spK`；
+- 验收状态：GitHub Stable quality gates、Chromium、Firefox、WebKit、390px mobile 和 axe 流程全部通过；线上 Edge/390px 起卦锁定流程通过；
+- 部署边界：Vercel 项目保持公开默认域名，账号、AI 解卦、AR、社区、商城和云端记录仍为预留模块，不得伪称已实现。
