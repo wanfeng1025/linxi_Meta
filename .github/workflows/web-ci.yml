@@ -1,4 +1,4 @@
-name: Public Web V1
+name: Lingxi Meta Web CI
 
 on:
   pull_request:
@@ -15,7 +15,7 @@ jobs:
   public-web:
     name: Linux Web build and anonymous flow
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 40
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -44,10 +44,10 @@ jobs:
       - name: Build the public Next.js site
         run: pnpm --filter @liuyao/web run build
 
-      - name: Install Playwright Chromium
-        run: pnpm --filter @liuyao/web exec playwright install --with-deps chromium
+      - name: Install Playwright browsers
+        run: pnpm --filter @liuyao/web exec playwright install --with-deps chromium firefox webkit
 
-      - name: Run anonymous browser flow
+      - name: Run cross-browser, mobile, and accessibility flows
         run: pnpm run test:web:e2e
 
       - name: Upload browser diagnostics

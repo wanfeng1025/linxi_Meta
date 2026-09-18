@@ -18,6 +18,7 @@ import {
 import Link from 'next/link';
 import { useState } from 'react';
 
+import { ResultActions } from '../../../components/result-actions';
 import { loadWebCastingSnapshot, type WebCastingSnapshot } from '../../../lib/session-storage';
 
 function LineDiagram({ session }: { session: CastingSession }) {
@@ -227,9 +228,7 @@ export function ResultView({ sessionId }: { sessionId: string }) {
             </span>
           </div>
           <p>动爻：{result.movingLines.length > 0 ? result.movingLines.join('、') : '无'}</p>
-          <p className="muted">
-            规则版本 {result.rulesetVersion} · 结构数据版本 {result.mappingDataVersion}
-          </p>
+          <p className="muted">计算规则与结构数据均已版本化锁定，可随 JSON 一并导出复核。</p>
         </article>
       </div>
       <section className="card" aria-labelledby="casting-record-title">
@@ -251,6 +250,7 @@ export function ResultView({ sessionId }: { sessionId: string }) {
           <p>{stored.question}</p>
         </section>
       )}
+      <ResultActions stored={stored} result={result} />
       <ClassicalQuoteSection result={result} />
       <InterpretationSection result={result} />
       <section className="grid" aria-label="结构化复盘入口">

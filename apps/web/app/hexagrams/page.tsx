@@ -1,6 +1,10 @@
 import Link from 'next/link';
-import { verifiedHexagrams } from '@liuyao/content';
+import { verifiedHexagramCatalog, verifiedHexagrams } from '@liuyao/content';
 export default function HexagramsPage() {
+  const trigramsById = new Map(
+    verifiedHexagramCatalog.trigrams.map((trigram) => [trigram.id, trigram]),
+  );
+
   return (
     <section>
       <p className="eyebrow">已核验结构目录</p>
@@ -15,8 +19,9 @@ export default function HexagramsPage() {
                 {hexagram.kingWenSequence}. {hexagram.name} {hexagram.symbol}
               </strong>
               <br />
-              <small>
-                {hexagram.lowerTrigramId} / {hexagram.upperTrigramId}
+              <small className="trigram-pair">
+                下卦 {trigramsById.get(hexagram.lowerTrigramId)?.name} · 上卦{' '}
+                {trigramsById.get(hexagram.upperTrigramId)?.name}
               </small>
             </Link>
           ))}

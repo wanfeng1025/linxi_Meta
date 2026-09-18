@@ -4,3 +4,4 @@ dist/
 node_modules/
 pnpm-lock.yaml
 assets/
+apps/web/app/icon.svg

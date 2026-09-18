@@ -9,9 +9,10 @@ import {
   type CastingSession,
 } from '@liuyao/domain';
 import { verifiedHexagramCatalog } from '@liuyao/content';
+import { gsap } from 'gsap';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
 import {
   loadActiveWebCastingSnapshot,
@@ -62,6 +63,7 @@ export function CastingWorkflow() {
   );
   const [error, setError] = useState<string | null>(null);
   const [isCasting, setIsCasting] = useState(false);
+  const stageRef = useRef<HTMLDivElement>(null);
 
   const persist = (
     nextSession: CastingSession,
@@ -125,11 +127,77 @@ export function CastingWorkflow() {
 
   const latestLine = session?.lines.at(-1);
 
+  useEffect(() => {
+    const stage = stageRef.current;
+    if (stage === null || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!window.matchMedia('(pointer: fine)').matches) return;
+
+    const move = (event: PointerEvent) => {
+      const bounds = stage.getBoundingClientRect();
+      const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+      const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+      gsap.to(stage, {
+        rotateX: y * -2.5,
+        rotateY: x * 2.5,
+        duration: 0.45,
+        ease: 'power2.out',
+        transformPerspective: 900,
+      });
+    };
+    const leave = () => gsap.to(stage, { rotateX: 0, rotateY: 0, duration: 0.5 });
+
+    stage.addEventListener('pointermove', move);
+    stage.addEventListener('pointerleave', leave);
+    return () => {
+      stage.removeEventListener('pointermove', move);
+      stage.removeEventListener('pointerleave', leave);
+      gsap.killTweensOf(stage);
+    };
+  }, []);
+
+  useEffect(() => {
+    const stage = stageRef.current;
+    if (stage === null || latestLine === undefined) return;
+
+    const media = gsap.matchMedia();
+    media.add('(prefers-reduced-motion: no-preference)', () => {
+      const context = gsap.context(() => {
+        gsap.fromTo(
+          '.coin',
+          { y: -72, rotateX: -360, rotateZ: -18, opacity: 0 },
+          {
+            y: 0,
+            rotateX: 0,
+            rotateZ: 0,
+            opacity: 1,
+            duration: 0.8,
+            stagger: 0.09,
+            ease: 'back.out(1.5)',
+          },
+        );
+        gsap.fromTo(
+          `.line-slot[data-position="${latestLine.position}"]`,
+          { scaleX: 0, opacity: 0.2 },
+          { scaleX: 1, opacity: 1, duration: 0.55, ease: 'power2.out' },
+        );
+      }, stage);
+      return () => context.revert();
+    });
+
+    return () => media.revert();
+  }, [latestLine]);
+
   return (
     <section className="grid">
       <div className="card">
         <p className="eyebrow">匿名起卦</p>
-        <h1>{session === null ? '写下你的问题（可选）' : `第 ${session.lines.length + 1} 爻`}</h1>
+        <h1>
+          {session === null
+            ? '写下你的问题（可选）'
+            : session.status === 'complete'
+              ? '六爻已成，等待锁定'
+              : `第 ${session.lines.length + 1} 爻`}
+        </h1>
         {session === null ? (
           <>
             <label htmlFor="casting-question">
@@ -179,22 +247,41 @@ export function CastingWorkflow() {
               <strong>{session.lines.length} / 6 爻</strong>
               <span className="muted">初爻在最下方</span>
             </div>
-            <div className="coins" aria-label="最近一次三枚铜钱的原始数值">
-              {(latestLine?.coins ?? [null, null, null]).map((coin, index) => (
-                <div
-                  className="coin"
-                  key={index}
-                  aria-label={`第 ${index + 1} 枚铜钱：${coin ?? '尚未起爻'}`}
-                >
-                  {coin ?? '—'}
-                </div>
-              ))}
+            <div className="casting-stage" ref={stageRef}>
+              <div className="coins" aria-label="最近一次三枚铜钱的原始数值">
+                {(latestLine?.coins ?? [null, null, null]).map((coin, index) => (
+                  <div
+                    className="coin"
+                    key={index}
+                    aria-label={`第 ${index + 1} 枚铜钱：${coin ?? '尚未起爻'}`}
+                  >
+                    <span>{coin ?? '—'}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="line-progress" aria-hidden="true">
+                {[6, 5, 4, 3, 2, 1].map((position) => {
+                  const line = session.lines.find((candidate) => candidate.position === position);
+                  return (
+                    <span
+                      className={`line-slot${line === undefined ? '' : ' filled'}${line?.movement === 'moving' ? ' moving' : ''}`}
+                      data-position={position}
+                      key={position}
+                    />
+                  );
+                })}
+              </div>
             </div>
             <p>
               {latestLine === undefined
                 ? '点击按钮，由三枚独立铜钱生成第一爻。'
                 : `最近一爻：${latestLine.value}，${latestLine.movement === 'moving' ? '动爻' : '静爻'}`}
             </p>
+            {session.status === 'complete' && (
+              <p className="completion-message" role="status">
+                六次起爻已经完成。锁定后将查看本卦、变卦与动爻结构。
+              </p>
+            )}
             {session.status === 'complete' ? (
               <button className="button" type="button" onClick={lock}>
                 锁定并查看结构结果
