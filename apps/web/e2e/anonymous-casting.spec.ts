@@ -5,8 +5,11 @@ import { readFile } from 'node:fs/promises';
 test('anonymous visitor can lock a six-line casting and inspect verified structures', async ({
   page,
 }) => {
-  await page.goto('/');
-  await page.getByRole('link', { name: '开始匿名起卦' }).click();
+  await page.goto('/', { waitUntil: 'networkidle' });
+  await Promise.all([
+    page.waitForURL('**/casting'),
+    page.getByRole('link', { name: '开始匿名起卦' }).click(),
+  ]);
   await expect(page.getByText('让问题更容易回看（可选）')).toBeVisible();
   await page.getByLabel('问题仅保存在当前浏览器会话').fill('测试会话不会上传');
   await page.getByRole('button', { name: '开始起卦' }).click();

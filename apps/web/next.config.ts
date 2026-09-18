@@ -14,7 +14,6 @@ const contentSecurityPolicy = [
   "script-src 'self' 'unsafe-inline'",
   "style-src 'self' 'unsafe-inline'",
   "worker-src 'self' blob:",
-  'upgrade-insecure-requests',
 ].join('; ');
 
 const nextConfig: NextConfig = {
