@@ -1,0 +1,4 @@
+# These files are immutable cultural-source bytes with audited SHA-256 values.
+# Never normalize their line endings during checkout or commit.
+data/source/classical/liuyao-overview-authorized-v1.txt -text
+data/draft/classical/kanripo-kr1a0001/files/*.txt text eol=lf
