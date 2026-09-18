@@ -63,6 +63,15 @@ export function CastingWorkflow() {
   );
   const [error, setError] = useState<string | null>(null);
   const [isCasting, setIsCasting] = useState(false);
+  const [castPhase, setCastPhase] = useState<
+    'idle' | 'ready' | 'casting' | 'result' | 'completed' | 'error'
+  >(
+    restoredSnapshot === null
+      ? 'idle'
+      : restoredSnapshot.session.status === 'complete'
+        ? 'completed'
+        : 'ready',
+  );
   const stageRef = useRef<HTMLDivElement>(null);
 
   const persist = (
@@ -88,6 +97,7 @@ export function CastingWorkflow() {
       persist(created, true);
       setSession(created);
       setError(null);
+      setCastPhase('ready');
     } catch {
       setError('无法创建本次起卦会话。请确认浏览器允许本地会话存储后重试。');
     }
@@ -96,13 +106,16 @@ export function CastingWorkflow() {
   const cast = async () => {
     if (session === null || isCasting) return;
     setIsCasting(true);
+    setCastPhase('casting');
     try {
       const next = castNextLine(session, await drawThreeCoins(randomSource), now());
       persist(next, true);
       setSession(next);
       setError(null);
+      setCastPhase(next.status === 'complete' ? 'completed' : 'result');
     } catch {
       setError('本次起爻未能保存，请重试。');
+      setCastPhase('error');
     } finally {
       setIsCasting(false);
     }
@@ -119,9 +132,11 @@ export function CastingWorkflow() {
       });
       persist(locked, false, result);
       setSession(locked);
+      setCastPhase('completed');
       router.push(`/result/${locked.sessionId}`);
     } catch {
       setError('结果未能锁定或保存。请返回后重新开始一次起卦。');
+      setCastPhase('error');
     }
   };
 
@@ -245,9 +260,22 @@ export function CastingWorkflow() {
           <>
             <div className="progress" aria-live="polite">
               <strong>{session.lines.length} / 6 爻</strong>
+              <span className={`cast-phase phase-${castPhase}`}>
+                {castPhase === 'casting'
+                  ? '铜钱翻转中'
+                  : castPhase === 'completed'
+                    ? '六爻已成'
+                    : castPhase === 'result'
+                      ? '本爻已落定'
+                      : '准备起爻'}
+              </span>
               <span className="muted">初爻在最下方</span>
             </div>
-            <div className="casting-stage" ref={stageRef}>
+            <div
+              className={`casting-stage phase-${castPhase}`}
+              ref={stageRef}
+              data-phase={castPhase}
+            >
               <div className="coins" aria-label="最近一次三枚铜钱的原始数值">
                 {(latestLine?.coins ?? [null, null, null]).map((coin, index) => (
                   <div
@@ -272,10 +300,10 @@ export function CastingWorkflow() {
                 })}
               </div>
             </div>
-            <p>
+            <p className="cast-readout" role="status" aria-live="polite">
               {latestLine === undefined
                 ? '点击按钮，由三枚独立铜钱生成第一爻。'
-                : `最近一爻：${latestLine.value}，${latestLine.movement === 'moving' ? '动爻' : '静爻'}`}
+                : `第 ${latestLine.position} 爻已落定：${latestLine.value}，${latestLine.movement === 'moving' ? '动爻' : '静爻'}`}
             </p>
             {session.status === 'complete' && (
               <p className="completion-message" role="status">
