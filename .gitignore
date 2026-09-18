@@ -57,3 +57,6 @@ apps/web/playwright-report/
 # generated native folders
 /ios
 /android
+
+.vercel
+.env*
