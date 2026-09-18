@@ -81,7 +81,7 @@ Edge 截图/脚本验证：390px 首页、起卦、六十四卦无横向滚动�
 
 ## 14. Git / PR / Vercel
 
-本次变更将在当前 `codex/p0-production-readiness` 分支形成独立提交并推送到 `wanfeng1025/linxi_Meta`，沿用现有 PR #1 的质量门禁。Vercel 项目仍使用 `linxi-meta`、Root Directory `apps/web`、Node 22.x；完成 Preview 验证后再更新 Production。若远端检查或部署因网络/额度失败，会保留失败证据并单独说明。
+本次变更已推送到 `wanfeng1025/linxi_Meta` 的 `codex/p0-production-readiness`，沿用 PR #1；最终提交链为 `f8ff782`（UI 重构）→ `fb406df`（合并远端格式修复）→ `51e6545`（next-env 格式门禁修复）。Stable quality gates、两条 Linux Web build、Vercel Preview/Comments 均通过。Vercel 项目为 `linxi-meta`，Root Directory `apps/web`、Node 22.x；Production 部署 `dpl_86rAhZaygNf9P4R48vRqDyBvpwDo` 已就绪并绑定 `https://linxi-meta.vercel.app`。
 
 ## 15. Remaining issues
 
