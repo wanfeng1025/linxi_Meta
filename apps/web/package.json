@@ -1,0 +1,28 @@
+{
+  "name": "@liuyao/web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@liuyao/content": "workspace:*",
+    "@liuyao/domain": "workspace:*",
+    "@liuyao/shared": "workspace:*",
+    "next": "16.2.11",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "latest",
+    "@types/react-dom": "^19.2.2",
+    "@playwright/test": "^1.55.0",
+    "tailwindcss": "latest"
+  }
+}

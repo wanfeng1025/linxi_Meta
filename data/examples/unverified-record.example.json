@@ -1,0 +1,19 @@
+{
+  "recordId": "structure-only-example",
+  "recordType": "example",
+  "status": "pending",
+  "source": {
+    "sourceId": "pending-example",
+    "sourceTitle": "待确认（结构示例）",
+    "edition": null,
+    "sourceType": "pending",
+    "licenseStatus": "pending",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "notes": "仅用于验证 Schema；不是传统文化内容，不得在产品中展示。",
+    "contentVersion": "0.0.0-example"
+  },
+  "content": {
+    "placeholder": true
+  }
+}

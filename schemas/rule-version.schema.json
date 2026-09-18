@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "rulesetId": { "$ref": "#/$defs/__schema0" },
+    "rulesetVersion": { "$ref": "#/$defs/__schema1" },
+    "systemName": { "$ref": "#/$defs/__schema2" },
+    "status": { "$ref": "#/$defs/__schema3" },
+    "releaseStatus": { "$ref": "#/$defs/__schema4" },
+    "parentVersion": { "$ref": "#/$defs/__schema5" },
+    "effectiveFrom": { "$ref": "#/$defs/__schema6" },
+    "sourceRefs": { "$ref": "#/$defs/__schema8" },
+    "scope": { "$ref": "#/$defs/__schema9" },
+    "changelog": { "$ref": "#/$defs/__schema10" },
+    "breakingChanges": { "$ref": "#/$defs/__schema11" },
+    "sourceManifestHash": { "$ref": "#/$defs/__schema12" },
+    "rulesHash": { "$ref": "#/$defs/__schema14" },
+    "createdAt": { "$ref": "#/$defs/__schema7" },
+    "verifiedBy": { "$ref": "#/$defs/__schema15" },
+    "verifiedAt": { "$ref": "#/$defs/__schema16" },
+    "reviewedBy": { "$ref": "#/$defs/__schema17" },
+    "releasedAt": { "$ref": "#/$defs/__schema18" },
+    "notes": { "$ref": "#/$defs/__schema19" }
+  },
+  "required": [
+    "rulesetId",
+    "rulesetVersion",
+    "systemName",
+    "status",
+    "releaseStatus",
+    "parentVersion",
+    "effectiveFrom",
+    "sourceRefs",
+    "scope",
+    "changelog",
+    "breakingChanges",
+    "sourceManifestHash",
+    "rulesHash",
+    "createdAt",
+    "verifiedBy",
+    "verifiedAt",
+    "reviewedBy",
+    "releasedAt",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "__schema0": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "__schema1": { "type": "string", "minLength": 1 },
+    "__schema2": { "type": "string", "minLength": 1 },
+    "__schema3": { "type": "string", "enum": ["draft", "verified", "retired"] },
+    "__schema4": { "type": "string", "enum": ["draft", "reviewed", "released", "deprecated"] },
+    "__schema5": { "anyOf": [{ "$ref": "#/$defs/__schema1" }, { "type": "null" }] },
+    "__schema6": { "anyOf": [{ "$ref": "#/$defs/__schema7" }, { "type": "null" }] },
+    "__schema7": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+    },
+    "__schema8": {
+      "readOnly": true,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sourceId": { "$ref": "#/$defs/__schema0" },
+          "sourceVersion": { "$ref": "#/$defs/__schema1" }
+        },
+        "required": ["sourceId", "sourceVersion"],
+        "additionalProperties": false
+      }
+    },
+    "__schema9": { "type": "string", "minLength": 1 },
+    "__schema10": { "type": "string" },
+    "__schema11": {
+      "readOnly": true,
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "__schema12": { "anyOf": [{ "$ref": "#/$defs/__schema13" }, { "type": "null" }] },
+    "__schema13": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "__schema14": { "anyOf": [{ "$ref": "#/$defs/__schema13" }, { "type": "null" }] },
+    "__schema15": { "anyOf": [{ "type": "string", "minLength": 1 }, { "type": "null" }] },
+    "__schema16": { "anyOf": [{ "$ref": "#/$defs/__schema7" }, { "type": "null" }] },
+    "__schema17": { "anyOf": [{ "type": "string", "minLength": 1 }, { "type": "null" }] },
+    "__schema18": { "anyOf": [{ "$ref": "#/$defs/__schema7" }, { "type": "null" }] },
+    "__schema19": { "type": "string" }
+  },
+  "$id": "https://liuyao.app/schemas/rule-version.schema.json",
+  "$comment": "Generated from scripts/content-data-schema.ts. Cross-record and release-gate rules are enforced by validateContentDataset."
+}

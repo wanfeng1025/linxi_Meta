@@ -1,0 +1,525 @@
+{
+  "schemaVersion": "hexagram-page-manifest-v1",
+  "source": {
+    "sourceId": "module-four-acceptance-pack",
+    "sourceVersion": "2026-07-25-candidate-v1",
+    "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+    "revision": null,
+    "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+    "verificationStatus": "production_candidate"
+  },
+  "entries": [
+    {
+      "hexagramId": "hexagram-kw-01",
+      "kingWenSequence": 1,
+      "name": "乾",
+      "unicodeSymbol": "䷀",
+      "upperTrigramId": "trigram-qian",
+      "lowerTrigramId": "trigram-qian"
+    },
+    {
+      "hexagramId": "hexagram-kw-02",
+      "kingWenSequence": 2,
+      "name": "坤",
+      "unicodeSymbol": "䷁",
+      "upperTrigramId": "trigram-kun",
+      "lowerTrigramId": "trigram-kun"
+    },
+    {
+      "hexagramId": "hexagram-kw-03",
+      "kingWenSequence": 3,
+      "name": "屯",
+      "unicodeSymbol": "䷂",
+      "upperTrigramId": "trigram-kan",
+      "lowerTrigramId": "trigram-zhen"
+    },
+    {
+      "hexagramId": "hexagram-kw-04",
+      "kingWenSequence": 4,
+      "name": "蒙",
+      "unicodeSymbol": "䷃",
+      "upperTrigramId": "trigram-gen",
+      "lowerTrigramId": "trigram-kan"
+    },
+    {
+      "hexagramId": "hexagram-kw-05",
+      "kingWenSequence": 5,
+      "name": "需",
+      "unicodeSymbol": "䷄",
+      "upperTrigramId": "trigram-kan",
+      "lowerTrigramId": "trigram-qian"
+    },
+    {
+      "hexagramId": "hexagram-kw-06",
+      "kingWenSequence": 6,
+      "name": "讼",
+      "unicodeSymbol": "䷅",
+      "upperTrigramId": "trigram-qian",
+      "lowerTrigramId": "trigram-kan"
+    },
+    {
+      "hexagramId": "hexagram-kw-07",
+      "kingWenSequence": 7,
+      "name": "师",
+      "unicodeSymbol": "䷆",
+      "upperTrigramId": "trigram-kun",
+      "lowerTrigramId": "trigram-kan"
+    },
+    {
+      "hexagramId": "hexagram-kw-08",
+      "kingWenSequence": 8,
+      "name": "比",
+      "unicodeSymbol": "䷇",
+      "upperTrigramId": "trigram-kan",
+      "lowerTrigramId": "trigram-kun"
+    },
+    {
+      "hexagramId": "hexagram-kw-09",
+      "kingWenSequence": 9,
+      "name": "小畜",
+      "unicodeSymbol": "䷈",
+      "upperTrigramId": "trigram-xun",
+      "lowerTrigramId": "trigram-qian"
+    },
+    {
+      "hexagramId": "hexagram-kw-10",
+      "kingWenSequence": 10,
+      "name": "履",
+      "unicodeSymbol": "䷉",
+      "upperTrigramId": "trigram-qian",
+      "lowerTrigramId": "trigram-dui"
+    },
+    {
+      "hexagramId": "hexagram-kw-11",
+      "kingWenSequence": 11,
+      "name": "泰",
+      "unicodeSymbol": "䷊",
+      "upperTrigramId": "trigram-kun",
+      "lowerTrigramId": "trigram-qian"
+    },
+    {
+      "hexagramId": "hexagram-kw-12",
+      "kingWenSequence": 12,
+      "name": "否",
+      "unicodeSymbol": "䷋",
+      "upperTrigramId": "trigram-qian",
+      "lowerTrigramId": "trigram-kun"
+    },
+    {
+      "hexagramId": "hexagram-kw-13",
+      "kingWenSequence": 13,
+      "name": "同人",
+      "unicodeSymbol": "䷌",
+      "upperTrigramId": "trigram-qian",
+      "lowerTrigramId": "trigram-li"
+    },
+    {
+      "hexagramId": "hexagram-kw-14",
+      "kingWenSequence": 14,
+      "name": "大有",
+      "unicodeSymbol": "䷍",
+      "upperTrigramId": "trigram-li",
+      "lowerTrigramId": "trigram-qian"
+    },
+    {
+      "hexagramId": "hexagram-kw-15",
+      "kingWenSequence": 15,
+      "name": "谦",
+      "unicodeSymbol": "䷎",
+      "upperTrigramId": "trigram-kun",
+      "lowerTrigramId": "trigram-gen"
+    },
+    {
+      "hexagramId": "hexagram-kw-16",
+      "kingWenSequence": 16,
+      "name": "豫",
+      "unicodeSymbol": "䷏",
+      "upperTrigramId": "trigram-zhen",
+      "lowerTrigramId": "trigram-kun"
+    },
+    {
+      "hexagramId": "hexagram-kw-17",
+      "kingWenSequence": 17,
+      "name": "随",
+      "unicodeSymbol": "䷐",
+      "upperTrigramId": "trigram-dui",
+      "lowerTrigramId": "trigram-zhen"
+    },
+    {
+      "hexagramId": "hexagram-kw-18",
+      "kingWenSequence": 18,
+      "name": "蛊",
+      "unicodeSymbol": "䷑",
+      "upperTrigramId": "trigram-gen",
+      "lowerTrigramId": "trigram-xun"
+    },
+    {
+      "hexagramId": "hexagram-kw-19",
+      "kingWenSequence": 19,
+      "name": "临",
+      "unicodeSymbol": "䷒",
+      "upperTrigramId": "trigram-kun",
+      "lowerTrigramId": "trigram-dui"
+    },
+    {
+      "hexagramId": "hexagram-kw-20",
+      "kingWenSequence": 20,
+      "name": "观",
+      "unicodeSymbol": "䷓",
+      "upperTrigramId": "trigram-xun",
+      "lowerTrigramId": "trigram-kun"
+    },
+    {
+      "hexagramId": "hexagram-kw-21",
+      "kingWenSequence": 21,
+      "name": "噬嗑",
+      "unicodeSymbol": "䷔",
+      "upperTrigramId": "trigram-li",
+      "lowerTrigramId": "trigram-zhen"
+    },
+    {
+      "hexagramId": "hexagram-kw-22",
+      "kingWenSequence": 22,
+      "name": "贲",
+      "unicodeSymbol": "䷕",
+      "upperTrigramId": "trigram-gen",
+      "lowerTrigramId": "trigram-li"
+    },
+    {
+      "hexagramId": "hexagram-kw-23",
+      "kingWenSequence": 23,
+      "name": "剥",
+      "unicodeSymbol": "䷖",
+      "upperTrigramId": "trigram-gen",
+      "lowerTrigramId": "trigram-kun"
+    },
+    {
+      "hexagramId": "hexagram-kw-24",
+      "kingWenSequence": 24,
+      "name": "复",
+      "unicodeSymbol": "䷗",
+      "upperTrigramId": "trigram-kun",
+      "lowerTrigramId": "trigram-zhen"
+    },
+    {
+      "hexagramId": "hexagram-kw-25",
+      "kingWenSequence": 25,
+      "name": "无妄",
+      "unicodeSymbol": "䷘",
+      "upperTrigramId": "trigram-qian",
+      "lowerTrigramId": "trigram-zhen"
+    },
+    {
+      "hexagramId": "hexagram-kw-26",
+      "kingWenSequence": 26,
+      "name": "大畜",
+      "unicodeSymbol": "䷙",
+      "upperTrigramId": "trigram-gen",
+      "lowerTrigramId": "trigram-qian"
+    },
+    {
+      "hexagramId": "hexagram-kw-27",
+      "kingWenSequence": 27,
+      "name": "颐",
+      "unicodeSymbol": "䷚",
+      "upperTrigramId": "trigram-gen",
+      "lowerTrigramId": "trigram-zhen"
+    },
+    {
+      "hexagramId": "hexagram-kw-28",
+      "kingWenSequence": 28,
+      "name": "大过",
+      "unicodeSymbol": "䷛",
+      "upperTrigramId": "trigram-dui",
+      "lowerTrigramId": "trigram-xun"
+    },
+    {
+      "hexagramId": "hexagram-kw-29",
+      "kingWenSequence": 29,
+      "name": "坎",
+      "unicodeSymbol": "䷜",
+      "upperTrigramId": "trigram-kan",
+      "lowerTrigramId": "trigram-kan"
+    },
+    {
+      "hexagramId": "hexagram-kw-30",
+      "kingWenSequence": 30,
+      "name": "离",
+      "unicodeSymbol": "䷝",
+      "upperTrigramId": "trigram-li",
+      "lowerTrigramId": "trigram-li"
+    },
+    {
+      "hexagramId": "hexagram-kw-31",
+      "kingWenSequence": 31,
+      "name": "咸",
+      "unicodeSymbol": "䷞",
+      "upperTrigramId": "trigram-dui",
+      "lowerTrigramId": "trigram-gen"
+    },
+    {
+      "hexagramId": "hexagram-kw-32",
+      "kingWenSequence": 32,
+      "name": "恒",
+      "unicodeSymbol": "䷟",
+      "upperTrigramId": "trigram-zhen",
+      "lowerTrigramId": "trigram-xun"
+    },
+    {
+      "hexagramId": "hexagram-kw-33",
+      "kingWenSequence": 33,
+      "name": "遁",
+      "unicodeSymbol": "䷠",
+      "upperTrigramId": "trigram-qian",
+      "lowerTrigramId": "trigram-gen"
+    },
+    {
+      "hexagramId": "hexagram-kw-34",
+      "kingWenSequence": 34,
+      "name": "大壮",
+      "unicodeSymbol": "䷡",
+      "upperTrigramId": "trigram-zhen",
+      "lowerTrigramId": "trigram-qian"
+    },
+    {
+      "hexagramId": "hexagram-kw-35",
+      "kingWenSequence": 35,
+      "name": "晋",
+      "unicodeSymbol": "䷢",
+      "upperTrigramId": "trigram-li",
+      "lowerTrigramId": "trigram-kun"
+    },
+    {
+      "hexagramId": "hexagram-kw-36",
+      "kingWenSequence": 36,
+      "name": "明夷",
+      "unicodeSymbol": "䷣",
+      "upperTrigramId": "trigram-kun",
+      "lowerTrigramId": "trigram-li"
+    },
+    {
+      "hexagramId": "hexagram-kw-37",
+      "kingWenSequence": 37,
+      "name": "家人",
+      "unicodeSymbol": "䷤",
+      "upperTrigramId": "trigram-xun",
+      "lowerTrigramId": "trigram-li"
+    },
+    {
+      "hexagramId": "hexagram-kw-38",
+      "kingWenSequence": 38,
+      "name": "睽",
+      "unicodeSymbol": "䷥",
+      "upperTrigramId": "trigram-li",
+      "lowerTrigramId": "trigram-dui"
+    },
+    {
+      "hexagramId": "hexagram-kw-39",
+      "kingWenSequence": 39,
+      "name": "蹇",
+      "unicodeSymbol": "䷦",
+      "upperTrigramId": "trigram-kan",
+      "lowerTrigramId": "trigram-gen"
+    },
+    {
+      "hexagramId": "hexagram-kw-40",
+      "kingWenSequence": 40,
+      "name": "解",
+      "unicodeSymbol": "䷧",
+      "upperTrigramId": "trigram-zhen",
+      "lowerTrigramId": "trigram-kan"
+    },
+    {
+      "hexagramId": "hexagram-kw-41",
+      "kingWenSequence": 41,
+      "name": "损",
+      "unicodeSymbol": "䷨",
+      "upperTrigramId": "trigram-gen",
+      "lowerTrigramId": "trigram-dui"
+    },
+    {
+      "hexagramId": "hexagram-kw-42",
+      "kingWenSequence": 42,
+      "name": "益",
+      "unicodeSymbol": "䷩",
+      "upperTrigramId": "trigram-xun",
+      "lowerTrigramId": "trigram-zhen"
+    },
+    {
+      "hexagramId": "hexagram-kw-43",
+      "kingWenSequence": 43,
+      "name": "夬",
+      "unicodeSymbol": "䷪",
+      "upperTrigramId": "trigram-dui",
+      "lowerTrigramId": "trigram-qian"
+    },
+    {
+      "hexagramId": "hexagram-kw-44",
+      "kingWenSequence": 44,
+      "name": "姤",
+      "unicodeSymbol": "䷫",
+      "upperTrigramId": "trigram-qian",
+      "lowerTrigramId": "trigram-xun"
+    },
+    {
+      "hexagramId": "hexagram-kw-45",
+      "kingWenSequence": 45,
+      "name": "萃",
+      "unicodeSymbol": "䷬",
+      "upperTrigramId": "trigram-dui",
+      "lowerTrigramId": "trigram-kun"
+    },
+    {
+      "hexagramId": "hexagram-kw-46",
+      "kingWenSequence": 46,
+      "name": "升",
+      "unicodeSymbol": "䷭",
+      "upperTrigramId": "trigram-kun",
+      "lowerTrigramId": "trigram-xun"
+    },
+    {
+      "hexagramId": "hexagram-kw-47",
+      "kingWenSequence": 47,
+      "name": "困",
+      "unicodeSymbol": "䷮",
+      "upperTrigramId": "trigram-dui",
+      "lowerTrigramId": "trigram-kan"
+    },
+    {
+      "hexagramId": "hexagram-kw-48",
+      "kingWenSequence": 48,
+      "name": "井",
+      "unicodeSymbol": "䷯",
+      "upperTrigramId": "trigram-kan",
+      "lowerTrigramId": "trigram-xun"
+    },
+    {
+      "hexagramId": "hexagram-kw-49",
+      "kingWenSequence": 49,
+      "name": "革",
+      "unicodeSymbol": "䷰",
+      "upperTrigramId": "trigram-dui",
+      "lowerTrigramId": "trigram-li"
+    },
+    {
+      "hexagramId": "hexagram-kw-50",
+      "kingWenSequence": 50,
+      "name": "鼎",
+      "unicodeSymbol": "䷱",
+      "upperTrigramId": "trigram-li",
+      "lowerTrigramId": "trigram-xun"
+    },
+    {
+      "hexagramId": "hexagram-kw-51",
+      "kingWenSequence": 51,
+      "name": "震",
+      "unicodeSymbol": "䷲",
+      "upperTrigramId": "trigram-zhen",
+      "lowerTrigramId": "trigram-zhen"
+    },
+    {
+      "hexagramId": "hexagram-kw-52",
+      "kingWenSequence": 52,
+      "name": "艮",
+      "unicodeSymbol": "䷳",
+      "upperTrigramId": "trigram-gen",
+      "lowerTrigramId": "trigram-gen"
+    },
+    {
+      "hexagramId": "hexagram-kw-53",
+      "kingWenSequence": 53,
+      "name": "渐",
+      "unicodeSymbol": "䷴",
+      "upperTrigramId": "trigram-xun",
+      "lowerTrigramId": "trigram-gen"
+    },
+    {
+      "hexagramId": "hexagram-kw-54",
+      "kingWenSequence": 54,
+      "name": "归妹",
+      "unicodeSymbol": "䷵",
+      "upperTrigramId": "trigram-zhen",
+      "lowerTrigramId": "trigram-dui"
+    },
+    {
+      "hexagramId": "hexagram-kw-55",
+      "kingWenSequence": 55,
+      "name": "丰",
+      "unicodeSymbol": "䷶",
+      "upperTrigramId": "trigram-zhen",
+      "lowerTrigramId": "trigram-li"
+    },
+    {
+      "hexagramId": "hexagram-kw-56",
+      "kingWenSequence": 56,
+      "name": "旅",
+      "unicodeSymbol": "䷷",
+      "upperTrigramId": "trigram-li",
+      "lowerTrigramId": "trigram-gen"
+    },
+    {
+      "hexagramId": "hexagram-kw-57",
+      "kingWenSequence": 57,
+      "name": "巽",
+      "unicodeSymbol": "䷸",
+      "upperTrigramId": "trigram-xun",
+      "lowerTrigramId": "trigram-xun"
+    },
+    {
+      "hexagramId": "hexagram-kw-58",
+      "kingWenSequence": 58,
+      "name": "兑",
+      "unicodeSymbol": "䷹",
+      "upperTrigramId": "trigram-dui",
+      "lowerTrigramId": "trigram-dui"
+    },
+    {
+      "hexagramId": "hexagram-kw-59",
+      "kingWenSequence": 59,
+      "name": "涣",
+      "unicodeSymbol": "䷺",
+      "upperTrigramId": "trigram-xun",
+      "lowerTrigramId": "trigram-kan"
+    },
+    {
+      "hexagramId": "hexagram-kw-60",
+      "kingWenSequence": 60,
+      "name": "节",
+      "unicodeSymbol": "䷻",
+      "upperTrigramId": "trigram-kan",
+      "lowerTrigramId": "trigram-dui"
+    },
+    {
+      "hexagramId": "hexagram-kw-61",
+      "kingWenSequence": 61,
+      "name": "中孚",
+      "unicodeSymbol": "䷼",
+      "upperTrigramId": "trigram-xun",
+      "lowerTrigramId": "trigram-dui"
+    },
+    {
+      "hexagramId": "hexagram-kw-62",
+      "kingWenSequence": 62,
+      "name": "小过",
+      "unicodeSymbol": "䷽",
+      "upperTrigramId": "trigram-zhen",
+      "lowerTrigramId": "trigram-gen"
+    },
+    {
+      "hexagramId": "hexagram-kw-63",
+      "kingWenSequence": 63,
+      "name": "既济",
+      "unicodeSymbol": "䷾",
+      "upperTrigramId": "trigram-kan",
+      "lowerTrigramId": "trigram-li"
+    },
+    {
+      "hexagramId": "hexagram-kw-64",
+      "kingWenSequence": 64,
+      "name": "未济",
+      "unicodeSymbol": "䷿",
+      "upperTrigramId": "trigram-li",
+      "lowerTrigramId": "trigram-kan"
+    }
+  ]
+}

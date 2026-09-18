@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "recordType": { "type": "string", "const": "professional-calendar-candidate" },
+    "status": { "type": "string", "const": "production_candidate" },
+    "generatedFromSha256": { "type": "string", "pattern": "^[a-fA-F0-9]{64}$" },
+    "calendar": {
+      "type": "object",
+      "properties": {
+        "policyId": { "$ref": "#/$defs/__schema0" },
+        "calendarAlgorithmVersion": { "$ref": "#/$defs/__schema1" },
+        "solarTermDataVersion": { "$ref": "#/$defs/__schema1" },
+        "timezoneDataVersion": { "$ref": "#/$defs/__schema1" },
+        "sourceIds": { "minItems": 1, "type": "array", "items": { "$ref": "#/$defs/__schema0" } },
+        "dayGanzhiAnchor": {
+          "type": "object",
+          "properties": {
+            "localDate": {
+              "type": "string",
+              "format": "date",
+              "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+            },
+            "cycleIndex": { "type": "integer", "minimum": 0, "maximum": 59 }
+          },
+          "required": ["localDate", "cycleIndex"]
+        },
+        "coverageEndInclusiveInstant": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+        },
+        "solarTerms": { "minItems": 1, "type": "array", "items": { "$ref": "#/$defs/__schema2" } },
+        "timezones": { "minItems": 1, "type": "array", "items": { "$ref": "#/$defs/__schema3" } }
+      },
+      "required": [
+        "policyId",
+        "calendarAlgorithmVersion",
+        "solarTermDataVersion",
+        "timezoneDataVersion",
+        "sourceIds",
+        "dayGanzhiAnchor",
+        "coverageEndInclusiveInstant",
+        "solarTerms",
+        "timezones"
+      ]
+    }
+  },
+  "required": ["recordType", "status", "generatedFromSha256", "calendar"],
+  "additionalProperties": false,
+  "$defs": {
+    "__schema0": { "type": "string", "minLength": 1 },
+    "__schema1": { "type": "string", "minLength": 1 },
+    "__schema2": {
+      "type": "object",
+      "properties": {
+        "id": { "$ref": "#/$defs/__schema0" },
+        "instant": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+        },
+        "monthBranchId": { "$ref": "#/$defs/__schema0" },
+        "changesMonthBranch": { "type": "boolean" }
+      },
+      "required": ["id", "instant", "monthBranchId", "changesMonthBranch"]
+    },
+    "__schema3": {
+      "type": "object",
+      "properties": {
+        "timezone": { "$ref": "#/$defs/__schema0" },
+        "initialOffsetSeconds": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "initialIsDst": { "type": "boolean" },
+        "transitions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "instant": {
+                "type": "string",
+                "format": "date-time",
+                "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+              },
+              "offsetSecondsAfter": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              },
+              "isDstAfter": { "type": "boolean" }
+            },
+            "required": ["instant", "offsetSecondsAfter", "isDstAfter"]
+          }
+        }
+      },
+      "required": ["timezone", "initialOffsetSeconds", "initialIsDst", "transitions"]
+    }
+  },
+  "$id": "https://liuyao.app/schemas/professional-calendar-candidate-document.schema.json",
+  "$comment": "Generated from scripts/content-data-schema.ts. Cross-record and release-gate rules are enforced by validateContentDataset."
+}

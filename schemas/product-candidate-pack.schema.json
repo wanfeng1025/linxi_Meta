@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "product-editorial-candidate-v1" },
+    "source": {
+      "type": "object",
+      "properties": {
+        "sourceId": { "type": "string", "minLength": 1 },
+        "sourceVersion": { "type": "string", "minLength": 1 },
+        "sourceLocator": { "type": "string", "minLength": 1 },
+        "revision": { "anyOf": [{ "type": "string" }, { "type": "null" }] },
+        "sourceSha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "verificationStatus": {
+          "type": "string",
+          "enum": ["production_candidate", "editorial_original"]
+        }
+      },
+      "required": [
+        "sourceId",
+        "sourceVersion",
+        "sourceLocator",
+        "revision",
+        "sourceSha256",
+        "verificationStatus"
+      ],
+      "additionalProperties": false
+    },
+    "categories": {
+      "minItems": 18,
+      "maxItems": 18,
+      "type": "array",
+      "items": { "$ref": "#/$defs/__schema0" }
+    },
+    "templates": { "minItems": 1, "type": "array", "items": { "$ref": "#/$defs/__schema1" } },
+    "disclaimers": {
+      "minItems": 6,
+      "maxItems": 6,
+      "type": "array",
+      "items": { "$ref": "#/$defs/__schema2" }
+    }
+  },
+  "required": ["schemaVersion", "source", "categories", "templates", "disclaimers"],
+  "additionalProperties": false,
+  "$defs": {
+    "__schema0": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "primaryCandidate": { "type": "string" },
+        "secondaryCandidates": { "type": "array", "items": { "type": "string" } },
+        "clarificationHint": { "type": "string" }
+      },
+      "required": ["id", "name", "primaryCandidate", "secondaryCandidates", "clarificationHint"],
+      "additionalProperties": false
+    },
+    "__schema1": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "text": { "type": "string" },
+        "variables": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["id", "text", "variables"],
+      "additionalProperties": false
+    },
+    "__schema2": {
+      "type": "object",
+      "properties": { "id": { "type": "string" }, "text": { "type": "string" } },
+      "required": ["id", "text"],
+      "additionalProperties": false
+    }
+  },
+  "$id": "https://liuyao.app/schemas/product-candidate-pack.schema.json",
+  "$comment": "Generated from scripts/content-data-schema.ts. Cross-record and release-gate rules are enforced by validateContentDataset."
+}

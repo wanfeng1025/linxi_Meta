@@ -1,0 +1,266 @@
+import {
+  createTestProfessionalRuleset,
+  type CalendarContext,
+  type ProfessionalRuleset,
+  type ProfessionalRulesetInput,
+  type QuestionContext,
+  type VersionedRule,
+} from '../../src/domain/professional';
+
+const versioned = (ruleId: string): VersionedRule => ({
+  ruleId,
+  rulesetId: 'synthetic-professional-test',
+  rulesetVersion: '0.0.0-test.1',
+  contentVersion: 'synthetic-content-test.1',
+  sourceId: 'synthetic-source',
+  sourceVersion: 'test.1',
+  sourceLocator: 'test fixture only',
+});
+
+export function professionalRulesetInputFixture(): ProfessionalRulesetInput {
+  const branchElements = ['wood', 'fire', 'earth', 'metal', 'water', 'earth'] as const;
+  return {
+    metadata: {
+      rulesetId: 'synthetic-professional-test',
+      rulesetVersion: '0.0.0-test.1',
+      contentVersion: 'synthetic-content-test.1',
+      calendarAlgorithmVersion: 'fixed-calendar-test.1',
+      timezoneDataVersion: 'synthetic-tzdb-test.1',
+      compatibilityGroup: 'synthetic-only',
+      verificationStatus: 'test-only',
+      sourceManifestHash: null,
+      rulesHash: null,
+      verifiedBy: [],
+      verifiedAt: null,
+      sources: [
+        {
+          sourceId: 'synthetic-source',
+          sourceVersion: 'test.1',
+          sourceLocator: 'test fixture only',
+          verificationStatus: 'pending',
+        },
+      ],
+      dayBoundaryPolicy: 'civil-midnight',
+      trueSolarTimeEnabled: false,
+    },
+    palaceRules: [
+      {
+        ...versioned('test-palace-primary'),
+        hexagramId: 'hex-primary',
+        palaceTrigramId: 'trigram-palace',
+        palaceElementId: 'metal',
+        palaceSequence: 0,
+        stage: 'base',
+        worldPosition: 6,
+        responsePosition: 3,
+      },
+    ],
+    najiaRules: [
+      ...([1, 2, 3] as const).map((localLine) => ({
+        ...versioned(`test-najia-inner-${localLine}`),
+        trigramId: 'trigram-lower',
+        scope: 'inner' as const,
+        localLine,
+        heavenlyStemId: 'stem-inner',
+        earthlyBranchId: `branch-${localLine}`,
+      })),
+      ...([1, 2, 3] as const).map((localLine) => ({
+        ...versioned(`test-najia-outer-${localLine}`),
+        trigramId: 'trigram-upper',
+        scope: 'outer' as const,
+        localLine,
+        heavenlyStemId: 'stem-outer',
+        earthlyBranchId: `branch-${localLine + 3}`,
+      })),
+    ],
+    earthlyBranches: branchElements.map((elementId, index) => ({
+      ...versioned(`test-branch-${index + 1}`),
+      branchId: `branch-${index + 1}`,
+      order: (index + 1) as 1 | 2 | 3 | 4 | 5 | 6,
+      elementId,
+    })),
+    sixRelativeRules: [
+      {
+        ...versioned('test-relative-wood'),
+        palaceElementId: 'metal',
+        lineElementId: 'wood',
+        relative: 'wealth',
+        formulaCode: 'palace-controls-line',
+      },
+      {
+        ...versioned('test-relative-fire'),
+        palaceElementId: 'metal',
+        lineElementId: 'fire',
+        relative: 'official',
+        formulaCode: 'line-controls-palace',
+      },
+      {
+        ...versioned('test-relative-earth'),
+        palaceElementId: 'metal',
+        lineElementId: 'earth',
+        relative: 'parent',
+        formulaCode: 'line-generates-palace',
+      },
+      {
+        ...versioned('test-relative-metal'),
+        palaceElementId: 'metal',
+        lineElementId: 'metal',
+        relative: 'sibling',
+        formulaCode: 'same-element',
+      },
+      {
+        ...versioned('test-relative-water'),
+        palaceElementId: 'metal',
+        lineElementId: 'water',
+        relative: 'offspring',
+        formulaCode: 'palace-generates-line',
+      },
+    ],
+    sixSpirits: ([1, 2, 3, 4, 5, 6] as const).map((order) => ({
+      ...versioned(`test-spirit-${order}`),
+      spiritId: `spirit-${order}`,
+      order,
+    })),
+    sixSpiritStartRules: [
+      { ...versioned('test-spirit-start'), dayStemId: 'day-stem-a', startSpiritId: 'spirit-3' },
+    ],
+    voidRules: [
+      { ...versioned('test-void-0'), cycleStartIndex: 0, voidBranches: ['branch-5', 'branch-6'] },
+    ],
+    branchRelationRules: [
+      {
+        ...versioned('test-clash-1-4'),
+        relationType: 'six-clash',
+        branchIds: ['branch-1', 'branch-4'],
+        directional: false,
+        resultElementId: null,
+        priority: 90,
+        enabled: true,
+        interpretationMode: 'active',
+      },
+      {
+        ...versioned('test-generate-2-3'),
+        relationType: 'generate',
+        branchIds: ['branch-2', 'branch-3'],
+        directional: true,
+        resultElementId: null,
+        priority: 50,
+        enabled: true,
+        interpretationMode: 'active',
+      },
+      {
+        ...versioned('test-harm-disabled'),
+        relationType: 'harm',
+        branchIds: ['branch-2', 'branch-5'],
+        directional: false,
+        resultElementId: null,
+        priority: 10,
+        enabled: false,
+        interpretationMode: 'disabled',
+      },
+    ],
+    usefulGodRules: [
+      {
+        ...versioned('test-useful-career-position'),
+        match: {
+          questionCategories: ['career'],
+          questionSubcategories: [],
+          selfOrProxy: ['self'],
+          subjectRoles: [],
+          targetRoles: ['position'],
+          targetRelationships: [],
+          desiredOutcomes: ['obtain'],
+          requiredContextTags: [],
+          traditionalGenderRule: 'irrelevant',
+        },
+        relative: 'official',
+        candidateRole: 'primary',
+        priority: 100,
+        evidenceTemplate: 'Synthetic position rule matched.',
+      },
+      {
+        ...versioned('test-useful-career-document'),
+        match: {
+          questionCategories: ['career'],
+          questionSubcategories: [],
+          selfOrProxy: [],
+          subjectRoles: [],
+          targetRoles: [],
+          targetRelationships: [],
+          desiredOutcomes: [],
+          requiredContextTags: ['document'],
+          traditionalGenderRule: 'irrelevant',
+        },
+        relative: 'parent',
+        candidateRole: 'secondary',
+        priority: 50,
+        evidenceTemplate: 'Synthetic document rule matched.',
+      },
+    ],
+    supportingRoleRules: [
+      {
+        ...versioned('test-related-gods-official'),
+        usefulGodRelative: 'official',
+        supportingRelative: 'wealth',
+        avoidingRelative: 'offspring',
+        enemyRelative: 'parent',
+      },
+    ],
+    hiddenSpiritRules: [
+      {
+        ...versioned('test-hidden-primary-4'),
+        hexagramId: 'hex-primary',
+        linePosition: 4,
+        hiddenRelative: 'wealth',
+        hiddenStemId: 'hidden-stem',
+        hiddenBranchId: 'branch-1',
+        flyingLinePosition: 4,
+      },
+    ],
+  };
+}
+
+export function createProfessionalRulesetFixture(): ProfessionalRuleset {
+  return createTestProfessionalRuleset(professionalRulesetInputFixture());
+}
+
+export const calendarContextFixture: CalendarContext = {
+  isoInstant: '2026-07-20T08:00:00Z',
+  timezone: 'Asia/Shanghai',
+  localDateTime: '2026-07-20T16:00:00+08:00',
+  monthBranchId: 'branch-4',
+  dayStemId: 'day-stem-a',
+  dayBranchId: 'branch-3',
+  dayCycleIndex: 2,
+  solarTermId: 'synthetic-term',
+  solarTermBoundaryInstant: '2026-07-07T00:00:00Z',
+  calendarAlgorithmVersion: 'fixed-calendar-test.1',
+  timezoneDataVersion: 'synthetic-tzdb-test.1',
+  dayBoundaryPolicy: 'civil-midnight',
+  trueSolarTimeEnabled: false,
+  sourceIds: ['synthetic-calendar-source'],
+  localDate: '2026-07-20',
+  utcOffsetSeconds: 28800,
+  isDst: false,
+  fold: null,
+  localTimeResolution: 'UNIQUE',
+  previousMonthBoundaryInstant: '2026-07-07T00:00:00Z',
+  nextMonthBoundaryInstant: '2026-08-07T00:00:00Z',
+  xunId: 'synthetic-xun',
+  voidBranches: ['branch-5', 'branch-6'],
+  calendarPolicyId: 'synthetic-calendar-policy',
+  solarTermDataVersion: 'synthetic-terms-test.1',
+  verificationStatus: 'test-only',
+};
+
+export const questionContextFixture: QuestionContext = {
+  questionCategory: 'career',
+  questionSubcategory: 'application',
+  selfOrProxy: 'self',
+  subjectRole: 'self',
+  targetRole: 'position',
+  targetRelationship: null,
+  desiredOutcome: 'obtain',
+  contextTags: ['document'],
+  traditionalGenderRuleEnabled: false,
+};

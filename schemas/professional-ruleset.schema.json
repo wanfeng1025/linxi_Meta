@@ -1,0 +1,601 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "rulesetId": { "$ref": "#/$defs/__schema0" },
+        "rulesetVersion": { "$ref": "#/$defs/__schema1" },
+        "contentVersion": { "$ref": "#/$defs/__schema1" },
+        "calendarAlgorithmVersion": { "$ref": "#/$defs/__schema1" },
+        "timezoneDataVersion": { "$ref": "#/$defs/__schema1" },
+        "compatibilityGroup": { "$ref": "#/$defs/__schema0" },
+        "verificationStatus": {
+          "type": "string",
+          "enum": ["production_candidate", "production_verified", "test-only"]
+        },
+        "sourceManifestHash": {
+          "anyOf": [{ "type": "string", "pattern": "^[a-fA-F0-9]{64}$" }, { "type": "null" }]
+        },
+        "rulesHash": {
+          "anyOf": [{ "type": "string", "pattern": "^[a-fA-F0-9]{64}$" }, { "type": "null" }]
+        },
+        "verifiedBy": {
+          "readOnly": true,
+          "type": "array",
+          "items": { "$ref": "#/$defs/__schema0" }
+        },
+        "verifiedAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+            },
+            { "type": "null" }
+          ]
+        },
+        "sources": {
+          "readOnly": true,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "sourceId": { "$ref": "#/$defs/__schema0" },
+              "sourceVersion": { "$ref": "#/$defs/__schema1" },
+              "sourceLocator": { "$ref": "#/$defs/__schema0" },
+              "verificationStatus": {
+                "type": "string",
+                "enum": ["production_candidate", "production_verified", "pending"]
+              }
+            },
+            "required": ["sourceId", "sourceVersion", "sourceLocator", "verificationStatus"],
+            "additionalProperties": false
+          }
+        },
+        "dayBoundaryPolicy": {
+          "type": "string",
+          "enum": ["civil-midnight", "zi-hour", "true-solar-zi-hour"]
+        },
+        "trueSolarTimeEnabled": { "type": "boolean" }
+      },
+      "required": [
+        "rulesetId",
+        "rulesetVersion",
+        "contentVersion",
+        "calendarAlgorithmVersion",
+        "timezoneDataVersion",
+        "compatibilityGroup",
+        "verificationStatus",
+        "sourceManifestHash",
+        "rulesHash",
+        "verifiedBy",
+        "verifiedAt",
+        "sources",
+        "dayBoundaryPolicy",
+        "trueSolarTimeEnabled"
+      ],
+      "additionalProperties": false
+    },
+    "palaceRules": {
+      "readOnly": true,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ruleId": { "$ref": "#/$defs/__schema0" },
+          "rulesetId": { "$ref": "#/$defs/__schema0" },
+          "rulesetVersion": { "$ref": "#/$defs/__schema1" },
+          "contentVersion": { "$ref": "#/$defs/__schema1" },
+          "sourceId": { "$ref": "#/$defs/__schema0" },
+          "sourceVersion": { "$ref": "#/$defs/__schema1" },
+          "sourceLocator": { "$ref": "#/$defs/__schema0" },
+          "hexagramId": { "$ref": "#/$defs/__schema0" },
+          "palaceTrigramId": { "$ref": "#/$defs/__schema0" },
+          "palaceElementId": { "$ref": "#/$defs/__schema0" },
+          "palaceSequence": { "type": "integer", "minimum": 0, "maximum": 7 },
+          "stage": {
+            "type": "string",
+            "enum": [
+              "base",
+              "first-change",
+              "second-change",
+              "third-change",
+              "fourth-change",
+              "fifth-change",
+              "wandering-soul",
+              "returning-soul"
+            ]
+          },
+          "worldPosition": { "$ref": "#/$defs/__schema2" },
+          "responsePosition": { "$ref": "#/$defs/__schema2" }
+        },
+        "required": [
+          "ruleId",
+          "rulesetId",
+          "rulesetVersion",
+          "contentVersion",
+          "sourceId",
+          "sourceVersion",
+          "sourceLocator",
+          "hexagramId",
+          "palaceTrigramId",
+          "palaceElementId",
+          "palaceSequence",
+          "stage",
+          "worldPosition",
+          "responsePosition"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "najiaRules": {
+      "readOnly": true,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ruleId": { "$ref": "#/$defs/__schema0" },
+          "rulesetId": { "$ref": "#/$defs/__schema0" },
+          "rulesetVersion": { "$ref": "#/$defs/__schema1" },
+          "contentVersion": { "$ref": "#/$defs/__schema1" },
+          "sourceId": { "$ref": "#/$defs/__schema0" },
+          "sourceVersion": { "$ref": "#/$defs/__schema1" },
+          "sourceLocator": { "$ref": "#/$defs/__schema0" },
+          "trigramId": { "$ref": "#/$defs/__schema0" },
+          "scope": { "type": "string", "enum": ["inner", "outer"] },
+          "localLine": { "type": "integer", "minimum": 1, "maximum": 3 },
+          "heavenlyStemId": { "$ref": "#/$defs/__schema0" },
+          "earthlyBranchId": { "$ref": "#/$defs/__schema0" }
+        },
+        "required": [
+          "ruleId",
+          "rulesetId",
+          "rulesetVersion",
+          "contentVersion",
+          "sourceId",
+          "sourceVersion",
+          "sourceLocator",
+          "trigramId",
+          "scope",
+          "localLine",
+          "heavenlyStemId",
+          "earthlyBranchId"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "earthlyBranches": {
+      "readOnly": true,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ruleId": { "$ref": "#/$defs/__schema0" },
+          "rulesetId": { "$ref": "#/$defs/__schema0" },
+          "rulesetVersion": { "$ref": "#/$defs/__schema1" },
+          "contentVersion": { "$ref": "#/$defs/__schema1" },
+          "sourceId": { "$ref": "#/$defs/__schema0" },
+          "sourceVersion": { "$ref": "#/$defs/__schema1" },
+          "sourceLocator": { "$ref": "#/$defs/__schema0" },
+          "branchId": { "$ref": "#/$defs/__schema0" },
+          "order": { "type": "integer", "minimum": 1, "maximum": 12 },
+          "elementId": { "$ref": "#/$defs/__schema0" }
+        },
+        "required": [
+          "ruleId",
+          "rulesetId",
+          "rulesetVersion",
+          "contentVersion",
+          "sourceId",
+          "sourceVersion",
+          "sourceLocator",
+          "branchId",
+          "order",
+          "elementId"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "sixRelativeRules": {
+      "readOnly": true,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ruleId": { "$ref": "#/$defs/__schema0" },
+          "rulesetId": { "$ref": "#/$defs/__schema0" },
+          "rulesetVersion": { "$ref": "#/$defs/__schema1" },
+          "contentVersion": { "$ref": "#/$defs/__schema1" },
+          "sourceId": { "$ref": "#/$defs/__schema0" },
+          "sourceVersion": { "$ref": "#/$defs/__schema1" },
+          "sourceLocator": { "$ref": "#/$defs/__schema0" },
+          "palaceElementId": { "$ref": "#/$defs/__schema0" },
+          "lineElementId": { "$ref": "#/$defs/__schema0" },
+          "relative": { "$ref": "#/$defs/__schema3" },
+          "formulaCode": { "$ref": "#/$defs/__schema0" }
+        },
+        "required": [
+          "ruleId",
+          "rulesetId",
+          "rulesetVersion",
+          "contentVersion",
+          "sourceId",
+          "sourceVersion",
+          "sourceLocator",
+          "palaceElementId",
+          "lineElementId",
+          "relative",
+          "formulaCode"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "sixSpirits": {
+      "readOnly": true,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ruleId": { "$ref": "#/$defs/__schema0" },
+          "rulesetId": { "$ref": "#/$defs/__schema0" },
+          "rulesetVersion": { "$ref": "#/$defs/__schema1" },
+          "contentVersion": { "$ref": "#/$defs/__schema1" },
+          "sourceId": { "$ref": "#/$defs/__schema0" },
+          "sourceVersion": { "$ref": "#/$defs/__schema1" },
+          "sourceLocator": { "$ref": "#/$defs/__schema0" },
+          "spiritId": { "$ref": "#/$defs/__schema0" },
+          "order": { "type": "integer", "minimum": 1, "maximum": 6 }
+        },
+        "required": [
+          "ruleId",
+          "rulesetId",
+          "rulesetVersion",
+          "contentVersion",
+          "sourceId",
+          "sourceVersion",
+          "sourceLocator",
+          "spiritId",
+          "order"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "sixSpiritStartRules": {
+      "readOnly": true,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ruleId": { "$ref": "#/$defs/__schema0" },
+          "rulesetId": { "$ref": "#/$defs/__schema0" },
+          "rulesetVersion": { "$ref": "#/$defs/__schema1" },
+          "contentVersion": { "$ref": "#/$defs/__schema1" },
+          "sourceId": { "$ref": "#/$defs/__schema0" },
+          "sourceVersion": { "$ref": "#/$defs/__schema1" },
+          "sourceLocator": { "$ref": "#/$defs/__schema0" },
+          "dayStemId": { "$ref": "#/$defs/__schema0" },
+          "startSpiritId": { "$ref": "#/$defs/__schema0" }
+        },
+        "required": [
+          "ruleId",
+          "rulesetId",
+          "rulesetVersion",
+          "contentVersion",
+          "sourceId",
+          "sourceVersion",
+          "sourceLocator",
+          "dayStemId",
+          "startSpiritId"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "voidRules": {
+      "readOnly": true,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ruleId": { "$ref": "#/$defs/__schema0" },
+          "rulesetId": { "$ref": "#/$defs/__schema0" },
+          "rulesetVersion": { "$ref": "#/$defs/__schema1" },
+          "contentVersion": { "$ref": "#/$defs/__schema1" },
+          "sourceId": { "$ref": "#/$defs/__schema0" },
+          "sourceVersion": { "$ref": "#/$defs/__schema1" },
+          "sourceLocator": { "$ref": "#/$defs/__schema0" },
+          "cycleStartIndex": {
+            "anyOf": [
+              { "type": "number", "const": 0 },
+              { "type": "number", "const": 10 },
+              { "type": "number", "const": 20 },
+              { "type": "number", "const": 30 },
+              { "type": "number", "const": 40 },
+              { "type": "number", "const": 50 }
+            ]
+          },
+          "voidBranches": {
+            "readOnly": true,
+            "type": "array",
+            "prefixItems": [{ "$ref": "#/$defs/__schema0" }, { "$ref": "#/$defs/__schema0" }]
+          }
+        },
+        "required": [
+          "ruleId",
+          "rulesetId",
+          "rulesetVersion",
+          "contentVersion",
+          "sourceId",
+          "sourceVersion",
+          "sourceLocator",
+          "cycleStartIndex",
+          "voidBranches"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "branchRelationRules": {
+      "readOnly": true,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ruleId": { "$ref": "#/$defs/__schema0" },
+          "rulesetId": { "$ref": "#/$defs/__schema0" },
+          "rulesetVersion": { "$ref": "#/$defs/__schema1" },
+          "contentVersion": { "$ref": "#/$defs/__schema1" },
+          "sourceId": { "$ref": "#/$defs/__schema0" },
+          "sourceVersion": { "$ref": "#/$defs/__schema1" },
+          "sourceLocator": { "$ref": "#/$defs/__schema0" },
+          "relationType": {
+            "type": "string",
+            "enum": [
+              "six-harmony",
+              "six-clash",
+              "three-harmony",
+              "half-harmony",
+              "directional-harmony",
+              "punishment",
+              "harm",
+              "break",
+              "generate",
+              "control"
+            ]
+          },
+          "branchIds": {
+            "readOnly": true,
+            "minItems": 2,
+            "maxItems": 3,
+            "type": "array",
+            "items": { "$ref": "#/$defs/__schema0" }
+          },
+          "directional": { "type": "boolean" },
+          "resultElementId": { "anyOf": [{ "$ref": "#/$defs/__schema0" }, { "type": "null" }] },
+          "priority": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "enabled": { "type": "boolean" },
+          "interpretationMode": { "type": "string", "enum": ["active", "fact-only", "disabled"] }
+        },
+        "required": [
+          "ruleId",
+          "rulesetId",
+          "rulesetVersion",
+          "contentVersion",
+          "sourceId",
+          "sourceVersion",
+          "sourceLocator",
+          "relationType",
+          "branchIds",
+          "directional",
+          "resultElementId",
+          "priority",
+          "enabled",
+          "interpretationMode"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "usefulGodRules": {
+      "readOnly": true,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ruleId": { "$ref": "#/$defs/__schema0" },
+          "rulesetId": { "$ref": "#/$defs/__schema0" },
+          "rulesetVersion": { "$ref": "#/$defs/__schema1" },
+          "contentVersion": { "$ref": "#/$defs/__schema1" },
+          "sourceId": { "$ref": "#/$defs/__schema0" },
+          "sourceVersion": { "$ref": "#/$defs/__schema1" },
+          "sourceLocator": { "$ref": "#/$defs/__schema0" },
+          "match": {
+            "type": "object",
+            "properties": {
+              "questionCategories": {
+                "readOnly": true,
+                "type": "array",
+                "items": { "$ref": "#/$defs/__schema0" }
+              },
+              "questionSubcategories": {
+                "readOnly": true,
+                "type": "array",
+                "items": { "$ref": "#/$defs/__schema0" }
+              },
+              "selfOrProxy": {
+                "readOnly": true,
+                "type": "array",
+                "items": { "type": "string", "enum": ["self", "proxy"] }
+              },
+              "subjectRoles": {
+                "readOnly": true,
+                "type": "array",
+                "items": { "$ref": "#/$defs/__schema0" }
+              },
+              "targetRoles": {
+                "readOnly": true,
+                "type": "array",
+                "items": { "$ref": "#/$defs/__schema0" }
+              },
+              "targetRelationships": {
+                "readOnly": true,
+                "type": "array",
+                "items": { "$ref": "#/$defs/__schema0" }
+              },
+              "desiredOutcomes": {
+                "readOnly": true,
+                "type": "array",
+                "items": { "$ref": "#/$defs/__schema0" }
+              },
+              "requiredContextTags": {
+                "readOnly": true,
+                "type": "array",
+                "items": { "$ref": "#/$defs/__schema0" }
+              },
+              "traditionalGenderRule": {
+                "type": "string",
+                "enum": ["required", "forbidden", "irrelevant"]
+              }
+            },
+            "required": [
+              "questionCategories",
+              "questionSubcategories",
+              "selfOrProxy",
+              "subjectRoles",
+              "targetRoles",
+              "targetRelationships",
+              "desiredOutcomes",
+              "requiredContextTags",
+              "traditionalGenderRule"
+            ],
+            "additionalProperties": false
+          },
+          "relative": { "$ref": "#/$defs/__schema3" },
+          "candidateRole": { "type": "string", "enum": ["primary", "secondary", "contextual"] },
+          "priority": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "evidenceTemplate": { "$ref": "#/$defs/__schema0" }
+        },
+        "required": [
+          "ruleId",
+          "rulesetId",
+          "rulesetVersion",
+          "contentVersion",
+          "sourceId",
+          "sourceVersion",
+          "sourceLocator",
+          "match",
+          "relative",
+          "candidateRole",
+          "priority",
+          "evidenceTemplate"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "supportingRoleRules": {
+      "readOnly": true,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ruleId": { "$ref": "#/$defs/__schema0" },
+          "rulesetId": { "$ref": "#/$defs/__schema0" },
+          "rulesetVersion": { "$ref": "#/$defs/__schema1" },
+          "contentVersion": { "$ref": "#/$defs/__schema1" },
+          "sourceId": { "$ref": "#/$defs/__schema0" },
+          "sourceVersion": { "$ref": "#/$defs/__schema1" },
+          "sourceLocator": { "$ref": "#/$defs/__schema0" },
+          "usefulGodRelative": { "$ref": "#/$defs/__schema3" },
+          "supportingRelative": { "$ref": "#/$defs/__schema3" },
+          "avoidingRelative": { "$ref": "#/$defs/__schema3" },
+          "enemyRelative": { "$ref": "#/$defs/__schema3" }
+        },
+        "required": [
+          "ruleId",
+          "rulesetId",
+          "rulesetVersion",
+          "contentVersion",
+          "sourceId",
+          "sourceVersion",
+          "sourceLocator",
+          "usefulGodRelative",
+          "supportingRelative",
+          "avoidingRelative",
+          "enemyRelative"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "hiddenSpiritRules": {
+      "readOnly": true,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ruleId": { "$ref": "#/$defs/__schema0" },
+          "rulesetId": { "$ref": "#/$defs/__schema0" },
+          "rulesetVersion": { "$ref": "#/$defs/__schema1" },
+          "contentVersion": { "$ref": "#/$defs/__schema1" },
+          "sourceId": { "$ref": "#/$defs/__schema0" },
+          "sourceVersion": { "$ref": "#/$defs/__schema1" },
+          "sourceLocator": { "$ref": "#/$defs/__schema0" },
+          "hexagramId": { "$ref": "#/$defs/__schema0" },
+          "linePosition": { "$ref": "#/$defs/__schema2" },
+          "hiddenRelative": { "$ref": "#/$defs/__schema3" },
+          "hiddenStemId": { "$ref": "#/$defs/__schema0" },
+          "hiddenBranchId": { "$ref": "#/$defs/__schema0" },
+          "flyingLinePosition": { "$ref": "#/$defs/__schema2" }
+        },
+        "required": [
+          "ruleId",
+          "rulesetId",
+          "rulesetVersion",
+          "contentVersion",
+          "sourceId",
+          "sourceVersion",
+          "sourceLocator",
+          "hexagramId",
+          "linePosition",
+          "hiddenRelative",
+          "hiddenStemId",
+          "hiddenBranchId",
+          "flyingLinePosition"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "metadata",
+    "palaceRules",
+    "najiaRules",
+    "earthlyBranches",
+    "sixRelativeRules",
+    "sixSpirits",
+    "sixSpiritStartRules",
+    "voidRules",
+    "branchRelationRules",
+    "usefulGodRules",
+    "supportingRoleRules",
+    "hiddenSpiritRules"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "__schema0": { "type": "string", "minLength": 1 },
+    "__schema1": { "type": "string", "minLength": 1 },
+    "__schema2": { "type": "integer", "minimum": 1, "maximum": 6 },
+    "__schema3": {
+      "type": "string",
+      "enum": ["parent", "sibling", "offspring", "wealth", "official"]
+    }
+  },
+  "$id": "https://liuyao.app/schemas/professional-ruleset.schema.json",
+  "$comment": "Generated from scripts/content-data-schema.ts. Cross-record and release-gate rules are enforced by validateContentDataset."
+}

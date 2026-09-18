@@ -1,0 +1,103 @@
+{
+  "recordType": "professional-gold-cases-candidate",
+  "status": "candidate_for_human_review",
+  "generatedFromSha256": "8F5118AB2DE1ED04D2CFF14977CC2C10BF22E90E7390ECB1DCD73FCFB429DFEB",
+  "cases": [
+    {
+      "caseId": "CASE-CAL-001",
+      "status": "candidate_for_human_review",
+      "reviewerSignoffsRequired": 2,
+      "reviewerSignoffsPresent": 0
+    },
+    {
+      "caseId": "CASE-CAL-002",
+      "status": "candidate_for_human_review",
+      "reviewerSignoffsRequired": 2,
+      "reviewerSignoffsPresent": 0
+    },
+    {
+      "caseId": "CASE-CAL-003",
+      "status": "candidate_for_human_review",
+      "reviewerSignoffsRequired": 2,
+      "reviewerSignoffsPresent": 0
+    },
+    {
+      "caseId": "CASE-CAL-004",
+      "status": "candidate_for_human_review",
+      "reviewerSignoffsRequired": 2,
+      "reviewerSignoffsPresent": 0
+    },
+    {
+      "caseId": "CASE-CAL-005",
+      "status": "candidate_for_human_review",
+      "reviewerSignoffsRequired": 2,
+      "reviewerSignoffsPresent": 0
+    },
+    {
+      "caseId": "CASE-CAL-006",
+      "status": "candidate_for_human_review",
+      "reviewerSignoffsRequired": 2,
+      "reviewerSignoffsPresent": 0
+    },
+    {
+      "caseId": "CASE-DST-001",
+      "status": "candidate_for_human_review",
+      "reviewerSignoffsRequired": 2,
+      "reviewerSignoffsPresent": 0
+    },
+    {
+      "caseId": "CASE-DST-002",
+      "status": "candidate_for_human_review",
+      "reviewerSignoffsRequired": 2,
+      "reviewerSignoffsPresent": 0
+    },
+    {
+      "caseId": "CASE-DST-003",
+      "status": "candidate_for_human_review",
+      "reviewerSignoffsRequired": 2,
+      "reviewerSignoffsPresent": 0
+    },
+    {
+      "caseId": "CASE-PAN-001",
+      "status": "candidate_for_human_review",
+      "reviewerSignoffsRequired": 2,
+      "reviewerSignoffsPresent": 0
+    },
+    {
+      "caseId": "CASE-PAN-002",
+      "status": "candidate_for_human_review",
+      "reviewerSignoffsRequired": 2,
+      "reviewerSignoffsPresent": 0
+    },
+    {
+      "caseId": "CASE-PAN-003",
+      "status": "candidate_for_human_review",
+      "reviewerSignoffsRequired": 2,
+      "reviewerSignoffsPresent": 0
+    },
+    {
+      "caseId": "CASE-PAN-004",
+      "status": "candidate_for_human_review",
+      "reviewerSignoffsRequired": 2,
+      "reviewerSignoffsPresent": 0
+    },
+    {
+      "caseId": "CASE-PAN-005",
+      "status": "candidate_for_human_review",
+      "reviewerSignoffsRequired": 2,
+      "reviewerSignoffsPresent": 0
+    },
+    {
+      "caseId": "CASE-RULE-001",
+      "status": "candidate_for_human_review",
+      "reviewerSignoffsRequired": 2,
+      "reviewerSignoffsPresent": 0
+    },
+    {
+      "caseId": "CASE-RULE-002",
+      "status": "candidate_for_human_review",
+      "reviewerSignoffsRequired": 2,
+      "reviewerSignoffsPresent": 0
+    }
+  ]
+}

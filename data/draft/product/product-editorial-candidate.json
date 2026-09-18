@@ -1,0 +1,185 @@
+{
+  "schemaVersion": "product-editorial-candidate-v1",
+  "source": {
+    "sourceId": "module-four-acceptance-pack",
+    "sourceVersion": "2026-07-25-candidate-v1",
+    "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+    "revision": null,
+    "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+    "verificationStatus": "editorial_original"
+  },
+  "categories": [
+    {
+      "id": "general-decision",
+      "name": "綜合決策",
+      "primaryCandidate": "世爻",
+      "secondaryCandidates": ["應爻", "用神候選"],
+      "clarificationHint": "先明確選項、時限與可控因素"
+    },
+    {
+      "id": "career",
+      "name": "事業發展",
+      "primaryCandidate": "官鬼",
+      "secondaryCandidates": ["世爻", "父母"],
+      "clarificationHint": "職位、責任、組織關係與發展路徑"
+    },
+    {
+      "id": "job-search",
+      "name": "求職錄用",
+      "primaryCandidate": "官鬼",
+      "secondaryCandidates": ["父母", "世爻", "應爻"],
+      "clarificationHint": "職位為主，通知、合同為父母，招聘方看應爻"
+    },
+    {
+      "id": "promotion",
+      "name": "升職任命",
+      "primaryCandidate": "官鬼",
+      "secondaryCandidates": ["父母", "世爻"],
+      "clarificationHint": "職位、批文與本人承擔能力"
+    },
+    {
+      "id": "study",
+      "name": "學業學習",
+      "primaryCandidate": "父母",
+      "secondaryCandidates": ["世爻", "子孫"],
+      "clarificationHint": "課程、知識、材料與學習狀態"
+    },
+    {
+      "id": "exam",
+      "name": "考試證書",
+      "primaryCandidate": "父母",
+      "secondaryCandidates": ["官鬼", "世爻"],
+      "clarificationHint": "試卷證書、名次職稱和本人"
+    },
+    {
+      "id": "wealth",
+      "name": "收入財運",
+      "primaryCandidate": "妻財",
+      "secondaryCandidates": ["世爻", "兄弟"],
+      "clarificationHint": "收入資源、成本競爭與可得性"
+    },
+    {
+      "id": "investment",
+      "name": "投資交易",
+      "primaryCandidate": "妻財",
+      "secondaryCandidates": ["兄弟", "父母", "應爻"],
+      "clarificationHint": "標的、成本、合同、對手方；必須顯示投資免責"
+    },
+    {
+      "id": "business",
+      "name": "買賣合作",
+      "primaryCandidate": "妻財",
+      "secondaryCandidates": ["應爻", "父母", "兄弟"],
+      "clarificationHint": "貨款、合作方、合同與競爭"
+    },
+    {
+      "id": "love",
+      "name": "感情關係",
+      "primaryCandidate": "依上下文配置",
+      "secondaryCandidates": ["世爻", "應爻"],
+      "clarificationHint": "禁止僅按性別硬編碼妻財/官鬼"
+    },
+    {
+      "id": "marriage",
+      "name": "婚姻承諾",
+      "primaryCandidate": "依規則集與關係角色",
+      "secondaryCandidates": ["世爻", "應爻", "父母"],
+      "clarificationHint": "關係主體、承諾與制度性安排"
+    },
+    {
+      "id": "family",
+      "name": "家庭親屬",
+      "primaryCandidate": "按親屬關係",
+      "secondaryCandidates": ["世爻", "應爻"],
+      "clarificationHint": "父母、兄弟、子孫等依實際關係"
+    },
+    {
+      "id": "health",
+      "name": "健康狀態",
+      "primaryCandidate": "世爻/相關親屬爻",
+      "secondaryCandidates": ["官鬼", "子孫"],
+      "clarificationHint": "只作文化反思，不得診斷或延誤就醫"
+    },
+    {
+      "id": "travel",
+      "name": "出行遷移",
+      "primaryCandidate": "世爻",
+      "secondaryCandidates": ["應爻", "父母"],
+      "clarificationHint": "目的地、交通工具、文件與安全條件"
+    },
+    {
+      "id": "lost-item",
+      "name": "失物尋找",
+      "primaryCandidate": "按物品類型/妻財",
+      "secondaryCandidates": ["世爻", "應爻"],
+      "clarificationHint": "需記錄物品類型、最後位置和時間"
+    },
+    {
+      "id": "legal",
+      "name": "訴訟糾紛",
+      "primaryCandidate": "官鬼",
+      "secondaryCandidates": ["父母", "世應"],
+      "clarificationHint": "法律文書、責任、雙方；必須顯示法律免責"
+    },
+    {
+      "id": "property",
+      "name": "房屋車輛",
+      "primaryCandidate": "父母",
+      "secondaryCandidates": ["妻財", "世應"],
+      "clarificationHint": "房產車輛、價格、合同與交易對方"
+    },
+    {
+      "id": "creation",
+      "name": "作品技術產出",
+      "primaryCandidate": "子孫",
+      "secondaryCandidates": ["父母", "世爻"],
+      "clarificationHint": "作品、產品、技術輸出與發佈條件"
+    }
+  ],
+  "templates": [
+    {
+      "id": "template-general-brief",
+      "text": "{{hexagramName}}显示当前主题偏向“{{theme}}”。综合已确认的{{evidenceCount}}项依据，主象为{{primarySymbol}}，趋势为{{trend}}。当前最值得重视的是{{topFactor}}。建议：{{topAction}}。",
+      "variables": [
+        "hexagramName",
+        "theme",
+        "evidenceCount",
+        "primarySymbol",
+        "trend",
+        "topFactor",
+        "topAction"
+      ]
+    },
+    {
+      "id": "template-general-detailed",
+      "text": "当前状态：{{stateSummary}}。规则集 {{rulesetVersion}}，内容版本 {{contentVersion}}。",
+      "variables": ["stateSummary", "rulesetVersion", "contentVersion"]
+    }
+  ],
+  "disclaimers": [
+    {
+      "id": "disclaimer-general",
+      "text": "本应用以《周易》与传统六爻文化为内容基础，用于文化学习、娱乐和个人反思。起卦与解释不属于科学预测，不保证准确，也不应作为现实决策的唯一依据。请结合事实、证据、专业意见和自身责任作出决定。"
+    },
+    {
+      "id": "disclaimer-medical",
+      "text": "本应用不提供医学诊断、治疗方案、用药建议或急救服务。出现严重疼痛、呼吸困难、意识异常、自伤风险或其他紧急情况时，请立即联系当地急救机构或合格医疗人员。"
+    },
+    {
+      "id": "disclaimer-legal",
+      "text": "本应用不提供法律意见，不建立律师与客户关系。法律结果取决于司法管辖区、事实、证据、时限和适用法律。请咨询所在地具备执业资格的法律专业人士。"
+    },
+    {
+      "id": "disclaimer-financial",
+      "text": "本应用不提供投资、证券、税务、保险或信贷建议。任何资产都可能亏损，历史表现不代表未来结果。请评估自身承受能力并咨询合格专业人士。"
+    },
+    {
+      "id": "disclaimer-relationship",
+      "text": "本应用不能读取或证明他人的真实想法、感情、忠诚或行为。涉及关系的问题，应以尊重、明确沟通、同意和现实证据为准。"
+    },
+    {
+      "id": "disclaimer-ai",
+      "text": "AI 仅负责把已经确定的结构化规则结果改写为较易理解的文字。AI 不参与起卦，不得修改本卦、变卦、动爻、日月、世应、用神或命中规则。AI 输出异常时，应用将回退到本地模板。"
+    }
+  ]
+}

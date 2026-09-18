@@ -1,0 +1,26 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["node"],
+    "paths": {
+      "@/*": ["../../src/*"],
+      "@/assets/*": ["./assets/*"],
+      "@/domain/*": ["../../src/domain/*"],
+      "@/interpretation/*": ["../../src/domain/interpretation/*"],
+      "@/professional/*": ["../../src/domain/professional/*"]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts",
+    "../../src/**/*.ts",
+    "../../packages/**/*.ts"
+  ]
+}

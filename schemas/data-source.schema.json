@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "sourceId": { "$ref": "#/$defs/__schema0" },
+    "sourceVersion": { "$ref": "#/$defs/__schema1" },
+    "title": { "$ref": "#/$defs/__schema2" },
+    "authorOrEditor": { "$ref": "#/$defs/__schema3" },
+    "dynastyOrYear": { "$ref": "#/$defs/__schema4" },
+    "edition": { "$ref": "#/$defs/__schema5" },
+    "publisherOrPlatform": { "$ref": "#/$defs/__schema6" },
+    "locator": { "$ref": "#/$defs/__schema7" },
+    "sourceType": { "$ref": "#/$defs/__schema8" },
+    "url": { "$ref": "#/$defs/__schema9" },
+    "licenseStatus": { "$ref": "#/$defs/__schema10" },
+    "publicDomainStatus": { "$ref": "#/$defs/__schema11" },
+    "transcriptionStatus": { "$ref": "#/$defs/__schema12" },
+    "proofreadingStatus": { "$ref": "#/$defs/__schema13" },
+    "accessedAt": { "$ref": "#/$defs/__schema14" },
+    "reliabilityGrade": { "$ref": "#/$defs/__schema16" },
+    "status": { "$ref": "#/$defs/__schema17" },
+    "verifiedBy": { "$ref": "#/$defs/__schema18" },
+    "verifiedAt": { "$ref": "#/$defs/__schema19" },
+    "notes": { "$ref": "#/$defs/__schema20" }
+  },
+  "required": [
+    "sourceId",
+    "sourceVersion",
+    "title",
+    "authorOrEditor",
+    "dynastyOrYear",
+    "edition",
+    "publisherOrPlatform",
+    "locator",
+    "sourceType",
+    "url",
+    "licenseStatus",
+    "publicDomainStatus",
+    "transcriptionStatus",
+    "proofreadingStatus",
+    "accessedAt",
+    "reliabilityGrade",
+    "status",
+    "verifiedBy",
+    "verifiedAt",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "__schema0": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "__schema1": { "type": "string", "minLength": 1 },
+    "__schema2": { "type": "string", "minLength": 1 },
+    "__schema3": { "anyOf": [{ "type": "string", "minLength": 1 }, { "type": "null" }] },
+    "__schema4": { "anyOf": [{ "type": "string", "minLength": 1 }, { "type": "null" }] },
+    "__schema5": { "anyOf": [{ "type": "string", "minLength": 1 }, { "type": "null" }] },
+    "__schema6": { "anyOf": [{ "type": "string", "minLength": 1 }, { "type": "null" }] },
+    "__schema7": { "anyOf": [{ "type": "string", "minLength": 1 }, { "type": "null" }] },
+    "__schema8": {
+      "type": "string",
+      "enum": [
+        "primary-text",
+        "classical-text",
+        "ancient-commentary",
+        "modern-study",
+        "web-transcription",
+        "authorized-dataset",
+        "internal-derivation",
+        "product-original",
+        "pending"
+      ]
+    },
+    "__schema9": { "anyOf": [{ "type": "string", "format": "uri" }, { "type": "null" }] },
+    "__schema10": {
+      "type": "string",
+      "enum": ["cleared", "public-domain", "restricted", "pending"]
+    },
+    "__schema11": {
+      "type": "string",
+      "enum": ["confirmed", "not-public-domain", "unclear", "not-applicable"]
+    },
+    "__schema12": {
+      "type": "string",
+      "enum": ["not-applicable", "raw", "normalized", "proofread"]
+    },
+    "__schema13": {
+      "type": "string",
+      "enum": ["not-applicable", "pending", "single-reviewed", "double-reviewed"]
+    },
+    "__schema14": { "anyOf": [{ "$ref": "#/$defs/__schema15" }, { "type": "null" }] },
+    "__schema15": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+    },
+    "__schema16": { "type": "string", "enum": ["A", "B", "C", "P"] },
+    "__schema17": { "type": "string", "enum": ["draft", "verified"] },
+    "__schema18": { "anyOf": [{ "type": "string", "minLength": 1 }, { "type": "null" }] },
+    "__schema19": { "anyOf": [{ "$ref": "#/$defs/__schema15" }, { "type": "null" }] },
+    "__schema20": { "type": "string" }
+  },
+  "$id": "https://liuyao.app/schemas/data-source.schema.json",
+  "$comment": "Generated from scripts/content-data-schema.ts. Cross-record and release-gate rules are enforced by validateContentDataset."
+}

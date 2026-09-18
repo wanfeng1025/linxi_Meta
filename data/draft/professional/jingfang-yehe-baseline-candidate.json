@@ -1,0 +1,1511 @@
+{
+  "schemaVersion": "professional-candidate-v1",
+  "source": {
+    "sourceId": "module-four-acceptance-pack",
+    "sourceVersion": "2026-07-25-candidate-v1",
+    "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+    "revision": null,
+    "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+    "verificationStatus": "production_candidate"
+  },
+  "ruleset": {
+    "id": "jingfang-yehe-baseline",
+    "version": "1.0.0-candidate.1"
+  },
+  "trigrams": [
+    {
+      "id": "trigram-qian",
+      "fields": {
+        "palaceElement": "金",
+        "houtianDirection": "西北",
+        "familyRole": "父",
+        "naturalImage": "天",
+        "bodyPart": "首",
+        "animal": "馬",
+        "virtue": "健",
+        "extendedImages": ["天", "圜", "君", "父", "玉", "金", "寒", "冰", "大赤", "木果"],
+        "sourceLocator": "《易传·说卦》第七至第十一章及验收包第九节；待双人复核。"
+      }
+    },
+    {
+      "id": "trigram-kun",
+      "fields": {
+        "palaceElement": "土",
+        "houtianDirection": "西南",
+        "familyRole": "母",
+        "naturalImage": "地",
+        "bodyPart": "腹",
+        "animal": "牛",
+        "virtue": "順",
+        "extendedImages": ["地", "母", "布", "釜", "吝嗇", "均", "文", "眾", "輿"],
+        "sourceLocator": "《易传·说卦》第七至第十一章及验收包第九节；待双人复核。"
+      }
+    },
+    {
+      "id": "trigram-zhen",
+      "fields": {
+        "palaceElement": "木",
+        "houtianDirection": "東",
+        "familyRole": "長男",
+        "naturalImage": "雷",
+        "bodyPart": "足",
+        "animal": "龍",
+        "virtue": "動",
+        "extendedImages": ["雷", "龍", "玄黃", "旉", "大塗", "長子", "決躁", "蒼筤竹"],
+        "sourceLocator": "《易传·说卦》第七至第十一章及验收包第九节；待双人复核。"
+      }
+    },
+    {
+      "id": "trigram-xun",
+      "fields": {
+        "palaceElement": "木",
+        "houtianDirection": "東南",
+        "familyRole": "長女",
+        "naturalImage": "風/木",
+        "bodyPart": "股",
+        "animal": "雞",
+        "virtue": "入",
+        "extendedImages": [
+          "木",
+          "風",
+          "長女",
+          "繩直",
+          "工",
+          "白",
+          "長",
+          "高",
+          "進退",
+          "不果",
+          "臭"
+        ],
+        "sourceLocator": "《易传·说卦》第七至第十一章及验收包第九节；待双人复核。"
+      }
+    },
+    {
+      "id": "trigram-kan",
+      "fields": {
+        "palaceElement": "水",
+        "houtianDirection": "北",
+        "familyRole": "中男",
+        "naturalImage": "水",
+        "bodyPart": "耳",
+        "animal": "豕",
+        "virtue": "陷/險",
+        "extendedImages": [
+          "水",
+          "溝瀆",
+          "隱伏",
+          "矯輮",
+          "弓輪",
+          "加憂",
+          "心病",
+          "耳痛",
+          "血卦",
+          "赤"
+        ],
+        "sourceLocator": "《易传·说卦》第七至第十一章及验收包第九节；待双人复核。"
+      }
+    },
+    {
+      "id": "trigram-li",
+      "fields": {
+        "palaceElement": "火",
+        "houtianDirection": "南",
+        "familyRole": "中女",
+        "naturalImage": "火/日",
+        "bodyPart": "目",
+        "animal": "雉",
+        "virtue": "麗/明",
+        "extendedImages": ["火", "日", "電", "中女", "甲胄", "戈兵", "大腹", "乾卦", "鱉蟹螺蚌龜"],
+        "sourceLocator": "《易传·说卦》第七至第十一章及验收包第九节；待双人复核。"
+      }
+    },
+    {
+      "id": "trigram-gen",
+      "fields": {
+        "palaceElement": "土",
+        "houtianDirection": "東北",
+        "familyRole": "少男",
+        "naturalImage": "山",
+        "bodyPart": "手",
+        "animal": "狗",
+        "virtue": "止",
+        "extendedImages": ["山", "徑路", "小石", "門闕", "果蓏", "閽寺", "狗鼠", "黔喙之屬"],
+        "sourceLocator": "《易传·说卦》第七至第十一章及验收包第九节；待双人复核。"
+      }
+    },
+    {
+      "id": "trigram-dui",
+      "fields": {
+        "palaceElement": "金",
+        "houtianDirection": "西",
+        "familyRole": "少女",
+        "naturalImage": "澤",
+        "bodyPart": "口",
+        "animal": "羊",
+        "virtue": "說/悅",
+        "extendedImages": ["澤", "少女", "巫", "口舌", "毀折", "附決", "剛鹵", "妾", "羊"],
+        "sourceLocator": "《易传·说卦》第七至第十一章及验收包第九节；待双人复核。"
+      }
+    }
+  ],
+  "palaceMemberships": [
+    {
+      "hexagramId": "hexagram-kw-01",
+      "palaceTrigramId": "trigram-qian",
+      "stage": "base",
+      "shiPosition": 6,
+      "yingPosition": 3
+    },
+    {
+      "hexagramId": "hexagram-kw-44",
+      "palaceTrigramId": "trigram-qian",
+      "stage": "first-change",
+      "shiPosition": 1,
+      "yingPosition": 4
+    },
+    {
+      "hexagramId": "hexagram-kw-33",
+      "palaceTrigramId": "trigram-qian",
+      "stage": "second-change",
+      "shiPosition": 2,
+      "yingPosition": 5
+    },
+    {
+      "hexagramId": "hexagram-kw-12",
+      "palaceTrigramId": "trigram-qian",
+      "stage": "third-change",
+      "shiPosition": 3,
+      "yingPosition": 6
+    },
+    {
+      "hexagramId": "hexagram-kw-20",
+      "palaceTrigramId": "trigram-qian",
+      "stage": "fourth-change",
+      "shiPosition": 4,
+      "yingPosition": 1
+    },
+    {
+      "hexagramId": "hexagram-kw-23",
+      "palaceTrigramId": "trigram-qian",
+      "stage": "fifth-change",
+      "shiPosition": 5,
+      "yingPosition": 2
+    },
+    {
+      "hexagramId": "hexagram-kw-35",
+      "palaceTrigramId": "trigram-qian",
+      "stage": "wandering-soul",
+      "shiPosition": 4,
+      "yingPosition": 1
+    },
+    {
+      "hexagramId": "hexagram-kw-14",
+      "palaceTrigramId": "trigram-qian",
+      "stage": "returning-soul",
+      "shiPosition": 3,
+      "yingPosition": 6
+    },
+    {
+      "hexagramId": "hexagram-kw-51",
+      "palaceTrigramId": "trigram-zhen",
+      "stage": "base",
+      "shiPosition": 6,
+      "yingPosition": 3
+    },
+    {
+      "hexagramId": "hexagram-kw-16",
+      "palaceTrigramId": "trigram-zhen",
+      "stage": "first-change",
+      "shiPosition": 1,
+      "yingPosition": 4
+    },
+    {
+      "hexagramId": "hexagram-kw-40",
+      "palaceTrigramId": "trigram-zhen",
+      "stage": "second-change",
+      "shiPosition": 2,
+      "yingPosition": 5
+    },
+    {
+      "hexagramId": "hexagram-kw-32",
+      "palaceTrigramId": "trigram-zhen",
+      "stage": "third-change",
+      "shiPosition": 3,
+      "yingPosition": 6
+    },
+    {
+      "hexagramId": "hexagram-kw-46",
+      "palaceTrigramId": "trigram-zhen",
+      "stage": "fourth-change",
+      "shiPosition": 4,
+      "yingPosition": 1
+    },
+    {
+      "hexagramId": "hexagram-kw-48",
+      "palaceTrigramId": "trigram-zhen",
+      "stage": "fifth-change",
+      "shiPosition": 5,
+      "yingPosition": 2
+    },
+    {
+      "hexagramId": "hexagram-kw-28",
+      "palaceTrigramId": "trigram-zhen",
+      "stage": "wandering-soul",
+      "shiPosition": 4,
+      "yingPosition": 1
+    },
+    {
+      "hexagramId": "hexagram-kw-17",
+      "palaceTrigramId": "trigram-zhen",
+      "stage": "returning-soul",
+      "shiPosition": 3,
+      "yingPosition": 6
+    },
+    {
+      "hexagramId": "hexagram-kw-29",
+      "palaceTrigramId": "trigram-kan",
+      "stage": "base",
+      "shiPosition": 6,
+      "yingPosition": 3
+    },
+    {
+      "hexagramId": "hexagram-kw-60",
+      "palaceTrigramId": "trigram-kan",
+      "stage": "first-change",
+      "shiPosition": 1,
+      "yingPosition": 4
+    },
+    {
+      "hexagramId": "hexagram-kw-03",
+      "palaceTrigramId": "trigram-kan",
+      "stage": "second-change",
+      "shiPosition": 2,
+      "yingPosition": 5
+    },
+    {
+      "hexagramId": "hexagram-kw-63",
+      "palaceTrigramId": "trigram-kan",
+      "stage": "third-change",
+      "shiPosition": 3,
+      "yingPosition": 6
+    },
+    {
+      "hexagramId": "hexagram-kw-49",
+      "palaceTrigramId": "trigram-kan",
+      "stage": "fourth-change",
+      "shiPosition": 4,
+      "yingPosition": 1
+    },
+    {
+      "hexagramId": "hexagram-kw-55",
+      "palaceTrigramId": "trigram-kan",
+      "stage": "fifth-change",
+      "shiPosition": 5,
+      "yingPosition": 2
+    },
+    {
+      "hexagramId": "hexagram-kw-36",
+      "palaceTrigramId": "trigram-kan",
+      "stage": "wandering-soul",
+      "shiPosition": 4,
+      "yingPosition": 1
+    },
+    {
+      "hexagramId": "hexagram-kw-07",
+      "palaceTrigramId": "trigram-kan",
+      "stage": "returning-soul",
+      "shiPosition": 3,
+      "yingPosition": 6
+    },
+    {
+      "hexagramId": "hexagram-kw-52",
+      "palaceTrigramId": "trigram-gen",
+      "stage": "base",
+      "shiPosition": 6,
+      "yingPosition": 3
+    },
+    {
+      "hexagramId": "hexagram-kw-22",
+      "palaceTrigramId": "trigram-gen",
+      "stage": "first-change",
+      "shiPosition": 1,
+      "yingPosition": 4
+    },
+    {
+      "hexagramId": "hexagram-kw-26",
+      "palaceTrigramId": "trigram-gen",
+      "stage": "second-change",
+      "shiPosition": 2,
+      "yingPosition": 5
+    },
+    {
+      "hexagramId": "hexagram-kw-41",
+      "palaceTrigramId": "trigram-gen",
+      "stage": "third-change",
+      "shiPosition": 3,
+      "yingPosition": 6
+    },
+    {
+      "hexagramId": "hexagram-kw-38",
+      "palaceTrigramId": "trigram-gen",
+      "stage": "fourth-change",
+      "shiPosition": 4,
+      "yingPosition": 1
+    },
+    {
+      "hexagramId": "hexagram-kw-10",
+      "palaceTrigramId": "trigram-gen",
+      "stage": "fifth-change",
+      "shiPosition": 5,
+      "yingPosition": 2
+    },
+    {
+      "hexagramId": "hexagram-kw-61",
+      "palaceTrigramId": "trigram-gen",
+      "stage": "wandering-soul",
+      "shiPosition": 4,
+      "yingPosition": 1
+    },
+    {
+      "hexagramId": "hexagram-kw-53",
+      "palaceTrigramId": "trigram-gen",
+      "stage": "returning-soul",
+      "shiPosition": 3,
+      "yingPosition": 6
+    },
+    {
+      "hexagramId": "hexagram-kw-02",
+      "palaceTrigramId": "trigram-kun",
+      "stage": "base",
+      "shiPosition": 6,
+      "yingPosition": 3
+    },
+    {
+      "hexagramId": "hexagram-kw-24",
+      "palaceTrigramId": "trigram-kun",
+      "stage": "first-change",
+      "shiPosition": 1,
+      "yingPosition": 4
+    },
+    {
+      "hexagramId": "hexagram-kw-19",
+      "palaceTrigramId": "trigram-kun",
+      "stage": "second-change",
+      "shiPosition": 2,
+      "yingPosition": 5
+    },
+    {
+      "hexagramId": "hexagram-kw-11",
+      "palaceTrigramId": "trigram-kun",
+      "stage": "third-change",
+      "shiPosition": 3,
+      "yingPosition": 6
+    },
+    {
+      "hexagramId": "hexagram-kw-34",
+      "palaceTrigramId": "trigram-kun",
+      "stage": "fourth-change",
+      "shiPosition": 4,
+      "yingPosition": 1
+    },
+    {
+      "hexagramId": "hexagram-kw-43",
+      "palaceTrigramId": "trigram-kun",
+      "stage": "fifth-change",
+      "shiPosition": 5,
+      "yingPosition": 2
+    },
+    {
+      "hexagramId": "hexagram-kw-05",
+      "palaceTrigramId": "trigram-kun",
+      "stage": "wandering-soul",
+      "shiPosition": 4,
+      "yingPosition": 1
+    },
+    {
+      "hexagramId": "hexagram-kw-08",
+      "palaceTrigramId": "trigram-kun",
+      "stage": "returning-soul",
+      "shiPosition": 3,
+      "yingPosition": 6
+    },
+    {
+      "hexagramId": "hexagram-kw-57",
+      "palaceTrigramId": "trigram-xun",
+      "stage": "base",
+      "shiPosition": 6,
+      "yingPosition": 3
+    },
+    {
+      "hexagramId": "hexagram-kw-09",
+      "palaceTrigramId": "trigram-xun",
+      "stage": "first-change",
+      "shiPosition": 1,
+      "yingPosition": 4
+    },
+    {
+      "hexagramId": "hexagram-kw-37",
+      "palaceTrigramId": "trigram-xun",
+      "stage": "second-change",
+      "shiPosition": 2,
+      "yingPosition": 5
+    },
+    {
+      "hexagramId": "hexagram-kw-42",
+      "palaceTrigramId": "trigram-xun",
+      "stage": "third-change",
+      "shiPosition": 3,
+      "yingPosition": 6
+    },
+    {
+      "hexagramId": "hexagram-kw-25",
+      "palaceTrigramId": "trigram-xun",
+      "stage": "fourth-change",
+      "shiPosition": 4,
+      "yingPosition": 1
+    },
+    {
+      "hexagramId": "hexagram-kw-21",
+      "palaceTrigramId": "trigram-xun",
+      "stage": "fifth-change",
+      "shiPosition": 5,
+      "yingPosition": 2
+    },
+    {
+      "hexagramId": "hexagram-kw-27",
+      "palaceTrigramId": "trigram-xun",
+      "stage": "wandering-soul",
+      "shiPosition": 4,
+      "yingPosition": 1
+    },
+    {
+      "hexagramId": "hexagram-kw-18",
+      "palaceTrigramId": "trigram-xun",
+      "stage": "returning-soul",
+      "shiPosition": 3,
+      "yingPosition": 6
+    },
+    {
+      "hexagramId": "hexagram-kw-30",
+      "palaceTrigramId": "trigram-li",
+      "stage": "base",
+      "shiPosition": 6,
+      "yingPosition": 3
+    },
+    {
+      "hexagramId": "hexagram-kw-56",
+      "palaceTrigramId": "trigram-li",
+      "stage": "first-change",
+      "shiPosition": 1,
+      "yingPosition": 4
+    },
+    {
+      "hexagramId": "hexagram-kw-50",
+      "palaceTrigramId": "trigram-li",
+      "stage": "second-change",
+      "shiPosition": 2,
+      "yingPosition": 5
+    },
+    {
+      "hexagramId": "hexagram-kw-64",
+      "palaceTrigramId": "trigram-li",
+      "stage": "third-change",
+      "shiPosition": 3,
+      "yingPosition": 6
+    },
+    {
+      "hexagramId": "hexagram-kw-04",
+      "palaceTrigramId": "trigram-li",
+      "stage": "fourth-change",
+      "shiPosition": 4,
+      "yingPosition": 1
+    },
+    {
+      "hexagramId": "hexagram-kw-59",
+      "palaceTrigramId": "trigram-li",
+      "stage": "fifth-change",
+      "shiPosition": 5,
+      "yingPosition": 2
+    },
+    {
+      "hexagramId": "hexagram-kw-06",
+      "palaceTrigramId": "trigram-li",
+      "stage": "wandering-soul",
+      "shiPosition": 4,
+      "yingPosition": 1
+    },
+    {
+      "hexagramId": "hexagram-kw-13",
+      "palaceTrigramId": "trigram-li",
+      "stage": "returning-soul",
+      "shiPosition": 3,
+      "yingPosition": 6
+    },
+    {
+      "hexagramId": "hexagram-kw-58",
+      "palaceTrigramId": "trigram-dui",
+      "stage": "base",
+      "shiPosition": 6,
+      "yingPosition": 3
+    },
+    {
+      "hexagramId": "hexagram-kw-47",
+      "palaceTrigramId": "trigram-dui",
+      "stage": "first-change",
+      "shiPosition": 1,
+      "yingPosition": 4
+    },
+    {
+      "hexagramId": "hexagram-kw-45",
+      "palaceTrigramId": "trigram-dui",
+      "stage": "second-change",
+      "shiPosition": 2,
+      "yingPosition": 5
+    },
+    {
+      "hexagramId": "hexagram-kw-31",
+      "palaceTrigramId": "trigram-dui",
+      "stage": "third-change",
+      "shiPosition": 3,
+      "yingPosition": 6
+    },
+    {
+      "hexagramId": "hexagram-kw-39",
+      "palaceTrigramId": "trigram-dui",
+      "stage": "fourth-change",
+      "shiPosition": 4,
+      "yingPosition": 1
+    },
+    {
+      "hexagramId": "hexagram-kw-15",
+      "palaceTrigramId": "trigram-dui",
+      "stage": "fifth-change",
+      "shiPosition": 5,
+      "yingPosition": 2
+    },
+    {
+      "hexagramId": "hexagram-kw-62",
+      "palaceTrigramId": "trigram-dui",
+      "stage": "wandering-soul",
+      "shiPosition": 4,
+      "yingPosition": 1
+    },
+    {
+      "hexagramId": "hexagram-kw-54",
+      "palaceTrigramId": "trigram-dui",
+      "stage": "returning-soul",
+      "shiPosition": 3,
+      "yingPosition": 6
+    }
+  ],
+  "najiaAssignments": [
+    {
+      "trigramId": "trigram-qian",
+      "scope": "inner",
+      "localLine": 1,
+      "heavenlyStem": "甲",
+      "earthlyBranch": "子"
+    },
+    {
+      "trigramId": "trigram-qian",
+      "scope": "inner",
+      "localLine": 2,
+      "heavenlyStem": "甲",
+      "earthlyBranch": "寅"
+    },
+    {
+      "trigramId": "trigram-qian",
+      "scope": "inner",
+      "localLine": 3,
+      "heavenlyStem": "甲",
+      "earthlyBranch": "辰"
+    },
+    {
+      "trigramId": "trigram-qian",
+      "scope": "outer",
+      "localLine": 1,
+      "heavenlyStem": "壬",
+      "earthlyBranch": "午"
+    },
+    {
+      "trigramId": "trigram-qian",
+      "scope": "outer",
+      "localLine": 2,
+      "heavenlyStem": "壬",
+      "earthlyBranch": "申"
+    },
+    {
+      "trigramId": "trigram-qian",
+      "scope": "outer",
+      "localLine": 3,
+      "heavenlyStem": "壬",
+      "earthlyBranch": "戌"
+    },
+    {
+      "trigramId": "trigram-kun",
+      "scope": "inner",
+      "localLine": 1,
+      "heavenlyStem": "乙",
+      "earthlyBranch": "未"
+    },
+    {
+      "trigramId": "trigram-kun",
+      "scope": "inner",
+      "localLine": 2,
+      "heavenlyStem": "乙",
+      "earthlyBranch": "巳"
+    },
+    {
+      "trigramId": "trigram-kun",
+      "scope": "inner",
+      "localLine": 3,
+      "heavenlyStem": "乙",
+      "earthlyBranch": "卯"
+    },
+    {
+      "trigramId": "trigram-kun",
+      "scope": "outer",
+      "localLine": 1,
+      "heavenlyStem": "癸",
+      "earthlyBranch": "丑"
+    },
+    {
+      "trigramId": "trigram-kun",
+      "scope": "outer",
+      "localLine": 2,
+      "heavenlyStem": "癸",
+      "earthlyBranch": "亥"
+    },
+    {
+      "trigramId": "trigram-kun",
+      "scope": "outer",
+      "localLine": 3,
+      "heavenlyStem": "癸",
+      "earthlyBranch": "酉"
+    },
+    {
+      "trigramId": "trigram-zhen",
+      "scope": "inner",
+      "localLine": 1,
+      "heavenlyStem": "庚",
+      "earthlyBranch": "子"
+    },
+    {
+      "trigramId": "trigram-zhen",
+      "scope": "inner",
+      "localLine": 2,
+      "heavenlyStem": "庚",
+      "earthlyBranch": "寅"
+    },
+    {
+      "trigramId": "trigram-zhen",
+      "scope": "inner",
+      "localLine": 3,
+      "heavenlyStem": "庚",
+      "earthlyBranch": "辰"
+    },
+    {
+      "trigramId": "trigram-zhen",
+      "scope": "outer",
+      "localLine": 1,
+      "heavenlyStem": "庚",
+      "earthlyBranch": "午"
+    },
+    {
+      "trigramId": "trigram-zhen",
+      "scope": "outer",
+      "localLine": 2,
+      "heavenlyStem": "庚",
+      "earthlyBranch": "申"
+    },
+    {
+      "trigramId": "trigram-zhen",
+      "scope": "outer",
+      "localLine": 3,
+      "heavenlyStem": "庚",
+      "earthlyBranch": "戌"
+    },
+    {
+      "trigramId": "trigram-xun",
+      "scope": "inner",
+      "localLine": 1,
+      "heavenlyStem": "辛",
+      "earthlyBranch": "丑"
+    },
+    {
+      "trigramId": "trigram-xun",
+      "scope": "inner",
+      "localLine": 2,
+      "heavenlyStem": "辛",
+      "earthlyBranch": "亥"
+    },
+    {
+      "trigramId": "trigram-xun",
+      "scope": "inner",
+      "localLine": 3,
+      "heavenlyStem": "辛",
+      "earthlyBranch": "酉"
+    },
+    {
+      "trigramId": "trigram-xun",
+      "scope": "outer",
+      "localLine": 1,
+      "heavenlyStem": "辛",
+      "earthlyBranch": "未"
+    },
+    {
+      "trigramId": "trigram-xun",
+      "scope": "outer",
+      "localLine": 2,
+      "heavenlyStem": "辛",
+      "earthlyBranch": "巳"
+    },
+    {
+      "trigramId": "trigram-xun",
+      "scope": "outer",
+      "localLine": 3,
+      "heavenlyStem": "辛",
+      "earthlyBranch": "卯"
+    },
+    {
+      "trigramId": "trigram-kan",
+      "scope": "inner",
+      "localLine": 1,
+      "heavenlyStem": "戊",
+      "earthlyBranch": "寅"
+    },
+    {
+      "trigramId": "trigram-kan",
+      "scope": "inner",
+      "localLine": 2,
+      "heavenlyStem": "戊",
+      "earthlyBranch": "辰"
+    },
+    {
+      "trigramId": "trigram-kan",
+      "scope": "inner",
+      "localLine": 3,
+      "heavenlyStem": "戊",
+      "earthlyBranch": "午"
+    },
+    {
+      "trigramId": "trigram-kan",
+      "scope": "outer",
+      "localLine": 1,
+      "heavenlyStem": "戊",
+      "earthlyBranch": "申"
+    },
+    {
+      "trigramId": "trigram-kan",
+      "scope": "outer",
+      "localLine": 2,
+      "heavenlyStem": "戊",
+      "earthlyBranch": "戌"
+    },
+    {
+      "trigramId": "trigram-kan",
+      "scope": "outer",
+      "localLine": 3,
+      "heavenlyStem": "戊",
+      "earthlyBranch": "子"
+    },
+    {
+      "trigramId": "trigram-li",
+      "scope": "inner",
+      "localLine": 1,
+      "heavenlyStem": "己",
+      "earthlyBranch": "卯"
+    },
+    {
+      "trigramId": "trigram-li",
+      "scope": "inner",
+      "localLine": 2,
+      "heavenlyStem": "己",
+      "earthlyBranch": "丑"
+    },
+    {
+      "trigramId": "trigram-li",
+      "scope": "inner",
+      "localLine": 3,
+      "heavenlyStem": "己",
+      "earthlyBranch": "亥"
+    },
+    {
+      "trigramId": "trigram-li",
+      "scope": "outer",
+      "localLine": 1,
+      "heavenlyStem": "己",
+      "earthlyBranch": "酉"
+    },
+    {
+      "trigramId": "trigram-li",
+      "scope": "outer",
+      "localLine": 2,
+      "heavenlyStem": "己",
+      "earthlyBranch": "未"
+    },
+    {
+      "trigramId": "trigram-li",
+      "scope": "outer",
+      "localLine": 3,
+      "heavenlyStem": "己",
+      "earthlyBranch": "巳"
+    },
+    {
+      "trigramId": "trigram-gen",
+      "scope": "inner",
+      "localLine": 1,
+      "heavenlyStem": "丙",
+      "earthlyBranch": "辰"
+    },
+    {
+      "trigramId": "trigram-gen",
+      "scope": "inner",
+      "localLine": 2,
+      "heavenlyStem": "丙",
+      "earthlyBranch": "午"
+    },
+    {
+      "trigramId": "trigram-gen",
+      "scope": "inner",
+      "localLine": 3,
+      "heavenlyStem": "丙",
+      "earthlyBranch": "申"
+    },
+    {
+      "trigramId": "trigram-gen",
+      "scope": "outer",
+      "localLine": 1,
+      "heavenlyStem": "丙",
+      "earthlyBranch": "戌"
+    },
+    {
+      "trigramId": "trigram-gen",
+      "scope": "outer",
+      "localLine": 2,
+      "heavenlyStem": "丙",
+      "earthlyBranch": "子"
+    },
+    {
+      "trigramId": "trigram-gen",
+      "scope": "outer",
+      "localLine": 3,
+      "heavenlyStem": "丙",
+      "earthlyBranch": "寅"
+    },
+    {
+      "trigramId": "trigram-dui",
+      "scope": "inner",
+      "localLine": 1,
+      "heavenlyStem": "丁",
+      "earthlyBranch": "巳"
+    },
+    {
+      "trigramId": "trigram-dui",
+      "scope": "inner",
+      "localLine": 2,
+      "heavenlyStem": "丁",
+      "earthlyBranch": "卯"
+    },
+    {
+      "trigramId": "trigram-dui",
+      "scope": "inner",
+      "localLine": 3,
+      "heavenlyStem": "丁",
+      "earthlyBranch": "丑"
+    },
+    {
+      "trigramId": "trigram-dui",
+      "scope": "outer",
+      "localLine": 1,
+      "heavenlyStem": "丁",
+      "earthlyBranch": "亥"
+    },
+    {
+      "trigramId": "trigram-dui",
+      "scope": "outer",
+      "localLine": 2,
+      "heavenlyStem": "丁",
+      "earthlyBranch": "酉"
+    },
+    {
+      "trigramId": "trigram-dui",
+      "scope": "outer",
+      "localLine": 3,
+      "heavenlyStem": "丁",
+      "earthlyBranch": "未"
+    }
+  ],
+  "sixRelativeRules": [
+    {
+      "palaceElement": "金",
+      "lineElement": "金",
+      "relative": "兄弟"
+    },
+    {
+      "palaceElement": "金",
+      "lineElement": "木",
+      "relative": "妻財"
+    },
+    {
+      "palaceElement": "金",
+      "lineElement": "水",
+      "relative": "子孫"
+    },
+    {
+      "palaceElement": "金",
+      "lineElement": "火",
+      "relative": "官鬼"
+    },
+    {
+      "palaceElement": "金",
+      "lineElement": "土",
+      "relative": "父母"
+    },
+    {
+      "palaceElement": "木",
+      "lineElement": "金",
+      "relative": "官鬼"
+    },
+    {
+      "palaceElement": "木",
+      "lineElement": "木",
+      "relative": "兄弟"
+    },
+    {
+      "palaceElement": "木",
+      "lineElement": "水",
+      "relative": "父母"
+    },
+    {
+      "palaceElement": "木",
+      "lineElement": "火",
+      "relative": "子孫"
+    },
+    {
+      "palaceElement": "木",
+      "lineElement": "土",
+      "relative": "妻財"
+    },
+    {
+      "palaceElement": "水",
+      "lineElement": "金",
+      "relative": "父母"
+    },
+    {
+      "palaceElement": "水",
+      "lineElement": "木",
+      "relative": "子孫"
+    },
+    {
+      "palaceElement": "水",
+      "lineElement": "水",
+      "relative": "兄弟"
+    },
+    {
+      "palaceElement": "水",
+      "lineElement": "火",
+      "relative": "妻財"
+    },
+    {
+      "palaceElement": "水",
+      "lineElement": "土",
+      "relative": "官鬼"
+    },
+    {
+      "palaceElement": "火",
+      "lineElement": "金",
+      "relative": "妻財"
+    },
+    {
+      "palaceElement": "火",
+      "lineElement": "木",
+      "relative": "父母"
+    },
+    {
+      "palaceElement": "火",
+      "lineElement": "水",
+      "relative": "官鬼"
+    },
+    {
+      "palaceElement": "火",
+      "lineElement": "火",
+      "relative": "兄弟"
+    },
+    {
+      "palaceElement": "火",
+      "lineElement": "土",
+      "relative": "子孫"
+    },
+    {
+      "palaceElement": "土",
+      "lineElement": "金",
+      "relative": "子孫"
+    },
+    {
+      "palaceElement": "土",
+      "lineElement": "木",
+      "relative": "官鬼"
+    },
+    {
+      "palaceElement": "土",
+      "lineElement": "水",
+      "relative": "妻財"
+    },
+    {
+      "palaceElement": "土",
+      "lineElement": "火",
+      "relative": "父母"
+    },
+    {
+      "palaceElement": "土",
+      "lineElement": "土",
+      "relative": "兄弟"
+    }
+  ],
+  "sixSpiritAssignments": [
+    {
+      "dayStem": "甲",
+      "linePosition": 1,
+      "spirit": "青龙"
+    },
+    {
+      "dayStem": "甲",
+      "linePosition": 2,
+      "spirit": "朱雀"
+    },
+    {
+      "dayStem": "甲",
+      "linePosition": 3,
+      "spirit": "勾陈"
+    },
+    {
+      "dayStem": "甲",
+      "linePosition": 4,
+      "spirit": "螣蛇"
+    },
+    {
+      "dayStem": "甲",
+      "linePosition": 5,
+      "spirit": "白虎"
+    },
+    {
+      "dayStem": "甲",
+      "linePosition": 6,
+      "spirit": "玄武"
+    },
+    {
+      "dayStem": "乙",
+      "linePosition": 1,
+      "spirit": "青龙"
+    },
+    {
+      "dayStem": "乙",
+      "linePosition": 2,
+      "spirit": "朱雀"
+    },
+    {
+      "dayStem": "乙",
+      "linePosition": 3,
+      "spirit": "勾陈"
+    },
+    {
+      "dayStem": "乙",
+      "linePosition": 4,
+      "spirit": "螣蛇"
+    },
+    {
+      "dayStem": "乙",
+      "linePosition": 5,
+      "spirit": "白虎"
+    },
+    {
+      "dayStem": "乙",
+      "linePosition": 6,
+      "spirit": "玄武"
+    },
+    {
+      "dayStem": "丙",
+      "linePosition": 1,
+      "spirit": "朱雀"
+    },
+    {
+      "dayStem": "丙",
+      "linePosition": 2,
+      "spirit": "勾陈"
+    },
+    {
+      "dayStem": "丙",
+      "linePosition": 3,
+      "spirit": "螣蛇"
+    },
+    {
+      "dayStem": "丙",
+      "linePosition": 4,
+      "spirit": "白虎"
+    },
+    {
+      "dayStem": "丙",
+      "linePosition": 5,
+      "spirit": "玄武"
+    },
+    {
+      "dayStem": "丙",
+      "linePosition": 6,
+      "spirit": "青龙"
+    },
+    {
+      "dayStem": "丁",
+      "linePosition": 1,
+      "spirit": "朱雀"
+    },
+    {
+      "dayStem": "丁",
+      "linePosition": 2,
+      "spirit": "勾陈"
+    },
+    {
+      "dayStem": "丁",
+      "linePosition": 3,
+      "spirit": "螣蛇"
+    },
+    {
+      "dayStem": "丁",
+      "linePosition": 4,
+      "spirit": "白虎"
+    },
+    {
+      "dayStem": "丁",
+      "linePosition": 5,
+      "spirit": "玄武"
+    },
+    {
+      "dayStem": "丁",
+      "linePosition": 6,
+      "spirit": "青龙"
+    },
+    {
+      "dayStem": "戊",
+      "linePosition": 1,
+      "spirit": "勾陈"
+    },
+    {
+      "dayStem": "戊",
+      "linePosition": 2,
+      "spirit": "螣蛇"
+    },
+    {
+      "dayStem": "戊",
+      "linePosition": 3,
+      "spirit": "白虎"
+    },
+    {
+      "dayStem": "戊",
+      "linePosition": 4,
+      "spirit": "玄武"
+    },
+    {
+      "dayStem": "戊",
+      "linePosition": 5,
+      "spirit": "青龙"
+    },
+    {
+      "dayStem": "戊",
+      "linePosition": 6,
+      "spirit": "朱雀"
+    },
+    {
+      "dayStem": "己",
+      "linePosition": 1,
+      "spirit": "螣蛇"
+    },
+    {
+      "dayStem": "己",
+      "linePosition": 2,
+      "spirit": "白虎"
+    },
+    {
+      "dayStem": "己",
+      "linePosition": 3,
+      "spirit": "玄武"
+    },
+    {
+      "dayStem": "己",
+      "linePosition": 4,
+      "spirit": "青龙"
+    },
+    {
+      "dayStem": "己",
+      "linePosition": 5,
+      "spirit": "朱雀"
+    },
+    {
+      "dayStem": "己",
+      "linePosition": 6,
+      "spirit": "勾陈"
+    },
+    {
+      "dayStem": "庚",
+      "linePosition": 1,
+      "spirit": "白虎"
+    },
+    {
+      "dayStem": "庚",
+      "linePosition": 2,
+      "spirit": "玄武"
+    },
+    {
+      "dayStem": "庚",
+      "linePosition": 3,
+      "spirit": "青龙"
+    },
+    {
+      "dayStem": "庚",
+      "linePosition": 4,
+      "spirit": "朱雀"
+    },
+    {
+      "dayStem": "庚",
+      "linePosition": 5,
+      "spirit": "勾陈"
+    },
+    {
+      "dayStem": "庚",
+      "linePosition": 6,
+      "spirit": "螣蛇"
+    },
+    {
+      "dayStem": "辛",
+      "linePosition": 1,
+      "spirit": "白虎"
+    },
+    {
+      "dayStem": "辛",
+      "linePosition": 2,
+      "spirit": "玄武"
+    },
+    {
+      "dayStem": "辛",
+      "linePosition": 3,
+      "spirit": "青龙"
+    },
+    {
+      "dayStem": "辛",
+      "linePosition": 4,
+      "spirit": "朱雀"
+    },
+    {
+      "dayStem": "辛",
+      "linePosition": 5,
+      "spirit": "勾陈"
+    },
+    {
+      "dayStem": "辛",
+      "linePosition": 6,
+      "spirit": "螣蛇"
+    },
+    {
+      "dayStem": "壬",
+      "linePosition": 1,
+      "spirit": "玄武"
+    },
+    {
+      "dayStem": "壬",
+      "linePosition": 2,
+      "spirit": "青龙"
+    },
+    {
+      "dayStem": "壬",
+      "linePosition": 3,
+      "spirit": "朱雀"
+    },
+    {
+      "dayStem": "壬",
+      "linePosition": 4,
+      "spirit": "勾陈"
+    },
+    {
+      "dayStem": "壬",
+      "linePosition": 5,
+      "spirit": "螣蛇"
+    },
+    {
+      "dayStem": "壬",
+      "linePosition": 6,
+      "spirit": "白虎"
+    },
+    {
+      "dayStem": "癸",
+      "linePosition": 1,
+      "spirit": "玄武"
+    },
+    {
+      "dayStem": "癸",
+      "linePosition": 2,
+      "spirit": "青龙"
+    },
+    {
+      "dayStem": "癸",
+      "linePosition": 3,
+      "spirit": "朱雀"
+    },
+    {
+      "dayStem": "癸",
+      "linePosition": 4,
+      "spirit": "勾陈"
+    },
+    {
+      "dayStem": "癸",
+      "linePosition": 5,
+      "spirit": "螣蛇"
+    },
+    {
+      "dayStem": "癸",
+      "linePosition": 6,
+      "spirit": "白虎"
+    }
+  ],
+  "branchRelations": [
+    {
+      "relationType": "combine",
+      "branchIds": ["子", "丑"],
+      "resultElement": null
+    },
+    {
+      "relationType": "combine",
+      "branchIds": ["寅", "亥"],
+      "resultElement": null
+    },
+    {
+      "relationType": "combine",
+      "branchIds": ["卯", "戌"],
+      "resultElement": null
+    },
+    {
+      "relationType": "combine",
+      "branchIds": ["辰", "酉"],
+      "resultElement": null
+    },
+    {
+      "relationType": "combine",
+      "branchIds": ["巳", "申"],
+      "resultElement": null
+    },
+    {
+      "relationType": "combine",
+      "branchIds": ["午", "未"],
+      "resultElement": null
+    },
+    {
+      "relationType": "clash",
+      "branchIds": ["子", "午"],
+      "resultElement": null
+    },
+    {
+      "relationType": "clash",
+      "branchIds": ["丑", "未"],
+      "resultElement": null
+    },
+    {
+      "relationType": "clash",
+      "branchIds": ["寅", "申"],
+      "resultElement": null
+    },
+    {
+      "relationType": "clash",
+      "branchIds": ["卯", "酉"],
+      "resultElement": null
+    },
+    {
+      "relationType": "clash",
+      "branchIds": ["辰", "戌"],
+      "resultElement": null
+    },
+    {
+      "relationType": "clash",
+      "branchIds": ["巳", "亥"],
+      "resultElement": null
+    },
+    {
+      "relationType": "three-combine",
+      "branchIds": ["申", "子", "辰"],
+      "resultElement": "水"
+    },
+    {
+      "relationType": "three-combine",
+      "branchIds": ["亥", "卯", "未"],
+      "resultElement": "木"
+    },
+    {
+      "relationType": "three-combine",
+      "branchIds": ["寅", "午", "戌"],
+      "resultElement": "火"
+    },
+    {
+      "relationType": "three-combine",
+      "branchIds": ["巳", "酉", "丑"],
+      "resultElement": "金"
+    },
+    {
+      "relationType": "harm",
+      "branchIds": ["子", "未"],
+      "resultElement": null
+    },
+    {
+      "relationType": "harm",
+      "branchIds": ["丑", "午"],
+      "resultElement": null
+    },
+    {
+      "relationType": "harm",
+      "branchIds": ["寅", "巳"],
+      "resultElement": null
+    },
+    {
+      "relationType": "harm",
+      "branchIds": ["卯", "辰"],
+      "resultElement": null
+    },
+    {
+      "relationType": "harm",
+      "branchIds": ["申", "亥"],
+      "resultElement": null
+    },
+    {
+      "relationType": "harm",
+      "branchIds": ["酉", "戌"],
+      "resultElement": null
+    },
+    {
+      "relationType": "break-candidate",
+      "branchIds": ["子", "酉"],
+      "resultElement": null
+    },
+    {
+      "relationType": "break-candidate",
+      "branchIds": ["午", "卯"],
+      "resultElement": null
+    },
+    {
+      "relationType": "break-candidate",
+      "branchIds": ["辰", "丑"],
+      "resultElement": null
+    },
+    {
+      "relationType": "break-candidate",
+      "branchIds": ["戌", "未"],
+      "resultElement": null
+    },
+    {
+      "relationType": "break-candidate",
+      "branchIds": ["寅", "亥"],
+      "resultElement": null
+    },
+    {
+      "relationType": "break-candidate",
+      "branchIds": ["巳", "申"],
+      "resultElement": null
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "recordType": "professional-source-manifest-candidate",
+  "status": "production_candidate",
+  "generatedFromSha256": "8F5118AB2DE1ED04D2CFF14977CC2C10BF22E90E7390ECB1DCD73FCFB429DFEB",
+  "sources": [
+    {
+      "sourceId": "SOURCE-JFYT-SIKU",
+      "title": "京氏易传（四库全书候选定位）",
+      "sourceVersion": "candidate-manifest-2026-07-20-v1",
+      "verificationStatus": "production_candidate"
+    },
+    {
+      "sourceId": "SOURCE-ZSBY-WIKI",
+      "title": "增删卜易（候选整理定位）",
+      "sourceVersion": "candidate-manifest-2026-07-20-v1",
+      "verificationStatus": "production_candidate"
+    },
+    {
+      "sourceId": "SOURCE-ZSBY-PRINT",
+      "title": "增删卜易（待双人定位的印刷本）",
+      "sourceVersion": "candidate-manifest-2026-07-20-v1",
+      "verificationStatus": "production_candidate"
+    },
+    {
+      "sourceId": "SOURCE-HKO-TERMS",
+      "title": "香港天文台二十四节气资料",
+      "sourceVersion": "candidate-manifest-2026-07-20-v1",
+      "verificationStatus": "production_candidate"
+    },
+    {
+      "sourceId": "SOURCE-HKO-ALMANAC-2026",
+      "title": "香港天文台 2026 年公农历对照表",
+      "sourceVersion": "candidate-manifest-2026-07-20-v1",
+      "verificationStatus": "production_candidate"
+    },
+    {
+      "sourceId": "SOURCE-HKO-GANZHI",
+      "title": "香港天文台干支日候选锚点",
+      "sourceVersion": "candidate-manifest-2026-07-20-v1",
+      "verificationStatus": "production_candidate"
+    },
+    {
+      "sourceId": "SOURCE-IANA-TZDB",
+      "title": "IANA time zone database",
+      "sourceVersion": "2026c",
+      "verificationStatus": "production_candidate"
+    },
+    {
+      "sourceId": "SOURCE-NIST-DST",
+      "title": "NIST daylight-saving-time reference",
+      "sourceVersion": "candidate-manifest-2026-07-20-v1",
+      "verificationStatus": "production_candidate"
+    },
+    {
+      "sourceId": "SOURCE-GOVUK-DST",
+      "title": "GOV.UK daylight-saving-time reference",
+      "sourceVersion": "candidate-manifest-2026-07-20-v1",
+      "verificationStatus": "production_candidate"
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "$schema": { "$ref": "#/$defs/__schema0" },
+    "schemaId": { "$ref": "#/$defs/__schema1" },
+    "schemaVersion": { "$ref": "#/$defs/__schema2" },
+    "contentVersion": { "$ref": "#/$defs/__schema3" },
+    "source": { "$ref": "#/$defs/__schema4" },
+    "sourceFile": { "$ref": "#/$defs/__schema26" },
+    "releaseGate": { "$ref": "#/$defs/__schema28" },
+    "records": { "$ref": "#/$defs/__schema30" }
+  },
+  "required": [
+    "$schema",
+    "schemaId",
+    "schemaVersion",
+    "contentVersion",
+    "source",
+    "sourceFile",
+    "releaseGate",
+    "records"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "__schema0": { "type": "string", "const": "https://json-schema.org/draft/2020-12/schema" },
+    "__schema1": {
+      "type": "string",
+      "const": "https://liuyao.app/schemas/draft-interpretation-dataset.schema.json"
+    },
+    "__schema2": { "type": "string", "const": "draft-interpretation-dataset-v1" },
+    "__schema3": { "type": "string", "minLength": 1 },
+    "__schema4": {
+      "type": "object",
+      "properties": {
+        "sourceId": { "$ref": "#/$defs/__schema5" },
+        "sourceVersion": { "$ref": "#/$defs/__schema6" },
+        "title": { "$ref": "#/$defs/__schema7" },
+        "authorOrEditor": { "$ref": "#/$defs/__schema8" },
+        "dynastyOrYear": { "$ref": "#/$defs/__schema9" },
+        "edition": { "$ref": "#/$defs/__schema10" },
+        "publisherOrPlatform": { "$ref": "#/$defs/__schema11" },
+        "locator": { "$ref": "#/$defs/__schema12" },
+        "sourceType": { "$ref": "#/$defs/__schema13" },
+        "url": { "$ref": "#/$defs/__schema14" },
+        "licenseStatus": { "$ref": "#/$defs/__schema15" },
+        "publicDomainStatus": { "$ref": "#/$defs/__schema16" },
+        "transcriptionStatus": { "$ref": "#/$defs/__schema17" },
+        "proofreadingStatus": { "$ref": "#/$defs/__schema18" },
+        "accessedAt": { "$ref": "#/$defs/__schema19" },
+        "reliabilityGrade": { "$ref": "#/$defs/__schema21" },
+        "status": { "$ref": "#/$defs/__schema22" },
+        "verifiedBy": { "$ref": "#/$defs/__schema23" },
+        "verifiedAt": { "$ref": "#/$defs/__schema24" },
+        "notes": { "$ref": "#/$defs/__schema25" }
+      },
+      "required": [
+        "sourceId",
+        "sourceVersion",
+        "title",
+        "authorOrEditor",
+        "dynastyOrYear",
+        "edition",
+        "publisherOrPlatform",
+        "locator",
+        "sourceType",
+        "url",
+        "licenseStatus",
+        "publicDomainStatus",
+        "transcriptionStatus",
+        "proofreadingStatus",
+        "accessedAt",
+        "reliabilityGrade",
+        "status",
+        "verifiedBy",
+        "verifiedAt",
+        "notes"
+      ],
+      "additionalProperties": false
+    },
+    "__schema5": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "__schema6": { "type": "string", "minLength": 1 },
+    "__schema7": { "type": "string", "minLength": 1 },
+    "__schema8": { "anyOf": [{ "type": "string", "minLength": 1 }, { "type": "null" }] },
+    "__schema9": { "anyOf": [{ "type": "string", "minLength": 1 }, { "type": "null" }] },
+    "__schema10": { "anyOf": [{ "type": "string", "minLength": 1 }, { "type": "null" }] },
+    "__schema11": { "anyOf": [{ "type": "string", "minLength": 1 }, { "type": "null" }] },
+    "__schema12": { "anyOf": [{ "type": "string", "minLength": 1 }, { "type": "null" }] },
+    "__schema13": {
+      "type": "string",
+      "enum": [
+        "primary-text",
+        "classical-text",
+        "ancient-commentary",
+        "modern-study",
+        "web-transcription",
+        "authorized-dataset",
+        "internal-derivation",
+        "product-original",
+        "pending"
+      ]
+    },
+    "__schema14": { "anyOf": [{ "type": "string", "format": "uri" }, { "type": "null" }] },
+    "__schema15": {
+      "type": "string",
+      "enum": ["cleared", "public-domain", "restricted", "pending"]
+    },
+    "__schema16": {
+      "type": "string",
+      "enum": ["confirmed", "not-public-domain", "unclear", "not-applicable"]
+    },
+    "__schema17": {
+      "type": "string",
+      "enum": ["not-applicable", "raw", "normalized", "proofread"]
+    },
+    "__schema18": {
+      "type": "string",
+      "enum": ["not-applicable", "pending", "single-reviewed", "double-reviewed"]
+    },
+    "__schema19": { "anyOf": [{ "$ref": "#/$defs/__schema20" }, { "type": "null" }] },
+    "__schema20": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+    },
+    "__schema21": { "type": "string", "enum": ["A", "B", "C", "P"] },
+    "__schema22": { "type": "string", "enum": ["draft", "verified"] },
+    "__schema23": { "anyOf": [{ "type": "string", "minLength": 1 }, { "type": "null" }] },
+    "__schema24": { "anyOf": [{ "$ref": "#/$defs/__schema20" }, { "type": "null" }] },
+    "__schema25": { "type": "string" },
+    "__schema26": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^data\\/draft\\/interpretations\\/[a-z0-9-]+\\.txt$"
+        },
+        "sha256": { "$ref": "#/$defs/__schema27" },
+        "byteCount": { "type": "integer", "exclusiveMinimum": 0, "maximum": 9007199254740991 }
+      },
+      "required": ["path", "sha256", "byteCount"],
+      "additionalProperties": false
+    },
+    "__schema27": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "__schema28": {
+      "type": "object",
+      "properties": {
+        "status": { "type": "string", "const": "pending" },
+        "publicationEligible": { "type": "boolean", "const": false },
+        "usableForCastingResult": { "type": "boolean", "const": false },
+        "usableForProfessionalRules": { "type": "boolean", "const": false },
+        "usableForAiPrompting": { "type": "boolean", "const": false },
+        "outstandingRequirements": {
+          "minItems": 1,
+          "type": "array",
+          "items": { "$ref": "#/$defs/__schema29" }
+        }
+      },
+      "required": [
+        "status",
+        "publicationEligible",
+        "usableForCastingResult",
+        "usableForProfessionalRules",
+        "usableForAiPrompting",
+        "outstandingRequirements"
+      ],
+      "additionalProperties": false
+    },
+    "__schema29": { "type": "string", "minLength": 1 },
+    "__schema30": {
+      "readOnly": true,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "$ref": "#/$defs/__schema31" },
+          "contentLayer": { "$ref": "#/$defs/__schema32" },
+          "interpretationKind": { "$ref": "#/$defs/__schema33" },
+          "hexagramId": { "$ref": "#/$defs/__schema31" },
+          "kingWenSequence": { "$ref": "#/$defs/__schema34" },
+          "hexagramName": { "$ref": "#/$defs/__schema35" },
+          "linePosition": { "$ref": "#/$defs/__schema36" },
+          "lineLabel": { "$ref": "#/$defs/__schema37" },
+          "canonicalQuoteId": { "$ref": "#/$defs/__schema31" },
+          "locale": { "$ref": "#/$defs/__schema38" },
+          "interpretation": { "$ref": "#/$defs/__schema39" },
+          "sourceId": { "$ref": "#/$defs/__schema31" },
+          "sourceVersion": { "$ref": "#/$defs/__schema3" },
+          "contentVersion": { "$ref": "#/$defs/__schema3" },
+          "status": { "$ref": "#/$defs/__schema40" },
+          "sourceLocator": { "$ref": "#/$defs/__schema41" },
+          "editorialNotes": { "$ref": "#/$defs/__schema42" },
+          "checksum": { "$ref": "#/$defs/__schema27" }
+        },
+        "required": [
+          "id",
+          "contentLayer",
+          "interpretationKind",
+          "hexagramId",
+          "kingWenSequence",
+          "hexagramName",
+          "linePosition",
+          "lineLabel",
+          "canonicalQuoteId",
+          "locale",
+          "interpretation",
+          "sourceId",
+          "sourceVersion",
+          "contentVersion",
+          "status",
+          "sourceLocator",
+          "editorialNotes",
+          "checksum"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "__schema31": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "__schema32": { "type": "string", "const": "modern-interpretation" },
+    "__schema33": { "type": "string", "enum": ["judgment-explanation", "line-explanation"] },
+    "__schema34": { "type": "integer", "minimum": 1, "maximum": 64 },
+    "__schema35": { "type": "string", "minLength": 1 },
+    "__schema36": {
+      "anyOf": [{ "type": "integer", "minimum": 1, "maximum": 6 }, { "type": "null" }]
+    },
+    "__schema37": { "anyOf": [{ "type": "string", "minLength": 1 }, { "type": "null" }] },
+    "__schema38": { "type": "string", "const": "zh-Hans" },
+    "__schema39": { "type": "string", "minLength": 1 },
+    "__schema40": { "type": "string", "const": "pending" },
+    "__schema41": { "type": "string", "minLength": 1 },
+    "__schema42": { "type": "string", "minLength": 1 }
+  },
+  "$id": "https://liuyao.app/schemas/draft-interpretation-dataset.schema.json",
+  "$comment": "Generated from scripts/content-data-schema.ts. Cross-record and release-gate rules are enforced by validateContentDataset."
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "recordType": { "type": "string", "const": "professional-source-manifest-candidate" },
+    "status": { "$ref": "#/$defs/__schema0" },
+    "generatedFromSha256": { "type": "string", "pattern": "^[a-fA-F0-9]{64}$" },
+    "sources": { "minItems": 1, "type": "array", "items": { "$ref": "#/$defs/__schema1" } }
+  },
+  "required": ["recordType", "status", "generatedFromSha256", "sources"],
+  "additionalProperties": false,
+  "$defs": {
+    "__schema0": { "type": "string", "const": "production_candidate" },
+    "__schema1": {
+      "type": "object",
+      "properties": {
+        "sourceId": { "$ref": "#/$defs/__schema2" },
+        "title": { "$ref": "#/$defs/__schema2" },
+        "sourceVersion": { "type": "string", "minLength": 1 },
+        "verificationStatus": { "$ref": "#/$defs/__schema0" }
+      },
+      "required": ["sourceId", "title", "sourceVersion", "verificationStatus"]
+    },
+    "__schema2": { "type": "string", "minLength": 1 }
+  },
+  "$id": "https://liuyao.app/schemas/professional-source-manifest-candidate-document.schema.json",
+  "$comment": "Generated from scripts/content-data-schema.ts. Cross-record and release-gate rules are enforced by validateContentDataset."
+}

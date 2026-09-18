@@ -1,0 +1,523 @@
+{
+  "schemaVersion": "classical-text-units-v2",
+  "source": {
+    "sourceId": "module-four-acceptance-pack",
+    "sourceVersion": "2026-07-25-candidate-v1",
+    "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+    "revision": null,
+    "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+    "verificationStatus": "production_candidate"
+  },
+  "units": [
+    {
+      "id": "candidate-text-001",
+      "hexagramId": "hexagram-kw-01",
+      "linePosition": null,
+      "textKind": "hexagram_judgment",
+      "text": "乾：元亨利貞。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-002",
+      "hexagramId": "hexagram-kw-01",
+      "linePosition": null,
+      "textKind": "tuan_commentary",
+      "text": "彖曰：大哉乾元，萬物資始，乃統天。雲行雨施，品物流形。大明終始，六位時成，時乘六龍以御天。乾道變化，各正性命，保合大和，乃利貞。首出庶物，萬國咸寧。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-003",
+      "hexagramId": "hexagram-kw-01",
+      "linePosition": null,
+      "textKind": "great_image",
+      "text": "象曰：天行健，君子以自強不息。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-004",
+      "hexagramId": "hexagram-kw-01",
+      "linePosition": 1,
+      "textKind": "line_statement",
+      "text": "初九：潛龍，勿用。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-005",
+      "hexagramId": "hexagram-kw-01",
+      "linePosition": 2,
+      "textKind": "line_statement",
+      "text": "九二：見龍在田，利見大人。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-006",
+      "hexagramId": "hexagram-kw-01",
+      "linePosition": 3,
+      "textKind": "line_statement",
+      "text": "九三：君子終日乾乾，夕惕若，厲無咎。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-007",
+      "hexagramId": "hexagram-kw-01",
+      "linePosition": 4,
+      "textKind": "line_statement",
+      "text": "九四：或躍在淵，無咎。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-008",
+      "hexagramId": "hexagram-kw-01",
+      "linePosition": 5,
+      "textKind": "line_statement",
+      "text": "九五：飛龍在天，利見大人。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-009",
+      "hexagramId": "hexagram-kw-01",
+      "linePosition": 6,
+      "textKind": "line_statement",
+      "text": "上九：亢龍有悔。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-010",
+      "hexagramId": "hexagram-kw-01",
+      "linePosition": 1,
+      "textKind": "line_image",
+      "text": "象曰：潛龍勿用，陽在下也。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-011",
+      "hexagramId": "hexagram-kw-01",
+      "linePosition": 2,
+      "textKind": "line_image",
+      "text": "象曰：見龍在田，德施普也。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-012",
+      "hexagramId": "hexagram-kw-01",
+      "linePosition": 3,
+      "textKind": "line_image",
+      "text": "象曰：終日乾乾，反復道也。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-013",
+      "hexagramId": "hexagram-kw-01",
+      "linePosition": 4,
+      "textKind": "line_image",
+      "text": "象曰：或躍在淵，進無咎也。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-014",
+      "hexagramId": "hexagram-kw-01",
+      "linePosition": 5,
+      "textKind": "line_image",
+      "text": "象曰：飛龍在天，大人造也。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-015",
+      "hexagramId": "hexagram-kw-01",
+      "linePosition": 6,
+      "textKind": "line_image",
+      "text": "象曰：亢龍有悔，盈不可久也。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-016",
+      "hexagramId": "hexagram-kw-01",
+      "linePosition": null,
+      "textKind": "special_use_statement",
+      "text": "用九：見群龍無首，吉。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-017",
+      "hexagramId": "hexagram-kw-01",
+      "linePosition": null,
+      "textKind": "special_use_image",
+      "text": "象曰：用九，天德不可為首也。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-018",
+      "hexagramId": "hexagram-kw-02",
+      "linePosition": null,
+      "textKind": "hexagram_judgment",
+      "text": "坤：元亨，利牝馬之貞。君子有攸往，先迷後得主，利。西南得朋，東北喪朋。安貞吉。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-019",
+      "hexagramId": "hexagram-kw-02",
+      "linePosition": null,
+      "textKind": "tuan_commentary",
+      "text": "彖曰：至哉坤元，萬物資生，乃順承天。坤厚載物，德合無疆。含弘光大，品物咸亨。牝馬地類，行地無疆，柔順利貞。君子攸行，先迷失道，後順得常。西南得朋，乃與類行；東北喪朋，乃終有慶。安貞之吉，應地無疆。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-020",
+      "hexagramId": "hexagram-kw-02",
+      "linePosition": null,
+      "textKind": "great_image",
+      "text": "象曰：地勢坤，君子以厚德載物。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-021",
+      "hexagramId": "hexagram-kw-02",
+      "linePosition": 1,
+      "textKind": "line_statement",
+      "text": "初六：履霜，堅冰至。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-022",
+      "hexagramId": "hexagram-kw-02",
+      "linePosition": 2,
+      "textKind": "line_statement",
+      "text": "六二：直方大，不習無不利。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-023",
+      "hexagramId": "hexagram-kw-02",
+      "linePosition": 3,
+      "textKind": "line_statement",
+      "text": "六三：含章可貞。或從王事，無成有終。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-024",
+      "hexagramId": "hexagram-kw-02",
+      "linePosition": 4,
+      "textKind": "line_statement",
+      "text": "六四：括囊，無咎無譽。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-025",
+      "hexagramId": "hexagram-kw-02",
+      "linePosition": 5,
+      "textKind": "line_statement",
+      "text": "六五：黃裳，元吉。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-026",
+      "hexagramId": "hexagram-kw-02",
+      "linePosition": 6,
+      "textKind": "line_statement",
+      "text": "上六：龍戰于野，其血玄黃。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-027",
+      "hexagramId": "hexagram-kw-02",
+      "linePosition": 1,
+      "textKind": "line_image",
+      "text": "象曰：履霜堅冰，陰始凝也。馴致其道，至堅冰也。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-028",
+      "hexagramId": "hexagram-kw-02",
+      "linePosition": 2,
+      "textKind": "line_image",
+      "text": "象曰：六二之動，直以方也。不習無不利，地道光也。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-029",
+      "hexagramId": "hexagram-kw-02",
+      "linePosition": 3,
+      "textKind": "line_image",
+      "text": "象曰：含章可貞，以時發也。或從王事，知光大也。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-030",
+      "hexagramId": "hexagram-kw-02",
+      "linePosition": 4,
+      "textKind": "line_image",
+      "text": "象曰：括囊無咎，慎不害也。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-031",
+      "hexagramId": "hexagram-kw-02",
+      "linePosition": 5,
+      "textKind": "line_image",
+      "text": "象曰：黃裳元吉，文在中也。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-032",
+      "hexagramId": "hexagram-kw-02",
+      "linePosition": 6,
+      "textKind": "line_image",
+      "text": "象曰：龍戰于野，其道窮也。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-033",
+      "hexagramId": "hexagram-kw-02",
+      "linePosition": null,
+      "textKind": "special_use_statement",
+      "text": "用六：利永貞。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    },
+    {
+      "id": "candidate-text-034",
+      "hexagramId": "hexagram-kw-02",
+      "linePosition": null,
+      "textKind": "special_use_image",
+      "text": "象曰：用六永貞，以大終也。",
+      "source": {
+        "sourceId": "module-four-acceptance-pack",
+        "sourceVersion": "2026-07-25-candidate-v1",
+        "sourceLocator": "六爻App模块四内容数据库缺失数据补全与生产验收包.txt",
+        "revision": null,
+        "sourceSha256": "537d3ec190263166c1a3f541c962c44ce12bec47ba30b5c8cdc2a8841c8953a4",
+        "verificationStatus": "production_candidate"
+      }
+    }
+  ]
+}

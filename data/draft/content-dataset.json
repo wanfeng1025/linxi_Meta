@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "schemaId": "https://liuyao.app/schemas/content-dataset.schema.json",
+  "version": {
+    "contentVersion": "draft-empty-v2",
+    "schemaVersion": "content-dataset-v2",
+    "status": "draft",
+    "completenessMode": "partial",
+    "createdAt": "2026-07-20T00:00:00+08:00",
+    "notes": "Isolated draft workspace. Records here are never imported by the production seed command."
+  },
+  "dataSources": [],
+  "ruleVersions": [],
+  "trigrams": [],
+  "hexagrams": [],
+  "hexagramLines": [],
+  "specialLineTexts": [],
+  "contentTexts": [],
+  "palaceHexagrams": [],
+  "earthlyBranches": [],
+  "najiaAssignments": [],
+  "sixRelativeRules": [],
+  "sixSpirits": [],
+  "sixSpiritRules": [],
+  "branchRelations": [],
+  "questionCategories": [],
+  "interpretationTemplates": [],
+  "ruleDefinitions": []
+}

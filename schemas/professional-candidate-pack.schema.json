@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "professional-candidate-v1" },
+    "source": {
+      "type": "object",
+      "properties": {
+        "sourceId": { "type": "string", "minLength": 1 },
+        "sourceVersion": { "type": "string", "minLength": 1 },
+        "sourceLocator": { "type": "string", "minLength": 1 },
+        "revision": { "anyOf": [{ "type": "string" }, { "type": "null" }] },
+        "sourceSha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "verificationStatus": {
+          "type": "string",
+          "enum": ["production_candidate", "editorial_original"]
+        }
+      },
+      "required": [
+        "sourceId",
+        "sourceVersion",
+        "sourceLocator",
+        "revision",
+        "sourceSha256",
+        "verificationStatus"
+      ],
+      "additionalProperties": false
+    },
+    "ruleset": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "const": "jingfang-yehe-baseline" },
+        "version": { "type": "string", "minLength": 1 }
+      },
+      "required": ["id", "version"],
+      "additionalProperties": false
+    },
+    "trigrams": {
+      "minItems": 8,
+      "maxItems": 8,
+      "type": "array",
+      "items": { "$ref": "#/$defs/__schema0" }
+    },
+    "palaceMemberships": {
+      "minItems": 64,
+      "maxItems": 64,
+      "type": "array",
+      "items": { "$ref": "#/$defs/__schema1" }
+    },
+    "najiaAssignments": {
+      "minItems": 48,
+      "maxItems": 48,
+      "type": "array",
+      "items": { "$ref": "#/$defs/__schema2" }
+    },
+    "sixRelativeRules": {
+      "minItems": 25,
+      "maxItems": 25,
+      "type": "array",
+      "items": { "$ref": "#/$defs/__schema3" }
+    },
+    "sixSpiritAssignments": {
+      "minItems": 60,
+      "maxItems": 60,
+      "type": "array",
+      "items": { "$ref": "#/$defs/__schema4" }
+    },
+    "branchRelations": { "minItems": 1, "type": "array", "items": { "$ref": "#/$defs/__schema5" } }
+  },
+  "required": [
+    "schemaVersion",
+    "source",
+    "ruleset",
+    "trigrams",
+    "palaceMemberships",
+    "najiaAssignments",
+    "sixRelativeRules",
+    "sixSpiritAssignments",
+    "branchRelations"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "__schema0": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "fields": {
+          "type": "object",
+          "propertyNames": { "type": "string" },
+          "additionalProperties": {}
+        }
+      },
+      "required": ["id", "fields"],
+      "additionalProperties": false
+    },
+    "__schema1": {
+      "type": "object",
+      "properties": {
+        "hexagramId": { "type": "string" },
+        "palaceTrigramId": { "type": "string" },
+        "stage": { "type": "string" },
+        "shiPosition": { "type": "number" },
+        "yingPosition": { "type": "number" }
+      },
+      "required": ["hexagramId", "palaceTrigramId", "stage", "shiPosition", "yingPosition"],
+      "additionalProperties": false
+    },
+    "__schema2": {
+      "type": "object",
+      "properties": {
+        "trigramId": { "type": "string" },
+        "scope": { "type": "string", "enum": ["inner", "outer"] },
+        "localLine": { "type": "integer", "minimum": 1, "maximum": 3 },
+        "heavenlyStem": { "type": "string" },
+        "earthlyBranch": { "type": "string" }
+      },
+      "required": ["trigramId", "scope", "localLine", "heavenlyStem", "earthlyBranch"],
+      "additionalProperties": false
+    },
+    "__schema3": {
+      "type": "object",
+      "properties": {
+        "palaceElement": { "type": "string" },
+        "lineElement": { "type": "string" },
+        "relative": { "type": "string" }
+      },
+      "required": ["palaceElement", "lineElement", "relative"],
+      "additionalProperties": false
+    },
+    "__schema4": {
+      "type": "object",
+      "properties": {
+        "dayStem": { "type": "string" },
+        "linePosition": { "type": "integer", "minimum": 1, "maximum": 6 },
+        "spirit": { "type": "string" }
+      },
+      "required": ["dayStem", "linePosition", "spirit"],
+      "additionalProperties": false
+    },
+    "__schema5": {
+      "type": "object",
+      "properties": {
+        "relationType": { "type": "string" },
+        "branchIds": { "minItems": 1, "type": "array", "items": { "$ref": "#/$defs/__schema6" } },
+        "resultElement": { "anyOf": [{ "type": "string" }, { "type": "null" }] }
+      },
+      "required": ["relationType", "branchIds", "resultElement"],
+      "additionalProperties": false
+    },
+    "__schema6": { "type": "string" }
+  },
+  "$id": "https://liuyao.app/schemas/professional-candidate-pack.schema.json",
+  "$comment": "Generated from scripts/content-data-schema.ts. Cross-record and release-gate rules are enforced by validateContentDataset."
+}

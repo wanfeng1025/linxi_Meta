@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "classical-text-units-v2" },
+    "source": { "$ref": "#/$defs/__schema0" },
+    "units": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "hexagramId": { "type": "string", "minLength": 1 },
+          "linePosition": {
+            "anyOf": [{ "type": "integer", "minimum": 1, "maximum": 6 }, { "type": "null" }]
+          },
+          "textKind": {
+            "type": "string",
+            "enum": [
+              "hexagram_judgment",
+              "tuan_commentary",
+              "great_image",
+              "line_statement",
+              "line_image",
+              "special_use_statement",
+              "special_use_image"
+            ]
+          },
+          "text": { "type": "string", "minLength": 1 },
+          "source": { "$ref": "#/$defs/__schema0" }
+        },
+        "required": ["id", "hexagramId", "linePosition", "textKind", "text", "source"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["schemaVersion", "source", "units"],
+  "additionalProperties": false,
+  "$defs": {
+    "__schema0": {
+      "type": "object",
+      "properties": {
+        "sourceId": { "type": "string", "minLength": 1 },
+        "sourceVersion": { "type": "string", "minLength": 1 },
+        "sourceLocator": { "type": "string", "minLength": 1 },
+        "revision": { "anyOf": [{ "type": "string" }, { "type": "null" }] },
+        "sourceSha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "verificationStatus": {
+          "type": "string",
+          "enum": ["production_candidate", "editorial_original"]
+        }
+      },
+      "required": [
+        "sourceId",
+        "sourceVersion",
+        "sourceLocator",
+        "revision",
+        "sourceSha256",
+        "verificationStatus"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$id": "https://liuyao.app/schemas/classical-candidate-pack.schema.json",
+  "$comment": "Generated from scripts/content-data-schema.ts. Cross-record and release-gate rules are enforced by validateContentDataset."
+}

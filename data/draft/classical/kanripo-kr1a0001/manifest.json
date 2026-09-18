@@ -1,0 +1,504 @@
+{
+  "schemaVersion": "kanripo-zhouyi-transcription-seed-v1",
+  "collectionStatus": "production_candidate",
+  "publicationEligible": false,
+  "collectedAt": "2026-07-26T08:03:56.665023Z",
+  "source": {
+    "repository": "https://github.com/Kanripo/KR1a0001",
+    "repositoryCommit": "8284adbf9e3435d713180e24f05bf75f8b7d1d96",
+    "textPageUrl": "https://www.kanripo.org/text/KR1a0001/",
+    "sourceRole": "TRANSCRIPTION_SEED",
+    "verificationBase": "RUAN_1815_ZJLIB",
+    "licenseStatus": "CC-BY-SA-4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "Kanseki Repository / Kanripo",
+    "requiredReview": "Compare every release candidate unit with the selected 1815 facsimile; do not promote automatically."
+  },
+  "expectedFileCount": 69,
+  "files": [
+    {
+      "path": "files/KR1a0001_001.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_001.txt",
+      "gitBlobSha1": "a6963a3d4acb39bdfc24ffcd991bb98969a8018c",
+      "sha256": "ce3b0074441a31f2756d7b7c8687e7d25d2cdecb6c97a7c744d2879d7bcc430f",
+      "byteCount": 5771
+    },
+    {
+      "path": "files/KR1a0001_002.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_002.txt",
+      "gitBlobSha1": "e93a97ab52e4f18052c48cebb28bbce2ab15a146",
+      "sha256": "aecc28f8cd433f983b5e180f7fbc47afd6a95753df2e0b76bfae3b37c1847b8e",
+      "byteCount": 3548
+    },
+    {
+      "path": "files/KR1a0001_003.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_003.txt",
+      "gitBlobSha1": "411663323769ba51cc5b6f9c6bba92151e63573a",
+      "sha256": "beb830994a19507d9b344d686bc5c627861b7956c3a49f57473204964edc7f2b",
+      "byteCount": 1865
+    },
+    {
+      "path": "files/KR1a0001_004.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_004.txt",
+      "gitBlobSha1": "d3bcf96b18ce0b3c74292edfb6569744c090f815",
+      "sha256": "5311e2c1b0256a844504c73d3ee39fbbed30f0e1a59bec846b12ea53e0585067",
+      "byteCount": 1895
+    },
+    {
+      "path": "files/KR1a0001_005.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_005.txt",
+      "gitBlobSha1": "eefd2f1115afab3498887193701b4ff09c4a9b92",
+      "sha256": "c4ed7071cbddfae5ef7b9d233a5d794bb22f37ba599f227b7d941e9df6fbedfe",
+      "byteCount": 1892
+    },
+    {
+      "path": "files/KR1a0001_006.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_006.txt",
+      "gitBlobSha1": "16769faa95f0b3d8909e70fc1fd4b4e2a198ec41",
+      "sha256": "2f46d13c523df456809377b2a10359fe4db7c10cbed983ed07112431733da050",
+      "byteCount": 1931
+    },
+    {
+      "path": "files/KR1a0001_007.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_007.txt",
+      "gitBlobSha1": "75c8cb278440057ab03cdf88af4cf262344067c9",
+      "sha256": "779e5924ebc6c53707dc610eac68ffe8d1a7b18ac4f5f98d8a88a9b066f532c7",
+      "byteCount": 1832
+    },
+    {
+      "path": "files/KR1a0001_008.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_008.txt",
+      "gitBlobSha1": "786167978f4067c14b5a6c6f514c2e54dbb965b8",
+      "sha256": "9ddc182af90558e3b957e7728a24102905a84bce7ea9ee8ba9b05d66400d8438",
+      "byteCount": 1892
+    },
+    {
+      "path": "files/KR1a0001_009.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_009.txt",
+      "gitBlobSha1": "459dfa7929047687da2b43fb51521417230e42da",
+      "sha256": "fa269d162868f183d4744fcf8a6f249a57312bef5764bb005c22046610144948",
+      "byteCount": 1775
+    },
+    {
+      "path": "files/KR1a0001_010.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_010.txt",
+      "gitBlobSha1": "b1028e3084c671d23beafa7e8ee4456b95d70b8a",
+      "sha256": "d6c93349b6011e243843d82ea0de1d32181d85ad24892d0092d2435a9d1a31a6",
+      "byteCount": 1805
+    },
+    {
+      "path": "files/KR1a0001_011.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_011.txt",
+      "gitBlobSha1": "7d6eacfe6ad05cda17c5173350b6a3d81079039e",
+      "sha256": "851c2b2320f0069c9a7cd71e3a5201432a51ff3d0f6dbbb25ec4c9cb5c201f56",
+      "byteCount": 1920
+    },
+    {
+      "path": "files/KR1a0001_012.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_012.txt",
+      "gitBlobSha1": "3a6a1d0880c9e7631165aadef9f4caf189588d1b",
+      "sha256": "db30ab2d6eb8db39953a12df5649eea7acac527be556cbe2ebb88e00c97be915",
+      "byteCount": 1776
+    },
+    {
+      "path": "files/KR1a0001_013.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_013.txt",
+      "gitBlobSha1": "98a60b6611b9bfe842c67ea644f67b0d8612ac72",
+      "sha256": "509bcc32c50aecdee4909b071c511aab709f263e12ba59ce6057afc4017e4ffe",
+      "byteCount": 1914
+    },
+    {
+      "path": "files/KR1a0001_014.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_014.txt",
+      "gitBlobSha1": "b9e3aa14afdddf77273ade9c4378afea7f43a67b",
+      "sha256": "31de6184aa4d3bcb6fd57f7d96c5019eb50a0c4759dda52961a689c84f6fb658",
+      "byteCount": 1716
+    },
+    {
+      "path": "files/KR1a0001_015.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_015.txt",
+      "gitBlobSha1": "e3e42b2412e9f441b18543a008d539ac168be4f9",
+      "sha256": "492b3272e9a266c2ff8d8045d03ac5abd0576e79e26fef8d4c5de85786be46e6",
+      "byteCount": 1797
+    },
+    {
+      "path": "files/KR1a0001_016.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_016.txt",
+      "gitBlobSha1": "d0a292f539aea37d656fc96b7d8ab16223676781",
+      "sha256": "318d2af66d1c42d5372b691f57953045be7317af5b939b9a13460573e95e6d4d",
+      "byteCount": 1815
+    },
+    {
+      "path": "files/KR1a0001_017.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_017.txt",
+      "gitBlobSha1": "4468df676c7d36f62ae259ea03a3524d3d2d7ead",
+      "sha256": "0fb0ebf371f1299949266fda19927e273e7e1e024307f5bb070330cf61271891",
+      "byteCount": 1773
+    },
+    {
+      "path": "files/KR1a0001_018.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_018.txt",
+      "gitBlobSha1": "a2116fe3c92af44ab5c7ec03692ca4579bed03a2",
+      "sha256": "43fd6d5cd8f324ee3f606f503af4782896fa75a6ee5696f22d0595826b362945",
+      "byteCount": 1770
+    },
+    {
+      "path": "files/KR1a0001_019.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_019.txt",
+      "gitBlobSha1": "e261b8212583f90372a43619da20a75e4f830cca",
+      "sha256": "211a66d87eaa83ac3cfcfc96e8b0e5d46c18bb16d2daf8a5e47f46d5265deab7",
+      "byteCount": 1683
+    },
+    {
+      "path": "files/KR1a0001_020.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_020.txt",
+      "gitBlobSha1": "41e6888afc3718d1992a645c4d180c62f32dea02",
+      "sha256": "4b06c9b29dcbf244ffe466f7684035f7a7deb6c8ec8b8f569bf2e069e464229d",
+      "byteCount": 1659
+    },
+    {
+      "path": "files/KR1a0001_021.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_021.txt",
+      "gitBlobSha1": "be75fcfe1f38889667195a4e7840113b12b80d71",
+      "sha256": "67381d9f634a844e77de7affda8aacc5e1a9b97267f625f5dfa04c77c2a365f4",
+      "byteCount": 1620
+    },
+    {
+      "path": "files/KR1a0001_022.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_022.txt",
+      "gitBlobSha1": "11c5b1dd459d0be0b3473c28929f0adb1392c57f",
+      "sha256": "386d3f18809d56c0b8281cc1887cad04e9036f920ecc0fdbfb64c8361bdd601f",
+      "byteCount": 1770
+    },
+    {
+      "path": "files/KR1a0001_023.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_023.txt",
+      "gitBlobSha1": "a13784c9dfdab03eb744157c4c9583bbc33e7207",
+      "sha256": "05fdfcdd667a280767841d5067e5e10d0e6ba9ac2eae1c377fd692dcc18c9cfe",
+      "byteCount": 1629
+    },
+    {
+      "path": "files/KR1a0001_024.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_024.txt",
+      "gitBlobSha1": "6d0ad4dde6287c2696335bcda45196011d6e59e4",
+      "sha256": "3770fd411b38de5c8e885b9fd3251d003cb8875051d8748f50a3e7189c5db360",
+      "byteCount": 1887
+    },
+    {
+      "path": "files/KR1a0001_025.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_025.txt",
+      "gitBlobSha1": "6b3eeda6d5ed1d3370d44639ebfeae8511d0404a",
+      "sha256": "bd3c37f6cf5789c982cc08060040a0dd9645a3437faacbfe001585585f5d1825",
+      "byteCount": 1812
+    },
+    {
+      "path": "files/KR1a0001_026.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_026.txt",
+      "gitBlobSha1": "6f5a66f47ad1b66f88cfdd7dace64c6e4da642cc",
+      "sha256": "29b2c0ca681a6045727b02dc831a3644ff31ddbe5dd5f2e286bb0ea58681c503",
+      "byteCount": 1656
+    },
+    {
+      "path": "files/KR1a0001_027.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_027.txt",
+      "gitBlobSha1": "4d78cbb748dc52f100b6e37ffd8a1415bbe60e54",
+      "sha256": "86798a930c4a92658a39f87447a5edcd3636a3a10883d3d6b7b192c8b3060cf5",
+      "byteCount": 1806
+    },
+    {
+      "path": "files/KR1a0001_028.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_028.txt",
+      "gitBlobSha1": "6ba0dc523bce3c28167ee0afa06b2298a5a8dd4e",
+      "sha256": "70bb9bd33de55b6ae4e7b1f69427a0dd3768ae9213260d2ccb77c9296a90d411",
+      "byteCount": 1782
+    },
+    {
+      "path": "files/KR1a0001_029.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_029.txt",
+      "gitBlobSha1": "449c1a2e6fef89982e93f8beff55c6ac1881fc46",
+      "sha256": "66bfb74fae11951975f877f6ce5008fb46851bfb74dfba1074dcca673d3df592",
+      "byteCount": 1887
+    },
+    {
+      "path": "files/KR1a0001_030.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_030.txt",
+      "gitBlobSha1": "31214f02c50f29fa33ed34d3127dbf5928703c3c",
+      "sha256": "f75752d317ee50f0bbf2b99875d4a9745901a3c7d960a5620efb3d83e582a391",
+      "byteCount": 1758
+    },
+    {
+      "path": "files/KR1a0001_031.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_031.txt",
+      "gitBlobSha1": "8ad7b36fe53a9ff9b09407b40a1caee5495594ec",
+      "sha256": "58c8b16f8b7e94101a6db3313a8421519f117057d5b447cd21bfee1c4378afb8",
+      "byteCount": 1815
+    },
+    {
+      "path": "files/KR1a0001_032.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_032.txt",
+      "gitBlobSha1": "c96f86e3b8622a3a51c8d8ecaa247b0c1806d3cd",
+      "sha256": "ce5de9f1e18a64fecfd0f930a879835d9c04302776a1c600b8f92fed077dcb29",
+      "byteCount": 1896
+    },
+    {
+      "path": "files/KR1a0001_033.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_033.txt",
+      "gitBlobSha1": "f05d4088d4ac4d6257ea109d1ad55fc0110f48ec",
+      "sha256": "23ec703f5c542f5f4e97ab4005a2be9bb65d5aede160ca4ef975353b7127cc37",
+      "byteCount": 1695
+    },
+    {
+      "path": "files/KR1a0001_034.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_034.txt",
+      "gitBlobSha1": "8d2f260bb53ac548f9426a55f825480a31b9f6e1",
+      "sha256": "06abd563a6a498675d191db459ef115f14283d6c347fa25b4b80fef288ace98d",
+      "byteCount": 1731
+    },
+    {
+      "path": "files/KR1a0001_035.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_035.txt",
+      "gitBlobSha1": "6de97cc31c581b9068e82041ad4239b6afa160ab",
+      "sha256": "719356fec0d980622ebaef28ff0d4cff715f067b04f2686100cd688f528b2ee2",
+      "byteCount": 1743
+    },
+    {
+      "path": "files/KR1a0001_036.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_036.txt",
+      "gitBlobSha1": "2f7914db9605a1636cc4fb4d26c989af62532af3",
+      "sha256": "33380905a0ec3b463e1c1b5f2054317424ad61e2bc479a03ba58b854b3c6c3c9",
+      "byteCount": 1854
+    },
+    {
+      "path": "files/KR1a0001_037.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_037.txt",
+      "gitBlobSha1": "83a9fd7f4f8c87292255cf277e8c4fd596655194",
+      "sha256": "a087e2001406ef31b51627e570770cc887e810add4dd50677fe951a5e987c806",
+      "byteCount": 1776
+    },
+    {
+      "path": "files/KR1a0001_038.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_038.txt",
+      "gitBlobSha1": "207aa2272b27cb5c1d7fd1de18343feb32995b1e",
+      "sha256": "900637af3ec7bad7d84ffa83ac744a78f9eda81592ad8fde613c94b4fd00722d",
+      "byteCount": 1971
+    },
+    {
+      "path": "files/KR1a0001_039.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_039.txt",
+      "gitBlobSha1": "20f66afcd1802ff2aec78becc946b6c661c0e3fa",
+      "sha256": "8cdf1e207a2937cec71f88a77ebfcce7191677087d0e307f7a72ba40cb0b596e",
+      "byteCount": 1770
+    },
+    {
+      "path": "files/KR1a0001_040.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_040.txt",
+      "gitBlobSha1": "24d997f4a3850f9594c5b830ed227fa72245370e",
+      "sha256": "4cfe0b5587c84098786ca89467b8b2444a10a43672f109400313bb9e8fe65bae",
+      "byteCount": 1860
+    },
+    {
+      "path": "files/KR1a0001_041.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_041.txt",
+      "gitBlobSha1": "7b2c639fcde8d12a32ed4e7b610d405a0e871127",
+      "sha256": "2a0f76a66fc957bf7802c7fe552a066b91537ce7275e58e79b694138b4ba656a",
+      "byteCount": 1911
+    },
+    {
+      "path": "files/KR1a0001_042.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_042.txt",
+      "gitBlobSha1": "67c9bc5e3817e948d333f1f19dd26166433d6d38",
+      "sha256": "569f7482f545e496a4573ee1aa076817de7fa865bc46e96e337f44e1a1a47740",
+      "byteCount": 1977
+    },
+    {
+      "path": "files/KR1a0001_043.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_043.txt",
+      "gitBlobSha1": "c88709c9e2cbaba251f5f7404e05902d99be5872",
+      "sha256": "d90f43ed6a79e987d5939a3734fd8ae1d6d707ef01704e78964a8796cd4873e2",
+      "byteCount": 1962
+    },
+    {
+      "path": "files/KR1a0001_044.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_044.txt",
+      "gitBlobSha1": "aa8def569011a4b5a52f070c4ad186cb3560fd1e",
+      "sha256": "f8927962081486249097b501e8a1f9073bd931697a4634b03038490b578a503e",
+      "byteCount": 1791
+    },
+    {
+      "path": "files/KR1a0001_045.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_045.txt",
+      "gitBlobSha1": "3eeca876aab0fe84223f9b69a804361e023bb945",
+      "sha256": "b7001ef04b281df6caa6fd286134d5d1613e4e783f9b0e6bb12baddbf61ae947",
+      "byteCount": 1872
+    },
+    {
+      "path": "files/KR1a0001_046.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_046.txt",
+      "gitBlobSha1": "b2bd568e3bb6404d71517ae4b0ef8e2d36b31dda",
+      "sha256": "7cfed37b07ec5be8ff80193efa5e7fdd773bf1e38157d0df53d0af9604b56a05",
+      "byteCount": 1605
+    },
+    {
+      "path": "files/KR1a0001_047.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_047.txt",
+      "gitBlobSha1": "3d6aee204fb4eea401343b8b764d6e6a1b8b3eff",
+      "sha256": "208db8c3050409db56b8ca052e0277ec7fdd30ec07ec0da70b0c01aca53d4033",
+      "byteCount": 2025
+    },
+    {
+      "path": "files/KR1a0001_048.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_048.txt",
+      "gitBlobSha1": "8f783b1e00358fd170c81028cabd619dab3ab2db",
+      "sha256": "0010631a92d70ad1796ed76f97cd384f6a0159de44777d567bc0e50f05c14f67",
+      "byteCount": 1866
+    },
+    {
+      "path": "files/KR1a0001_049.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_049.txt",
+      "gitBlobSha1": "5346cb6358a4fbf98d6a253e10bb532df607cc1d",
+      "sha256": "261c9bedf9557403ca68ebe29df88bc27f3efb7f656dc49d8d024aa09987a49f",
+      "byteCount": 1884
+    },
+    {
+      "path": "files/KR1a0001_050.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_050.txt",
+      "gitBlobSha1": "c9b9553d19418628824b2dbceb84e7f5e0311573",
+      "sha256": "3f7d56da704908ccebec0a8eb2ecc02cc2413fd47c0623e2acd19d3386e2bb90",
+      "byteCount": 1833
+    },
+    {
+      "path": "files/KR1a0001_051.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_051.txt",
+      "gitBlobSha1": "678350998bf42aca69632cbd7317ae902db4824e",
+      "sha256": "16d65107e0f76c0dabd60638505ffece6cfd2fd87112fcb516c390a197ec629d",
+      "byteCount": 1965
+    },
+    {
+      "path": "files/KR1a0001_052.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_052.txt",
+      "gitBlobSha1": "0c787b7ccde5f15b269ce3480352a2c66fa57a86",
+      "sha256": "f5885b954e3cee6b02ebd6d609a8a18080de07912c83a230c9b911f67af27a52",
+      "byteCount": 1749
+    },
+    {
+      "path": "files/KR1a0001_053.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_053.txt",
+      "gitBlobSha1": "8f1677a5eba0b3fa25fcdc6c666e96ef50023831",
+      "sha256": "fba1ec193608148a16f6c11581675e35ef866451b8286c0403bf68e256e207cb",
+      "byteCount": 1863
+    },
+    {
+      "path": "files/KR1a0001_054.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_054.txt",
+      "gitBlobSha1": "84d70bd32e6945bcf0edce7ee48670bf9fa05bc2",
+      "sha256": "29920309d47abdb40d51ea3f7b4eeaa614f9f5a9e5646a4e2194fc16bcc713c6",
+      "byteCount": 1893
+    },
+    {
+      "path": "files/KR1a0001_055.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_055.txt",
+      "gitBlobSha1": "513319d9fbbb85fb1c885bb38a831f4fd96bc179",
+      "sha256": "d57e1afa083166108ac66effd38dac15162983884a58ca887910aa6750cba786",
+      "byteCount": 2079
+    },
+    {
+      "path": "files/KR1a0001_056.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_056.txt",
+      "gitBlobSha1": "afc064f19a8aa0999e25855c931d1b7c4c917df6",
+      "sha256": "1864bfabfe52eaee4ea840774f8b89fd7d1ae023a0f6135a8b9bc8dfa386c2ef",
+      "byteCount": 1866
+    },
+    {
+      "path": "files/KR1a0001_057.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_057.txt",
+      "gitBlobSha1": "beda44d3ea744350a601fa728c06edbdd5aad0fa",
+      "sha256": "6b3b973bac09c9db8f086be74c5bf49caac60028d21149d0f5e5c5479a7ba8a2",
+      "byteCount": 1788
+    },
+    {
+      "path": "files/KR1a0001_058.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_058.txt",
+      "gitBlobSha1": "4ba35d5413e6aeb6e3c4d83b3a27ca6fffddb2fc",
+      "sha256": "5eb85036276366c67a5248aaf45fc7b214c71fa77728c005186ccedd4fc58121",
+      "byteCount": 1614
+    },
+    {
+      "path": "files/KR1a0001_059.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_059.txt",
+      "gitBlobSha1": "117c64e7c07d4f5f7b1f189f96305d9e8c2be2b7",
+      "sha256": "9f7bfbcbf547bec0938347541df26d41acc3c27a2dce32a83876cd4023be0386",
+      "byteCount": 1656
+    },
+    {
+      "path": "files/KR1a0001_060.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_060.txt",
+      "gitBlobSha1": "71edf99afd3a79b242e6ac2a406bbd7e1758b26c",
+      "sha256": "f47700e18c08adec5ea399d3c17af6d34eb436a63334a088b2a5d17b8f0d9943",
+      "byteCount": 1710
+    },
+    {
+      "path": "files/KR1a0001_061.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_061.txt",
+      "gitBlobSha1": "b9bacfdb1ca71365d0fc9049f80df54bd38f6c75",
+      "sha256": "27644ab0ac8ab9046ce52756aa9d78ee5a0889800d5431a900dfe090c166cb86",
+      "byteCount": 1740
+    },
+    {
+      "path": "files/KR1a0001_062.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_062.txt",
+      "gitBlobSha1": "222f6518c1b7a9c2f90553f51de9205e645cb1e5",
+      "sha256": "8d9e2c4aca8ece3b2d430f0e200eb3166f9749ec17330adec5f8d1259db364bd",
+      "byteCount": 2085
+    },
+    {
+      "path": "files/KR1a0001_063.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_063.txt",
+      "gitBlobSha1": "4d3f12fdbcf2e5d7a81138002bcd16b5313f4687",
+      "sha256": "5cd625c46c875135d6eb0e6b2b10ec64b3a87aae4296bd742271df1d1aa91ff9",
+      "byteCount": 1758
+    },
+    {
+      "path": "files/KR1a0001_064.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_064.txt",
+      "gitBlobSha1": "f87cf03e95463940469b212df19ca8706ffac566",
+      "sha256": "a257dd859081a00335ac2c7087c826b5d37319180f59ebdaab327623615c2c74",
+      "byteCount": 1770
+    },
+    {
+      "path": "files/KR1a0001_065.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_065.txt",
+      "gitBlobSha1": "bc0cc78890552d1a747b8c58ca03f7f3e22eb3f1",
+      "sha256": "63ab286b220bf490e5070727a6cf5c1fa0fc9dcce791e53599dee099c8352a16",
+      "byteCount": 12524
+    },
+    {
+      "path": "files/KR1a0001_066.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_066.txt",
+      "gitBlobSha1": "a719e88667753e6de492b31fc6f031f41f7b3197",
+      "sha256": "d80dc891c9641f6b9ea1d6771e5c0fed4c508aebe032e107abae4243302c262f",
+      "byteCount": 10332
+    },
+    {
+      "path": "files/KR1a0001_067.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_067.txt",
+      "gitBlobSha1": "13dbcdaebc17a6c7d81df0e7d44efdf7b0111ff1",
+      "sha256": "da6132079587120c3592cfd468a9698f77d5278ac2d7b8c6374300af0f21cfef",
+      "byteCount": 5172
+    },
+    {
+      "path": "files/KR1a0001_068.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_068.txt",
+      "gitBlobSha1": "468d9ea12fa9a8c5abb51a00174c3c36e4327041",
+      "sha256": "0cbb83b7c8eb38304d3503d0c62f88fcdadd8b060bf59e53d60476b0a77099e0",
+      "byteCount": 4753
+    },
+    {
+      "path": "files/KR1a0001_069.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/Kanripo/KR1a0001/8284adbf9e3435d713180e24f05bf75f8b7d1d96/KR1a0001_069.txt",
+      "gitBlobSha1": "a6a30d11b8e55fc6cd9220c495914d38e53a5d74",
+      "sha256": "b2441f68a9d1f06cae7657239f88bc234ad09f0d5b33f2566a736ad69f2c9761",
+      "byteCount": 1964
+    }
+  ],
+  "collectionSha256": "d870c0437d86e74f20132c2a03607e38118b79d1f2872a6bdc0efd9b2fb92cd8"
+}

@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "hexagram-page-manifest-v1" },
+    "source": {
+      "type": "object",
+      "properties": {
+        "sourceId": { "type": "string", "minLength": 1 },
+        "sourceVersion": { "type": "string", "minLength": 1 },
+        "sourceLocator": { "type": "string", "minLength": 1 },
+        "revision": { "anyOf": [{ "type": "string" }, { "type": "null" }] },
+        "sourceSha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "verificationStatus": {
+          "type": "string",
+          "enum": ["production_candidate", "editorial_original"]
+        }
+      },
+      "required": [
+        "sourceId",
+        "sourceVersion",
+        "sourceLocator",
+        "revision",
+        "sourceSha256",
+        "verificationStatus"
+      ],
+      "additionalProperties": false
+    },
+    "entries": {
+      "minItems": 64,
+      "maxItems": 64,
+      "type": "array",
+      "items": { "$ref": "#/$defs/__schema0" }
+    }
+  },
+  "required": ["schemaVersion", "source", "entries"],
+  "additionalProperties": false,
+  "$defs": {
+    "__schema0": {
+      "type": "object",
+      "properties": {
+        "hexagramId": { "type": "string", "minLength": 1 },
+        "kingWenSequence": { "type": "integer", "minimum": 1, "maximum": 64 },
+        "name": { "type": "string", "minLength": 1 },
+        "unicodeSymbol": { "type": "string", "minLength": 1 },
+        "upperTrigramId": { "type": "string", "minLength": 1 },
+        "lowerTrigramId": { "type": "string", "minLength": 1 }
+      },
+      "required": [
+        "hexagramId",
+        "kingWenSequence",
+        "name",
+        "unicodeSymbol",
+        "upperTrigramId",
+        "lowerTrigramId"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$id": "https://liuyao.app/schemas/hexagram-page-manifest.schema.json",
+  "$comment": "Generated from scripts/content-data-schema.ts. Cross-record and release-gate rules are enforced by validateContentDataset."
+}

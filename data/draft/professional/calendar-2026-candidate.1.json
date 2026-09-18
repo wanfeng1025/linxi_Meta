@@ -1,0 +1,107 @@
+{
+  "recordType": "professional-calendar-candidate",
+  "status": "production_candidate",
+  "generatedFromSha256": "8F5118AB2DE1ED04D2CFF14977CC2C10BF22E90E7390ECB1DCD73FCFB429DFEB",
+  "calendar": {
+    "policyId": "civil_midnight_solar_terms_tzdb2026c",
+    "calendarAlgorithmVersion": "1.0.0-candidate.1",
+    "solarTermDataVersion": "hko-2026-candidate.1",
+    "timezoneDataVersion": "tzdb-2026c-candidate",
+    "sourceIds": [
+      "SOURCE-HKO-TERMS",
+      "SOURCE-HKO-ALMANAC-2026",
+      "SOURCE-HKO-GANZHI",
+      "SOURCE-IANA-TZDB"
+    ],
+    "dayGanzhiAnchor": {
+      "localDate": "2026-01-01",
+      "cycleIndex": 11
+    },
+    "coverageEndInclusiveInstant": "2026-02-18T15:52:00Z",
+    "solarTerms": [
+      {
+        "id": "solar-term-xiaohan-2026",
+        "instant": "2026-01-05T08:23:00Z",
+        "monthBranchId": "branch-chou",
+        "changesMonthBranch": true
+      },
+      {
+        "id": "solar-term-lichun-2026",
+        "instant": "2026-02-03T20:02:00Z",
+        "monthBranchId": "branch-yin",
+        "changesMonthBranch": true
+      },
+      {
+        "id": "solar-term-yushui-2026",
+        "instant": "2026-02-18T15:52:00Z",
+        "monthBranchId": "branch-yin",
+        "changesMonthBranch": false
+      }
+    ],
+    "timezones": [
+      {
+        "timezone": "Asia/Hong_Kong",
+        "initialOffsetSeconds": 28800,
+        "initialIsDst": false,
+        "transitions": []
+      },
+      {
+        "timezone": "Asia/Shanghai",
+        "initialOffsetSeconds": 28800,
+        "initialIsDst": false,
+        "transitions": []
+      },
+      {
+        "timezone": "America/Los_Angeles",
+        "initialOffsetSeconds": -28800,
+        "initialIsDst": false,
+        "transitions": [
+          {
+            "instant": "2026-03-08T10:00:00Z",
+            "offsetSecondsAfter": -25200,
+            "isDstAfter": true
+          },
+          {
+            "instant": "2026-11-01T09:00:00Z",
+            "offsetSecondsAfter": -28800,
+            "isDstAfter": false
+          }
+        ]
+      },
+      {
+        "timezone": "America/New_York",
+        "initialOffsetSeconds": -18000,
+        "initialIsDst": false,
+        "transitions": [
+          {
+            "instant": "2026-03-08T07:00:00Z",
+            "offsetSecondsAfter": -14400,
+            "isDstAfter": true
+          },
+          {
+            "instant": "2026-11-01T06:00:00Z",
+            "offsetSecondsAfter": -18000,
+            "isDstAfter": false
+          }
+        ]
+      },
+      {
+        "timezone": "Europe/London",
+        "initialOffsetSeconds": 0,
+        "initialIsDst": false,
+        "transitions": [
+          {
+            "instant": "2026-03-29T01:00:00Z",
+            "offsetSecondsAfter": 3600,
+            "isDstAfter": true
+          },
+          {
+            "instant": "2026-10-25T01:00:00Z",
+            "offsetSecondsAfter": 0,
+            "isDstAfter": false
+          }
+        ]
+      }
+    ]
+  }
+}

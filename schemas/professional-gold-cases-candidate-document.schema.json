@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "recordType": { "type": "string", "const": "professional-gold-cases-candidate" },
+    "status": { "type": "string", "const": "candidate_for_human_review" },
+    "generatedFromSha256": { "type": "string", "pattern": "^[a-fA-F0-9]{64}$" },
+    "cases": { "minItems": 1, "type": "array", "items": { "$ref": "#/$defs/__schema0" } }
+  },
+  "required": ["recordType", "status", "generatedFromSha256", "cases"],
+  "additionalProperties": false,
+  "$defs": {
+    "__schema0": {
+      "type": "object",
+      "properties": {
+        "caseId": { "type": "string", "minLength": 1 },
+        "status": { "type": "string", "const": "candidate_for_human_review" },
+        "reviewerSignoffsRequired": { "type": "number", "const": 2 },
+        "reviewerSignoffsPresent": { "type": "number", "const": 0 }
+      },
+      "required": ["caseId", "status", "reviewerSignoffsRequired", "reviewerSignoffsPresent"]
+    }
+  },
+  "$id": "https://liuyao.app/schemas/professional-gold-cases-candidate-document.schema.json",
+  "$comment": "Generated from scripts/content-data-schema.ts. Cross-record and release-gate rules are enforced by validateContentDataset."
+}

@@ -1,0 +1,1938 @@
+[
+  {
+    "recordId": "trigram-qian",
+    "recordType": "trigram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "trigram-qian",
+      "name": "乾",
+      "symbol": "☰",
+      "code": "111",
+      "lineBits": [1, 1, 1],
+      "element": "metal",
+      "direction": "northwest",
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "trigram-dui",
+    "recordType": "trigram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "trigram-dui",
+      "name": "兑",
+      "symbol": "☱",
+      "code": "110",
+      "lineBits": [1, 1, 0],
+      "element": "metal",
+      "direction": "west",
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "trigram-li",
+    "recordType": "trigram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "trigram-li",
+      "name": "离",
+      "symbol": "☲",
+      "code": "101",
+      "lineBits": [1, 0, 1],
+      "element": "fire",
+      "direction": "south",
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "trigram-zhen",
+    "recordType": "trigram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "trigram-zhen",
+      "name": "震",
+      "symbol": "☳",
+      "code": "100",
+      "lineBits": [1, 0, 0],
+      "element": "wood",
+      "direction": "east",
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "trigram-xun",
+    "recordType": "trigram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "trigram-xun",
+      "name": "巽",
+      "symbol": "☴",
+      "code": "011",
+      "lineBits": [0, 1, 1],
+      "element": "wood",
+      "direction": "southeast",
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "trigram-kan",
+    "recordType": "trigram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "trigram-kan",
+      "name": "坎",
+      "symbol": "☵",
+      "code": "010",
+      "lineBits": [0, 1, 0],
+      "element": "water",
+      "direction": "north",
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "trigram-gen",
+    "recordType": "trigram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "trigram-gen",
+      "name": "艮",
+      "symbol": "☶",
+      "code": "001",
+      "lineBits": [0, 0, 1],
+      "element": "earth",
+      "direction": "northeast",
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "trigram-kun",
+    "recordType": "trigram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "trigram-kun",
+      "name": "坤",
+      "symbol": "☷",
+      "code": "000",
+      "lineBits": [0, 0, 0],
+      "element": "earth",
+      "direction": "southwest",
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-01",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-01",
+      "kingWenSequence": 1,
+      "name": "乾",
+      "symbol": "䷀",
+      "upperTrigramId": "trigram-qian",
+      "lowerTrigramId": "trigram-qian",
+      "code": "111111",
+      "lineBits": [1, 1, 1, 1, 1, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-02",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-02",
+      "kingWenSequence": 2,
+      "name": "坤",
+      "symbol": "䷁",
+      "upperTrigramId": "trigram-kun",
+      "lowerTrigramId": "trigram-kun",
+      "code": "000000",
+      "lineBits": [0, 0, 0, 0, 0, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-03",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-03",
+      "kingWenSequence": 3,
+      "name": "屯",
+      "symbol": "䷂",
+      "upperTrigramId": "trigram-kan",
+      "lowerTrigramId": "trigram-zhen",
+      "code": "100010",
+      "lineBits": [1, 0, 0, 0, 1, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-04",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-04",
+      "kingWenSequence": 4,
+      "name": "蒙",
+      "symbol": "䷃",
+      "upperTrigramId": "trigram-gen",
+      "lowerTrigramId": "trigram-kan",
+      "code": "010001",
+      "lineBits": [0, 1, 0, 0, 0, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-05",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-05",
+      "kingWenSequence": 5,
+      "name": "需",
+      "symbol": "䷄",
+      "upperTrigramId": "trigram-kan",
+      "lowerTrigramId": "trigram-qian",
+      "code": "111010",
+      "lineBits": [1, 1, 1, 0, 1, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-06",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-06",
+      "kingWenSequence": 6,
+      "name": "讼",
+      "symbol": "䷅",
+      "upperTrigramId": "trigram-qian",
+      "lowerTrigramId": "trigram-kan",
+      "code": "010111",
+      "lineBits": [0, 1, 0, 1, 1, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-07",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-07",
+      "kingWenSequence": 7,
+      "name": "师",
+      "symbol": "䷆",
+      "upperTrigramId": "trigram-kun",
+      "lowerTrigramId": "trigram-kan",
+      "code": "010000",
+      "lineBits": [0, 1, 0, 0, 0, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-08",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-08",
+      "kingWenSequence": 8,
+      "name": "比",
+      "symbol": "䷇",
+      "upperTrigramId": "trigram-kan",
+      "lowerTrigramId": "trigram-kun",
+      "code": "000010",
+      "lineBits": [0, 0, 0, 0, 1, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-09",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-09",
+      "kingWenSequence": 9,
+      "name": "小畜",
+      "symbol": "䷈",
+      "upperTrigramId": "trigram-xun",
+      "lowerTrigramId": "trigram-qian",
+      "code": "111011",
+      "lineBits": [1, 1, 1, 0, 1, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-10",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-10",
+      "kingWenSequence": 10,
+      "name": "履",
+      "symbol": "䷉",
+      "upperTrigramId": "trigram-qian",
+      "lowerTrigramId": "trigram-dui",
+      "code": "110111",
+      "lineBits": [1, 1, 0, 1, 1, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-11",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-11",
+      "kingWenSequence": 11,
+      "name": "泰",
+      "symbol": "䷊",
+      "upperTrigramId": "trigram-kun",
+      "lowerTrigramId": "trigram-qian",
+      "code": "111000",
+      "lineBits": [1, 1, 1, 0, 0, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-12",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-12",
+      "kingWenSequence": 12,
+      "name": "否",
+      "symbol": "䷋",
+      "upperTrigramId": "trigram-qian",
+      "lowerTrigramId": "trigram-kun",
+      "code": "000111",
+      "lineBits": [0, 0, 0, 1, 1, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-13",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-13",
+      "kingWenSequence": 13,
+      "name": "同人",
+      "symbol": "䷌",
+      "upperTrigramId": "trigram-qian",
+      "lowerTrigramId": "trigram-li",
+      "code": "101111",
+      "lineBits": [1, 0, 1, 1, 1, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-14",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-14",
+      "kingWenSequence": 14,
+      "name": "大有",
+      "symbol": "䷍",
+      "upperTrigramId": "trigram-li",
+      "lowerTrigramId": "trigram-qian",
+      "code": "111101",
+      "lineBits": [1, 1, 1, 1, 0, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-15",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-15",
+      "kingWenSequence": 15,
+      "name": "谦",
+      "symbol": "䷎",
+      "upperTrigramId": "trigram-kun",
+      "lowerTrigramId": "trigram-gen",
+      "code": "001000",
+      "lineBits": [0, 0, 1, 0, 0, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-16",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-16",
+      "kingWenSequence": 16,
+      "name": "豫",
+      "symbol": "䷏",
+      "upperTrigramId": "trigram-zhen",
+      "lowerTrigramId": "trigram-kun",
+      "code": "000100",
+      "lineBits": [0, 0, 0, 1, 0, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-17",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-17",
+      "kingWenSequence": 17,
+      "name": "随",
+      "symbol": "䷐",
+      "upperTrigramId": "trigram-dui",
+      "lowerTrigramId": "trigram-zhen",
+      "code": "100110",
+      "lineBits": [1, 0, 0, 1, 1, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-18",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-18",
+      "kingWenSequence": 18,
+      "name": "蛊",
+      "symbol": "䷑",
+      "upperTrigramId": "trigram-gen",
+      "lowerTrigramId": "trigram-xun",
+      "code": "011001",
+      "lineBits": [0, 1, 1, 0, 0, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-19",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-19",
+      "kingWenSequence": 19,
+      "name": "临",
+      "symbol": "䷒",
+      "upperTrigramId": "trigram-kun",
+      "lowerTrigramId": "trigram-dui",
+      "code": "110000",
+      "lineBits": [1, 1, 0, 0, 0, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-20",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-20",
+      "kingWenSequence": 20,
+      "name": "观",
+      "symbol": "䷓",
+      "upperTrigramId": "trigram-xun",
+      "lowerTrigramId": "trigram-kun",
+      "code": "000011",
+      "lineBits": [0, 0, 0, 0, 1, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-21",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-21",
+      "kingWenSequence": 21,
+      "name": "噬嗑",
+      "symbol": "䷔",
+      "upperTrigramId": "trigram-li",
+      "lowerTrigramId": "trigram-zhen",
+      "code": "100101",
+      "lineBits": [1, 0, 0, 1, 0, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-22",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-22",
+      "kingWenSequence": 22,
+      "name": "贲",
+      "symbol": "䷕",
+      "upperTrigramId": "trigram-gen",
+      "lowerTrigramId": "trigram-li",
+      "code": "101001",
+      "lineBits": [1, 0, 1, 0, 0, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-23",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-23",
+      "kingWenSequence": 23,
+      "name": "剥",
+      "symbol": "䷖",
+      "upperTrigramId": "trigram-gen",
+      "lowerTrigramId": "trigram-kun",
+      "code": "000001",
+      "lineBits": [0, 0, 0, 0, 0, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-24",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-24",
+      "kingWenSequence": 24,
+      "name": "复",
+      "symbol": "䷗",
+      "upperTrigramId": "trigram-kun",
+      "lowerTrigramId": "trigram-zhen",
+      "code": "100000",
+      "lineBits": [1, 0, 0, 0, 0, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-25",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-25",
+      "kingWenSequence": 25,
+      "name": "无妄",
+      "symbol": "䷘",
+      "upperTrigramId": "trigram-qian",
+      "lowerTrigramId": "trigram-zhen",
+      "code": "100111",
+      "lineBits": [1, 0, 0, 1, 1, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-26",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-26",
+      "kingWenSequence": 26,
+      "name": "大畜",
+      "symbol": "䷙",
+      "upperTrigramId": "trigram-gen",
+      "lowerTrigramId": "trigram-qian",
+      "code": "111001",
+      "lineBits": [1, 1, 1, 0, 0, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-27",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-27",
+      "kingWenSequence": 27,
+      "name": "颐",
+      "symbol": "䷚",
+      "upperTrigramId": "trigram-gen",
+      "lowerTrigramId": "trigram-zhen",
+      "code": "100001",
+      "lineBits": [1, 0, 0, 0, 0, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-28",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-28",
+      "kingWenSequence": 28,
+      "name": "大过",
+      "symbol": "䷛",
+      "upperTrigramId": "trigram-dui",
+      "lowerTrigramId": "trigram-xun",
+      "code": "011110",
+      "lineBits": [0, 1, 1, 1, 1, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-29",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-29",
+      "kingWenSequence": 29,
+      "name": "坎",
+      "symbol": "䷜",
+      "upperTrigramId": "trigram-kan",
+      "lowerTrigramId": "trigram-kan",
+      "code": "010010",
+      "lineBits": [0, 1, 0, 0, 1, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-30",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-30",
+      "kingWenSequence": 30,
+      "name": "离",
+      "symbol": "䷝",
+      "upperTrigramId": "trigram-li",
+      "lowerTrigramId": "trigram-li",
+      "code": "101101",
+      "lineBits": [1, 0, 1, 1, 0, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-31",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-31",
+      "kingWenSequence": 31,
+      "name": "咸",
+      "symbol": "䷞",
+      "upperTrigramId": "trigram-dui",
+      "lowerTrigramId": "trigram-gen",
+      "code": "001110",
+      "lineBits": [0, 0, 1, 1, 1, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-32",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-32",
+      "kingWenSequence": 32,
+      "name": "恒",
+      "symbol": "䷟",
+      "upperTrigramId": "trigram-zhen",
+      "lowerTrigramId": "trigram-xun",
+      "code": "011100",
+      "lineBits": [0, 1, 1, 1, 0, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-33",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-33",
+      "kingWenSequence": 33,
+      "name": "遁",
+      "symbol": "䷠",
+      "upperTrigramId": "trigram-qian",
+      "lowerTrigramId": "trigram-gen",
+      "code": "001111",
+      "lineBits": [0, 0, 1, 1, 1, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-34",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-34",
+      "kingWenSequence": 34,
+      "name": "大壮",
+      "symbol": "䷡",
+      "upperTrigramId": "trigram-zhen",
+      "lowerTrigramId": "trigram-qian",
+      "code": "111100",
+      "lineBits": [1, 1, 1, 1, 0, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-35",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-35",
+      "kingWenSequence": 35,
+      "name": "晋",
+      "symbol": "䷢",
+      "upperTrigramId": "trigram-li",
+      "lowerTrigramId": "trigram-kun",
+      "code": "000101",
+      "lineBits": [0, 0, 0, 1, 0, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-36",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-36",
+      "kingWenSequence": 36,
+      "name": "明夷",
+      "symbol": "䷣",
+      "upperTrigramId": "trigram-kun",
+      "lowerTrigramId": "trigram-li",
+      "code": "101000",
+      "lineBits": [1, 0, 1, 0, 0, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-37",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-37",
+      "kingWenSequence": 37,
+      "name": "家人",
+      "symbol": "䷤",
+      "upperTrigramId": "trigram-xun",
+      "lowerTrigramId": "trigram-li",
+      "code": "101011",
+      "lineBits": [1, 0, 1, 0, 1, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-38",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-38",
+      "kingWenSequence": 38,
+      "name": "睽",
+      "symbol": "䷥",
+      "upperTrigramId": "trigram-li",
+      "lowerTrigramId": "trigram-dui",
+      "code": "110101",
+      "lineBits": [1, 1, 0, 1, 0, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-39",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-39",
+      "kingWenSequence": 39,
+      "name": "蹇",
+      "symbol": "䷦",
+      "upperTrigramId": "trigram-kan",
+      "lowerTrigramId": "trigram-gen",
+      "code": "001010",
+      "lineBits": [0, 0, 1, 0, 1, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-40",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-40",
+      "kingWenSequence": 40,
+      "name": "解",
+      "symbol": "䷧",
+      "upperTrigramId": "trigram-zhen",
+      "lowerTrigramId": "trigram-kan",
+      "code": "010100",
+      "lineBits": [0, 1, 0, 1, 0, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-41",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-41",
+      "kingWenSequence": 41,
+      "name": "损",
+      "symbol": "䷨",
+      "upperTrigramId": "trigram-gen",
+      "lowerTrigramId": "trigram-dui",
+      "code": "110001",
+      "lineBits": [1, 1, 0, 0, 0, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-42",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-42",
+      "kingWenSequence": 42,
+      "name": "益",
+      "symbol": "䷩",
+      "upperTrigramId": "trigram-xun",
+      "lowerTrigramId": "trigram-zhen",
+      "code": "100011",
+      "lineBits": [1, 0, 0, 0, 1, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-43",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-43",
+      "kingWenSequence": 43,
+      "name": "夬",
+      "symbol": "䷪",
+      "upperTrigramId": "trigram-dui",
+      "lowerTrigramId": "trigram-qian",
+      "code": "111110",
+      "lineBits": [1, 1, 1, 1, 1, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-44",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-44",
+      "kingWenSequence": 44,
+      "name": "姤",
+      "symbol": "䷫",
+      "upperTrigramId": "trigram-qian",
+      "lowerTrigramId": "trigram-xun",
+      "code": "011111",
+      "lineBits": [0, 1, 1, 1, 1, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-45",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-45",
+      "kingWenSequence": 45,
+      "name": "萃",
+      "symbol": "䷬",
+      "upperTrigramId": "trigram-dui",
+      "lowerTrigramId": "trigram-kun",
+      "code": "000110",
+      "lineBits": [0, 0, 0, 1, 1, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-46",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-46",
+      "kingWenSequence": 46,
+      "name": "升",
+      "symbol": "䷭",
+      "upperTrigramId": "trigram-kun",
+      "lowerTrigramId": "trigram-xun",
+      "code": "011000",
+      "lineBits": [0, 1, 1, 0, 0, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-47",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-47",
+      "kingWenSequence": 47,
+      "name": "困",
+      "symbol": "䷮",
+      "upperTrigramId": "trigram-dui",
+      "lowerTrigramId": "trigram-kan",
+      "code": "010110",
+      "lineBits": [0, 1, 0, 1, 1, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-48",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-48",
+      "kingWenSequence": 48,
+      "name": "井",
+      "symbol": "䷯",
+      "upperTrigramId": "trigram-kan",
+      "lowerTrigramId": "trigram-xun",
+      "code": "011010",
+      "lineBits": [0, 1, 1, 0, 1, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-49",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-49",
+      "kingWenSequence": 49,
+      "name": "革",
+      "symbol": "䷰",
+      "upperTrigramId": "trigram-dui",
+      "lowerTrigramId": "trigram-li",
+      "code": "101110",
+      "lineBits": [1, 0, 1, 1, 1, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-50",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-50",
+      "kingWenSequence": 50,
+      "name": "鼎",
+      "symbol": "䷱",
+      "upperTrigramId": "trigram-li",
+      "lowerTrigramId": "trigram-xun",
+      "code": "011101",
+      "lineBits": [0, 1, 1, 1, 0, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-51",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-51",
+      "kingWenSequence": 51,
+      "name": "震",
+      "symbol": "䷲",
+      "upperTrigramId": "trigram-zhen",
+      "lowerTrigramId": "trigram-zhen",
+      "code": "100100",
+      "lineBits": [1, 0, 0, 1, 0, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-52",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-52",
+      "kingWenSequence": 52,
+      "name": "艮",
+      "symbol": "䷳",
+      "upperTrigramId": "trigram-gen",
+      "lowerTrigramId": "trigram-gen",
+      "code": "001001",
+      "lineBits": [0, 0, 1, 0, 0, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-53",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-53",
+      "kingWenSequence": 53,
+      "name": "渐",
+      "symbol": "䷴",
+      "upperTrigramId": "trigram-xun",
+      "lowerTrigramId": "trigram-gen",
+      "code": "001011",
+      "lineBits": [0, 0, 1, 0, 1, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-54",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-54",
+      "kingWenSequence": 54,
+      "name": "归妹",
+      "symbol": "䷵",
+      "upperTrigramId": "trigram-zhen",
+      "lowerTrigramId": "trigram-dui",
+      "code": "110100",
+      "lineBits": [1, 1, 0, 1, 0, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-55",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-55",
+      "kingWenSequence": 55,
+      "name": "丰",
+      "symbol": "䷶",
+      "upperTrigramId": "trigram-zhen",
+      "lowerTrigramId": "trigram-li",
+      "code": "101100",
+      "lineBits": [1, 0, 1, 1, 0, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-56",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-56",
+      "kingWenSequence": 56,
+      "name": "旅",
+      "symbol": "䷷",
+      "upperTrigramId": "trigram-li",
+      "lowerTrigramId": "trigram-gen",
+      "code": "001101",
+      "lineBits": [0, 0, 1, 1, 0, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-57",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-57",
+      "kingWenSequence": 57,
+      "name": "巽",
+      "symbol": "䷸",
+      "upperTrigramId": "trigram-xun",
+      "lowerTrigramId": "trigram-xun",
+      "code": "011011",
+      "lineBits": [0, 1, 1, 0, 1, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-58",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-58",
+      "kingWenSequence": 58,
+      "name": "兑",
+      "symbol": "䷹",
+      "upperTrigramId": "trigram-dui",
+      "lowerTrigramId": "trigram-dui",
+      "code": "110110",
+      "lineBits": [1, 1, 0, 1, 1, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-59",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-59",
+      "kingWenSequence": 59,
+      "name": "涣",
+      "symbol": "䷺",
+      "upperTrigramId": "trigram-xun",
+      "lowerTrigramId": "trigram-kan",
+      "code": "010011",
+      "lineBits": [0, 1, 0, 0, 1, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-60",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-60",
+      "kingWenSequence": 60,
+      "name": "节",
+      "symbol": "䷻",
+      "upperTrigramId": "trigram-kan",
+      "lowerTrigramId": "trigram-dui",
+      "code": "110010",
+      "lineBits": [1, 1, 0, 0, 1, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-61",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-61",
+      "kingWenSequence": 61,
+      "name": "中孚",
+      "symbol": "䷼",
+      "upperTrigramId": "trigram-xun",
+      "lowerTrigramId": "trigram-dui",
+      "code": "110011",
+      "lineBits": [1, 1, 0, 0, 1, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-62",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-62",
+      "kingWenSequence": 62,
+      "name": "小过",
+      "symbol": "䷽",
+      "upperTrigramId": "trigram-zhen",
+      "lowerTrigramId": "trigram-gen",
+      "code": "001100",
+      "lineBits": [0, 0, 1, 1, 0, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-63",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-63",
+      "kingWenSequence": 63,
+      "name": "既济",
+      "symbol": "䷾",
+      "upperTrigramId": "trigram-kan",
+      "lowerTrigramId": "trigram-li",
+      "code": "101010",
+      "lineBits": [1, 0, 1, 0, 1, 0],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  },
+  {
+    "recordId": "hexagram-kw-64",
+    "recordType": "hexagram",
+    "status": "verified",
+    "source": {
+      "sourceId": "hexagram-mapping-source-2026-07-20",
+      "sourceTitle": "Project-owner hexagram mapping cross-checked with Unicode 17.0 and Wikisource",
+      "edition": "user-spec-2026-07-20; Unicode-17.0.0; Wikisource-oldid-7907208",
+      "sourceType": "internal-derivation",
+      "licenseStatus": "cleared",
+      "verifiedBy": "project-owner-source-approval",
+      "verifiedAt": "2026-07-20T16:02:35+08:00",
+      "notes": "Project owner supplied 六爻App模块四内容数据库详细说明.txt (SHA-256 E44D669F17CD9C90D30FC7481E3F6D741D5E9B40AA4CE4004D04BF1405BE2AD7), sections 3-4. Mapping cross-checked 2026-07-20 against Unicode 17.0.0 UCD NamesList.txt and Wikisource 周易 revision 7907208. Unicode symbols are used under Unicode License v3; Wikisource was used only to cross-check factual names and the upper/lower matrix, and no classical prose or modern explanation was copied. Simplified names follow the project-owner source.",
+      "contentVersion": "hexagram-mapping-2026-07-20-v1"
+    },
+    "content": {
+      "id": "hexagram-kw-64",
+      "kingWenSequence": 64,
+      "name": "未济",
+      "symbol": "䷿",
+      "upperTrigramId": "trigram-li",
+      "lowerTrigramId": "trigram-kan",
+      "code": "010101",
+      "lineBits": [0, 1, 0, 1, 0, 1],
+      "dataVersion": "hexagram-mapping-2026-07-20-v1"
+    }
+  }
+]

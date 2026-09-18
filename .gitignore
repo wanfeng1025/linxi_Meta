@@ -1,0 +1,58 @@
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files
+.env
+.env.*
+!.env.example
+
+# typescript
+*.tsbuildinfo
+.next/
+**/.next/
+
+# Vercel project linkage is user- and environment-specific.
+.vercel/
+
+# tests and local package cache
+coverage/
+.pnpm-store/
+__pycache__/
+apps/web/test-results/
+apps/web/playwright-report/
+
+# machine-local, portable development runtimes
+.tools/
+
+# generated native folders
+/ios
+/android
