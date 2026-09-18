@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 
 import { AmbientScene } from '../components/ambient-scene';
 import { BrandMark } from '../components/brand-mark';
+import { SiteNavigation } from '../components/site-navigation';
 import { siteUrl } from '../lib/site-url';
 
 import './globals.css';
@@ -61,12 +62,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
               <small>Meta</small>
             </span>
           </a>
-          <nav aria-label="主导航">
-            <a href="/casting">起卦</a>
-            <a href="/hexagrams">六十四卦</a>
-            <a href="/knowledge">知识</a>
-            <a href="/methodology">方法与证据</a>
-          </nav>
+          <SiteNavigation />
         </header>
         <main id="main-content">{children}</main>
         <footer>

@@ -70,6 +70,7 @@ test('critical public pages have no automatically detectable accessibility viola
 }) => {
   for (const path of ['/', '/casting', '/hexagrams', '/methodology']) {
     await page.goto(path);
+    await expect(page.getByRole('heading', { level: 1 }).first()).toBeVisible();
     const report = await new AxeBuilder({ page }).analyze();
     expect(report.violations, `${path}: ${JSON.stringify(report.violations, null, 2)}`).toEqual([]);
   }
@@ -81,6 +82,35 @@ test('reduced motion keeps the casting flow operable', async ({ page }) => {
   await page.getByRole('button', { name: '开始起卦' }).click();
   await page.getByRole('button', { name: '起下一爻' }).click();
   await expect(page.getByText('1 / 6 爻')).toBeVisible();
+});
+
+test('mobile navigation exposes an accessible menu and returns focus on Escape', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/');
+  const toggle = page.getByRole('button', { name: '打开菜单' });
+  await expect(toggle).toHaveAttribute('aria-expanded', 'false');
+  await toggle.click();
+  await expect(page.getByRole('button', { name: '关闭菜单' })).toHaveAttribute(
+    'aria-expanded',
+    'true',
+  );
+  await expect(page.getByRole('link', { name: '方法与证据' })).toBeVisible();
+  await page.keyboard.press('Escape');
+  await expect(page.getByRole('button', { name: '打开菜单' })).toBeFocused();
+});
+
+test('hexagram directory supports search and upper/lower trigram filters', async ({ page }) => {
+  await page.goto('/hexagrams');
+  await expect(page.getByText('显示 64 / 64 卦')).toBeVisible();
+  await page.getByLabel('搜索卦名、编号或卦象').fill('乾');
+  await expect(page.getByText(/显示 \d+ \/ 64 卦/)).toBeVisible();
+  await page.getByLabel('搜索卦名、编号或卦象').fill('');
+  await page.getByLabel('上卦').selectOption({ label: '乾' });
+  await expect(page.getByText(/显示 8 \/ 64 卦/)).toBeVisible();
+  await page.getByLabel('下卦').selectOption({ label: '乾' });
+  await expect(page.getByText(/显示 1 \/ 64 卦/)).toBeVisible();
 });
 
 test('corrupt session storage falls back to a safe empty state', async ({ page }) => {
