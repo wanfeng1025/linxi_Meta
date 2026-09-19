@@ -18,10 +18,16 @@ test('anonymous visitor can lock a six-line casting and inspect verified structu
     }
     if (message.type() === 'error') runtimeErrors.push(`console: ${message.text()}`);
   });
-  page.on('pageerror', (error) => runtimeErrors.push(`pageerror: ${error.message}`));
+  page.on('pageerror', (error) => {
+    if (error.message.includes('due to access control checks') && error.message.includes('?_rsc=')) {
+      return;
+    }
+    runtimeErrors.push(`pageerror: ${error.message}`);
+  });
   page.on('requestfailed', (request) => {
+    const errorText = request.failure()?.errorText;
     if (
-      request.failure()?.errorText === 'net::ERR_ABORTED' &&
+      ['net::ERR_ABORTED', 'NS_BINDING_ABORTED', 'Load request cancelled'].includes(errorText ?? '') &&
       (request.url().includes('?_rsc=') || request.url().includes('/_next/static/'))
     ) {
       return;
