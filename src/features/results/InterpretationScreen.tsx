@@ -1,6 +1,7 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import { Text } from 'react-native';
 
+import { formatMovingLinePositions } from '@/domain/casting';
 import { APP_ROUTES } from '@/features/navigation/routes';
 import { Button, Card, EvidenceCard, Screen, StateView, Tag } from '@/shared/components';
 import { useAppTheme } from '@/shared/theme/AppThemeProvider';
@@ -31,9 +32,10 @@ export function InterpretationScreen() {
         <Text style={[theme.typography.heading, { color: theme.colors.ink }]}>卦象总论</Text>
         <Text style={[theme.typography.body, { color: theme.colors.muted }]}>
           本卦为第 {snapshot.primaryHexagram.kingWenSequence} 卦「{snapshot.primaryHexagram.name}
-          」，变卦为第 {snapshot.changedHexagram.kingWenSequence} 卦「
-          {snapshot.changedHexagram.name}」；动爻位置为{' '}
-          {snapshot.movingLines.length ? snapshot.movingLines.join('、') : '无'}。
+          」；
+          {snapshot.changeStatus === 'CHANGING'
+            ? `变卦为第 ${snapshot.changedHexagram?.kingWenSequence} 卦「${snapshot.changedHexagram?.name}」；动爻位置为 ${formatMovingLinePositions(snapshot.movingLines)}。`
+            : '本次为静卦，无动爻，不产生独立变卦。'}
         </Text>
       </Card>
       {['针对问题分析', '有利条件', '不利条件', '趋势', '行动建议'].map((title) => (

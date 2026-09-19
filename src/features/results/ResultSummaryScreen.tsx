@@ -1,6 +1,8 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import { Share, StyleSheet, Text, View } from 'react-native';
 
+import { formatMovingLinePositions } from '@/domain/casting';
+import { formatHexagramLabel } from '@/domain/hexagram';
 import { useAppRuntime } from '@/features/app/AppRuntimeProvider';
 import { APP_ROUTES } from '@/features/navigation/routes';
 import {
@@ -46,10 +48,16 @@ export function ResultSummaryScreen() {
 
   const snapshot = result.snapshot;
   const movingLabel =
-    snapshot.movingLines.length === 0 ? '无动爻' : `${snapshot.movingLines.join('、')} 爻动`;
+    snapshot.changeStatus === 'STATIC'
+      ? '静卦 · 无动爻'
+      : `动卦 · ${formatMovingLinePositions(snapshot.movingLines)}动`;
+  const hexagramLabel =
+    snapshot.changeStatus === 'STATIC'
+      ? formatHexagramLabel(snapshot.primaryHexagram)
+      : `${formatHexagramLabel(snapshot.primaryHexagram)} → ${formatHexagramLabel(snapshot.changedHexagram!)}`;
   const share = async () => {
     await Share.share({
-      message: `${snapshot.metadata.values.question}\n${snapshot.primaryHexagram.name} → ${snapshot.changedHexagram.name}\n${movingLabel}\n${snapshot.riskStatement}`,
+      message: `${snapshot.metadata.values.question}\n${hexagramLabel}\n${movingLabel}\n${snapshot.riskStatement}`,
       title: '六爻结构结果',
     });
   };
@@ -72,17 +80,26 @@ export function ResultSummaryScreen() {
           {...snapshot.primaryHexagram}
           sequence={snapshot.primaryHexagram.kingWenSequence}
         />
-        <HexagramCard
-          label="变卦"
-          {...snapshot.changedHexagram}
-          sequence={snapshot.changedHexagram.kingWenSequence}
-        />
+        {snapshot.changeStatus === 'CHANGING' && (
+          <HexagramCard
+            label="变卦"
+            {...snapshot.changedHexagram!}
+            sequence={snapshot.changedHexagram!.kingWenSequence}
+          />
+        )}
       </View>
       <View style={styles.tags}>
         <Tag label={movingLabel} tone="accent" />
         <Tag label="结构已核验" tone="success" />
         <Tag label="解释待规则" tone="warning" />
       </View>
+      {snapshot.changeStatus === 'STATIC' && (
+        <Card>
+          <Text style={[theme.typography.body, { color: theme.colors.muted }]}>
+            本次无动爻，不产生独立变卦。
+          </Text>
+        </Card>
+      )}
       <Card style={{ backgroundColor: theme.colors.goldSoft }}>
         <Text style={[theme.typography.caption, { color: theme.colors.gold }]}>一句话结论</Text>
         <Text style={[theme.typography.heading, { color: theme.colors.ink }]}>

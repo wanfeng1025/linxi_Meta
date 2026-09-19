@@ -123,18 +123,28 @@ describe('all 4096 four-state six-line combinations', () => {
       );
 
       expect(result.primaryLineBits).toEqual(values.map(originalBit));
-      expect(result.changedLineBits).toEqual(values.map(changedBit));
+      if (expectedMovingLines.length === 0) {
+        expect(result.changeStatus).toBe('STATIC');
+        expect(result.changedLineBits).toBeNull();
+        expect(result.changedLowerTrigram).toBeNull();
+        expect(result.changedUpperTrigram).toBeNull();
+      } else {
+        expect(result.changeStatus).toBe('CHANGING');
+        expect(result.changedLineBits).toEqual(values.map(changedBit));
+        expect(result.changedLowerTrigram?.lineBits).toEqual(result.changedLineBits?.slice(0, 3));
+        expect(result.changedUpperTrigram?.lineBits).toEqual(result.changedLineBits?.slice(3, 6));
+      }
       expect(result.movingLines).toEqual(expectedMovingLines);
       expect(new Set(result.movingLines).size).toBe(result.movingLines.length);
       expect(result.primaryLowerTrigram.lineBits).toEqual(result.primaryLineBits.slice(0, 3));
       expect(result.primaryUpperTrigram.lineBits).toEqual(result.primaryLineBits.slice(3, 6));
-      expect(result.changedLowerTrigram.lineBits).toEqual(result.changedLineBits.slice(0, 3));
-      expect(result.changedUpperTrigram.lineBits).toEqual(result.changedLineBits.slice(3, 6));
       expect(repeated).toEqual(result);
       expect(JSON.stringify(lines)).toBe(before);
 
       primaryCodes.add(encodeHexagramBits(result.primaryLineBits));
-      changedCodes.add(encodeHexagramBits(result.changedLineBits));
+      if (result.changeStatus === 'CHANGING') {
+        changedCodes.add(encodeHexagramBits(result.changedLineBits));
+      }
       movingLineCounts.add(result.movingLines.length);
       testedStates += 1;
     }
@@ -174,15 +184,21 @@ describe('all 4096 four-state six-line combinations', () => {
 
       expect(result.primaryHexagram.kingWenSequence).toBeGreaterThanOrEqual(1);
       expect(result.primaryHexagram.kingWenSequence).toBeLessThanOrEqual(64);
-      expect(result.changedHexagram.kingWenSequence).toBeGreaterThanOrEqual(1);
-      expect(result.changedHexagram.kingWenSequence).toBeLessThanOrEqual(64);
+      if (result.changeStatus === 'CHANGING') {
+        expect(result.changedHexagram.kingWenSequence).toBeGreaterThanOrEqual(1);
+        expect(result.changedHexagram.kingWenSequence).toBeLessThanOrEqual(64);
+      } else {
+        expect(result.changedHexagram).toBeNull();
+      }
       expect(result.mappingDataVersion).toBe(catalog.dataVersion);
       expect(repeated).toEqual(result);
 
       primaryIds.add(result.primaryHexagram.id);
-      changedIds.add(result.changedHexagram.id);
       primarySequences.add(result.primaryHexagram.kingWenSequence);
-      changedSequences.add(result.changedHexagram.kingWenSequence);
+      if (result.changeStatus === 'CHANGING') {
+        changedIds.add(result.changedHexagram.id);
+        changedSequences.add(result.changedHexagram.kingWenSequence);
+      }
       testedStates += 1;
     }
 

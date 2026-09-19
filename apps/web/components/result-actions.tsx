@@ -1,6 +1,10 @@
 'use client';
 
-import type { HexagramCalculationResult } from '@liuyao/domain';
+import {
+  formatHexagramLabel,
+  formatMovingLinePositions,
+  type HexagramCalculationResult,
+} from '@liuyao/domain';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
@@ -146,17 +150,25 @@ export function ResultActions({ stored, result }: ResultActionsProps) {
     context.fillStyle = '#14211c';
     context.font = '700 38px "Microsoft YaHei", sans-serif';
     context.fillText(
-      `本卦 · ${result.primaryHexagram.name} ${result.primaryHexagram.symbol}`,
+      `本卦 · ${formatHexagramLabel(result.primaryHexagram)} ${result.primaryHexagram.symbol}`,
       120,
       250,
     );
     context.fillText(
-      `变卦 · ${result.changedHexagram.name} ${result.changedHexagram.symbol}`,
+      result.changeStatus === 'CHANGING'
+        ? `变卦 · ${formatHexagramLabel(result.changedHexagram)} ${result.changedHexagram.symbol}`
+        : '静卦 · 无动爻',
       690,
       250,
     );
     drawHexagram(context, result.primaryLineBits, result.movingLines, 120, 300);
-    drawHexagram(context, result.changedLineBits, [], 690, 300);
+    if (result.changeStatus === 'CHANGING') {
+      drawHexagram(context, result.changedLineBits, [], 690, 300);
+    } else {
+      context.fillStyle = '#3f5149';
+      context.font = '500 24px "Microsoft YaHei", sans-serif';
+      drawWrappedText(context, '本次无动爻，不产生独立变卦。', 690, 300, 420, 36, 3);
+    }
 
     context.fillStyle = '#3f5149';
     context.font = '500 23px "Microsoft YaHei", sans-serif';
@@ -166,7 +178,9 @@ export function ResultActions({ stored, result }: ResultActionsProps) {
       468,
     );
     context.fillText(
-      `动爻：${result.movingLines.length > 0 ? result.movingLines.join('、') : '无'}`,
+      result.changeStatus === 'CHANGING'
+        ? `动卦 · ${formatMovingLinePositions(result.movingLines)}动`
+        : '动爻：无',
       120,
       516,
     );

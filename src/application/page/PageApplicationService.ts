@@ -5,7 +5,7 @@ import type {
   SettingsRepository,
   StoredCastLineDto,
 } from '@/application/repositories';
-import type { CastingSession } from '@/domain/casting';
+import { createCastLine, type CastingSession } from '@/domain/casting';
 import { calculateHexagram, type HexagramCatalog } from '@/domain/hexagram';
 
 import {
@@ -76,19 +76,106 @@ function toStoredLine(line: CastingSession['lines'][number]): StoredCastLineDto 
   };
 }
 
-function isStructureOnlySnapshot(value: unknown): value is StructureOnlySnapshot {
-  if (typeof value !== 'object' || value === null) return false;
-  const record = value as Readonly<Record<string, unknown>>;
+function isRecord(value: unknown): value is Readonly<Record<string, unknown>> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
+
+function isHexagramSummary(value: unknown): boolean {
+  if (!isRecord(value)) return false;
   return (
-    record.kind === 'structure-only' &&
-    record.capability === 'interpretation-rules-unavailable' &&
-    typeof record.metadata === 'object' &&
-    typeof record.primaryHexagram === 'object' &&
-    typeof record.changedHexagram === 'object' &&
-    Array.isArray(record.movingLines) &&
-    Array.isArray(record.lines) &&
-    typeof record.oneLineConclusion === 'string'
+    typeof value.id === 'string' &&
+    typeof value.name === 'string' &&
+    typeof value.symbol === 'string' &&
+    typeof value.kingWenSequence === 'number' &&
+    typeof value.code === 'string'
   );
+}
+
+function isStructureOnlySnapshotShape(value: unknown): value is StructureOnlySnapshot {
+  if (!isRecord(value) || !isRecord(value.metadata)) return false;
+  const metadata = value.metadata;
+  const metadataValues = questionFormSchema.safeParse(metadata.values);
+  return (
+    value.kind === 'structure-only' &&
+    value.capability === 'interpretation-rules-unavailable' &&
+    metadata.schemaVersion === 'page-cast-metadata-v1' &&
+    typeof metadata.sessionId === 'string' &&
+    typeof metadata.submittedAt === 'string' &&
+    typeof metadata.timezone === 'string' &&
+    metadataValues.success &&
+    isHexagramSummary(value.primaryHexagram) &&
+    (value.changedHexagram === null || isHexagramSummary(value.changedHexagram)) &&
+    (value.changeStatus === undefined ||
+      value.changeStatus === 'STATIC' ||
+      value.changeStatus === 'CHANGING') &&
+    Array.isArray(value.movingLines) &&
+    value.movingLines.every(
+      (line) => typeof line === 'number' && Number.isInteger(line) && line >= 1 && line <= 6,
+    ) &&
+    Array.isArray(value.lines) &&
+    typeof value.oneLineConclusion === 'string' &&
+    value.primarySymbol === null &&
+    Array.isArray(value.auxiliarySymbols) &&
+    value.trend === null &&
+    Array.isArray(value.recommendations) &&
+    Array.isArray(value.rationale) &&
+    typeof value.riskStatement === 'string' &&
+    typeof value.rulesetVersion === 'string' &&
+    typeof value.contentVersion === 'string'
+  );
+}
+
+function toHexagramSummary(result: ReturnType<typeof calculateHexagram>['primaryHexagram']) {
+  return {
+    id: result.id,
+    name: result.name,
+    symbol: result.symbol,
+    kingWenSequence: result.kingWenSequence,
+    code: result.code,
+  };
+}
+
+/**
+ * Rebuild page snapshots from persisted coins. This is the single compatibility
+ * boundary for old snapshots: stale changeStatus/changedHexagram fields are
+ * ignored, static results never expose a synthetic changed hexagram, and a
+ * malformed record is rejected without being rendered.
+ */
+function normalizeStructureOnlySnapshot(
+  value: unknown,
+  record: DivinationSessionRecordDto,
+  catalog: HexagramCatalog,
+): StructureOnlySnapshot | null {
+  if (!isStructureOnlySnapshotShape(value) || !Array.isArray(record.lines)) return null;
+
+  try {
+    const lines = record.lines.map((line, index) =>
+      createCastLine({
+        position: index + 1,
+        coins: line.coins,
+        sequence: index + 1,
+        rulesetVersion: record.divinationRulesetVersion,
+      }),
+    );
+    const result = calculateHexagram({
+      originalLines: lines.map((line) => ({ position: line.position, value: line.value })),
+      rulesetVersion: record.divinationRulesetVersion,
+      catalog,
+    });
+    return {
+      ...value,
+      changeStatus: result.changeStatus,
+      primaryHexagram: toHexagramSummary(result.primaryHexagram),
+      changedHexagram:
+        result.changeStatus === 'CHANGING' ? toHexagramSummary(result.changedHexagram) : null,
+      movingLines: result.movingLines,
+      lines,
+      rulesetVersion: record.divinationRulesetVersion,
+      contentVersion: result.mappingDataVersion,
+    };
+  } catch {
+    return null;
+  }
 }
 
 function parseFavorites(value: string | null): ReadonlySet<string> {
@@ -271,7 +358,8 @@ export class PageApplicationService {
     const record = await this.options.historyRepository.getById(sessionId);
     if (record === null) return null;
     const latest = record.analysisSnapshots.at(-1)?.payload;
-    if (!isStructureOnlySnapshot(latest)) {
+    const snapshot = normalizeStructureOnlySnapshot(latest, record, this.options.catalog);
+    if (snapshot === null) {
       throw new PageCapabilityError('INVALID_STORED_RESULT', '历史快照无法通过页面 Schema 校验。');
     }
     const favorites = await this.getFavorites();
@@ -279,7 +367,7 @@ export class PageApplicationService {
       sessionId,
       castAt: record.castAt,
       timezone: record.timezone,
-      snapshot: latest,
+      snapshot,
       snapshotCount: record.analysisSnapshots.length,
       favorite: favorites.has(sessionId),
     };
@@ -292,16 +380,17 @@ export class PageApplicationService {
     ]);
     return records.flatMap((record) => {
       const payload = record.analysisSnapshots.at(-1)?.payload;
-      if (!isStructureOnlySnapshot(payload)) return [];
+      const snapshot = normalizeStructureOnlySnapshot(payload, record, this.options.catalog);
+      if (snapshot === null) return [];
       return [
         {
           sessionId: record.sessionId,
           question: record.question ?? '未记录问题',
-          category: payload.metadata.values.category,
+          category: snapshot.metadata.values.category,
           castAt: record.castAt,
-          primaryName: payload.primaryHexagram.name,
-          changedName: payload.changedHexagram.name,
-          movingLineCount: payload.movingLines.length,
+          primaryName: snapshot.primaryHexagram.name,
+          changedName: snapshot.changedHexagram?.name ?? null,
+          movingLineCount: snapshot.movingLines.length,
           favorite: favorites.has(record.sessionId),
           snapshotCount: record.analysisSnapshots.length,
         },
@@ -460,20 +549,10 @@ export class PageApplicationService {
       kind: 'structure-only',
       capability: 'interpretation-rules-unavailable',
       metadata,
-      primaryHexagram: {
-        id: result.primaryHexagram.id,
-        name: result.primaryHexagram.name,
-        symbol: result.primaryHexagram.symbol,
-        kingWenSequence: result.primaryHexagram.kingWenSequence,
-        code: result.primaryHexagram.code,
-      },
-      changedHexagram: {
-        id: result.changedHexagram.id,
-        name: result.changedHexagram.name,
-        symbol: result.changedHexagram.symbol,
-        kingWenSequence: result.changedHexagram.kingWenSequence,
-        code: result.changedHexagram.code,
-      },
+      changeStatus: result.changeStatus,
+      primaryHexagram: toHexagramSummary(result.primaryHexagram),
+      changedHexagram:
+        result.changeStatus === 'CHANGING' ? toHexagramSummary(result.changedHexagram) : null,
       movingLines: result.movingLines,
       lines: session.lines,
       oneLineConclusion: '已完成可复核的卦象结构；经核验解释规则尚未发布，暂不生成吉凶结论。',
@@ -497,7 +576,10 @@ export class PageApplicationService {
         {
           id: 'evidence-hexagram-map',
           title: '卦象映射',
-          detail: '本卦与变卦来自已核验的显式上下卦映射。',
+          detail:
+            result.changeStatus === 'CHANGING'
+              ? '本卦与变卦来自已核验的显式上下卦映射。'
+              : '本卦来自已核验的显式上下卦映射；静卦不生成独立变卦。',
           source: result.mappingDataVersion,
         },
       ],
@@ -524,7 +606,7 @@ export class PageApplicationService {
       randomAlgorithmVersion: session.randomAlgorithmVersion,
       contentVersion: result.mappingDataVersion,
       primaryHexagramId: result.primaryHexagram.id,
-      changedHexagramId: result.changedHexagram.id,
+      changedHexagramId: result.changeStatus === 'CHANGING' ? result.changedHexagram.id : null,
       createdAt: session.createdAt,
       lines: session.lines.map(toStoredLine),
       analysisSnapshots: [

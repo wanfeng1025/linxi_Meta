@@ -137,7 +137,7 @@ export function AppRuntimeProvider({ children }: PropsWithChildren) {
           settingsRepository: new SQLiteSettingsRepository(db),
           catalog: createProductionHexagramCatalog(),
           appVersion: 'app-0.1.0',
-          databaseSchemaVersion: 'sqlite-schema-v6',
+          databaseSchemaVersion: 'sqlite-schema-v8',
           createId: randomUUID,
           professionalChartPort: new UnavailableProfessionalChartAdapter(),
         });

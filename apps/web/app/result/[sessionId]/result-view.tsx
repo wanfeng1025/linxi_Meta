@@ -2,6 +2,8 @@
 
 import {
   calculateHexagram,
+  formatMovingLinePositions,
+  formatHexagramLabel,
   type CastingSession,
   type HexagramCalculationResult,
 } from '@liuyao/domain';
@@ -55,9 +57,7 @@ interface ContentRow {
 
 function AuthorizedDatasetSection({ result }: { result: HexagramCalculationResult }) {
   const primaryQuotes = getClassicalQuoteBundle(result.primaryHexagram.id);
-  const changedQuotes = getClassicalQuoteBundle(result.changedHexagram.id);
   const primaryInterpretations = getAuthorizedInterpretationBundle(result.primaryHexagram.id);
-  const changedInterpretations = getAuthorizedInterpretationBundle(result.changedHexagram.id);
   const movingPositions = new Set<number>(result.movingLines);
   const rows: ContentRow[] = [
     {
@@ -86,7 +86,9 @@ function AuthorizedDatasetSection({ result }: { result: HexagramCalculationResul
       });
     });
 
-  if (result.primaryHexagram.id !== result.changedHexagram.id) {
+  if (result.changeStatus === 'CHANGING') {
+    const changedQuotes = getClassicalQuoteBundle(result.changedHexagram.id);
+    const changedInterpretations = getAuthorizedInterpretationBundle(result.changedHexagram.id);
     rows.push({
       id: 'changed-judgment',
       label: `变卦 · ${result.changedHexagram.name} · 卦辞`,
@@ -191,7 +193,7 @@ export function ResultView({ sessionId }: { sessionId: string }) {
             <div className="result-title">
               <div>
                 <p className="result-kicker">本卦</p>
-                <h1>{result.primaryHexagram.name}</h1>
+                <h1>{formatHexagramLabel(result.primaryHexagram)}</h1>
               </div>
               <span className="symbol" aria-hidden="true">
                 {result.primaryHexagram.symbol}
@@ -202,27 +204,45 @@ export function ResultView({ sessionId }: { sessionId: string }) {
               下卦 {result.lowerTrigram.name} · 上卦 {result.upperTrigram.name}
             </p>
           </article>
-          <article className="result-card result-card-changed">
-            <div className="result-title">
-              <div>
-                <p className="result-kicker">变卦</p>
-                <h2>{result.changedHexagram.name}</h2>
+          {result.changeStatus === 'CHANGING' ? (
+            <article className="result-card result-card-changed">
+              <div className="result-title">
+                <div>
+                  <p className="result-kicker">变卦</p>
+                  <h2>{formatHexagramLabel(result.changedHexagram)}</h2>
+                </div>
+                <span className="symbol" aria-hidden="true">
+                  {result.changedHexagram.symbol}
+                </span>
               </div>
-              <span className="symbol" aria-hidden="true">
-                {result.changedHexagram.symbol}
-              </span>
-            </div>
-            <p className="result-meta">
-              动爻：{result.movingLines.length > 0 ? result.movingLines.join('、') : '无'}
-            </p>
-            <p className="muted">计算规则与结构数据均已版本化锁定，可随 JSON 一并导出复核。</p>
-            {stored.question.length > 0 && (
-              <div className="result-question">
-                <h3>本次问题</h3>
-                <p>{stored.question}</p>
-              </div>
-            )}
-          </article>
+              <p className="result-meta">
+                状态：动卦 · {formatMovingLinePositions(result.movingLines)}动
+              </p>
+              <p className="result-meta">
+                下卦 {result.changedLowerTrigram.name} · 上卦 {result.changedUpperTrigram.name}
+              </p>
+              <p className="muted">计算规则与结构数据均已版本化锁定，可随 JSON 一并导出复核。</p>
+              {stored.question.length > 0 && (
+                <div className="result-question">
+                  <h3>本次问题</h3>
+                  <p>{stored.question}</p>
+                </div>
+              )}
+            </article>
+          ) : (
+            <article className="result-card result-card-static">
+              <p className="result-kicker">卦态</p>
+              <h2>静卦 · 无动爻</h2>
+              <p className="muted">本次无动爻，不产生独立变卦。</p>
+              <p className="muted">计算规则与结构数据均已版本化锁定，可随 JSON 一并导出复核。</p>
+              {stored.question.length > 0 && (
+                <div className="result-question">
+                  <h3>本次问题</h3>
+                  <p>{stored.question}</p>
+                </div>
+              )}
+            </article>
+          )}
         </div>
 
         <section className="card record-card" aria-labelledby="casting-record-title">
@@ -250,14 +270,20 @@ export function ResultView({ sessionId }: { sessionId: string }) {
           <article className="card">
             <p className="eyebrow">下一步</p>
             <h2>查看卦象结构</h2>
-            <p>可浏览本卦与变卦的已核验名称、符号和上下卦映射。</p>
+            <p>
+              {result.changeStatus === 'CHANGING'
+                ? '可浏览本卦与变卦的已核验名称、符号和上下卦映射。'
+                : '可浏览本卦的已核验名称、符号和上下卦映射。'}
+            </p>
             <div className="actions">
               <Link className="button secondary" href={`/hexagrams/${result.primaryHexagram.id}`}>
                 浏览本卦结构
               </Link>
-              <Link className="button secondary" href={`/hexagrams/${result.changedHexagram.id}`}>
-                浏览变卦结构
-              </Link>
+              {result.changeStatus === 'CHANGING' && (
+                <Link className="button secondary" href={`/hexagrams/${result.changedHexagram.id}`}>
+                  浏览变卦结构
+                </Link>
+              )}
             </div>
           </article>
           <article className="card">

@@ -28,7 +28,7 @@ interface SessionRow {
   readonly random_algorithm_version: string;
   readonly content_version: string;
   readonly primary_hexagram_id: string;
-  readonly changed_hexagram_id: string;
+  readonly changed_hexagram_id: string | null;
   readonly created_at: string;
 }
 
@@ -150,13 +150,15 @@ function assertRecord(record: DivinationSessionRecordDto): void {
     record.sessionId.length === 0 ||
     record.timezone.length === 0 ||
     record.primaryHexagramId.length === 0 ||
-    record.changedHexagramId.length === 0 ||
+    (record.changedHexagramId !== null && record.changedHexagramId.length === 0) ||
     versions.some((version) => !isImmutableVersion(version)) ||
     !isOptionalImmutableVersion(record.calendarAlgorithmVersion) ||
     !isOptionalImmutableVersion(record.templateVersion) ||
     !isOptionalImmutableVersion(record.aiPromptVersion) ||
     record.lines.length !== 6 ||
-    record.analysisSnapshots.length === 0
+    record.analysisSnapshots.length === 0 ||
+    (record.lines.every((line) => !line.isMoving) && record.changedHexagramId !== null) ||
+    (record.lines.some((line) => line.isMoving) && record.changedHexagramId === null)
   ) {
     throw new DivinationRepositoryError(
       'INVALID_HISTORY_RECORD',
@@ -251,19 +253,23 @@ export class SQLiteDivinationSessionRepository implements DivinationSessionRepos
   public async append(record: DivinationSessionRecordDto): Promise<void> {
     assertRecord(record);
     await this.database.transaction(async (transaction) => {
-      const [primaryHexagram, changedHexagram] = await Promise.all([
-        transaction.getFirst<HexagramCodeRow>(
-          `SELECT code FROM hexagrams WHERE hexagram_id = ? AND content_version = ?`,
-          [record.primaryHexagramId, record.contentVersion],
-        ),
-        transaction.getFirst<HexagramCodeRow>(
-          `SELECT code FROM hexagrams WHERE hexagram_id = ? AND content_version = ?`,
-          [record.changedHexagramId, record.contentVersion],
-        ),
-      ]);
+      const primaryHexagram = await transaction.getFirst<HexagramCodeRow>(
+        `SELECT code FROM hexagrams WHERE hexagram_id = ? AND content_version = ?`,
+        [record.primaryHexagramId, record.contentVersion],
+      );
       const primaryCode = record.lines.map((line) => line.primaryBit).join('');
       const changedCode = record.lines.map((line) => line.changedBit).join('');
-      if (primaryHexagram?.code !== primaryCode || changedHexagram?.code !== changedCode) {
+      const changedHexagram =
+        record.changedHexagramId === null
+          ? null
+          : await transaction.getFirst<HexagramCodeRow>(
+              `SELECT code FROM hexagrams WHERE hexagram_id = ? AND content_version = ?`,
+              [record.changedHexagramId, record.contentVersion],
+            );
+      if (
+        primaryHexagram?.code !== primaryCode ||
+        (record.changedHexagramId !== null && changedHexagram?.code !== changedCode)
+      ) {
         throw new DivinationRepositoryError(
           'INVALID_HISTORY_RECORD',
           'Stored hexagram IDs must match the six raw coin lines for the selected content version.',
@@ -374,7 +380,9 @@ export class SQLiteDivinationSessionRepository implements DivinationSessionRepos
       randomAlgorithmVersion: session.random_algorithm_version,
       contentVersion: session.content_version,
       primaryHexagramId: session.primary_hexagram_id,
-      changedHexagramId: session.changed_hexagram_id,
+      changedHexagramId: lineRows.some((row) => row.is_moving === 1)
+        ? session.changed_hexagram_id
+        : null,
       createdAt: session.created_at,
       lines: lineRows.map((row) => asStoredLine(row)),
       analysisSnapshots: snapshotRows.map((row) => ({

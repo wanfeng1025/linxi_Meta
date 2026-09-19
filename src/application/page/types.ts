@@ -1,5 +1,5 @@
 import type { CastLine, CastingMethod, CastingSession, LinePosition } from '@/domain/casting';
-import type { HexagramDefinition } from '@/domain/hexagram';
+import type { HexagramChangeStatus, HexagramDefinition } from '@/domain/hexagram';
 
 export const QUESTION_CATEGORIES = [
   'general-decision',
@@ -49,10 +49,11 @@ export interface StructureOnlySnapshot {
     HexagramDefinition,
     'id' | 'name' | 'symbol' | 'kingWenSequence' | 'code'
   >;
+  readonly changeStatus: HexagramChangeStatus;
   readonly changedHexagram: Pick<
     HexagramDefinition,
     'id' | 'name' | 'symbol' | 'kingWenSequence' | 'code'
-  >;
+  > | null;
   readonly movingLines: readonly LinePosition[];
   readonly lines: readonly CastLine[];
   readonly oneLineConclusion: string;
@@ -86,7 +87,7 @@ export interface HistoryItem {
   readonly category: QuestionCategory;
   readonly castAt: string;
   readonly primaryName: string;
-  readonly changedName: string;
+  readonly changedName: string | null;
   readonly movingLineCount: number;
   readonly favorite: boolean;
   readonly snapshotCount: number;

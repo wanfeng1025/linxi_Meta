@@ -121,7 +121,9 @@ export function HistoryScreen() {
                 )}
               </View>
               <Text style={[theme.typography.body, { color: theme.colors.muted }]}>
-                {item.primaryName} → {item.changedName} · {item.movingLineCount} 动爻
+                {item.primaryName}
+                {item.changedName === null ? ' · 静卦 · 无动爻' : ` → ${item.changedName}`}
+                {item.changedName !== null && ` · ${item.movingLineCount} 动爻`}
               </Text>
               <View style={styles.rowBetween}>
                 <Text style={[theme.typography.caption, { color: theme.colors.subtle }]}>

@@ -48,8 +48,14 @@ describe('hexagram property invariants', () => {
 
         expect(result.primaryLowerTrigram.lineBits).toEqual(result.primaryLineBits.slice(0, 3));
         expect(result.primaryUpperTrigram.lineBits).toEqual(result.primaryLineBits.slice(3, 6));
-        expect(result.changedLowerTrigram.lineBits).toEqual(result.changedLineBits.slice(0, 3));
-        expect(result.changedUpperTrigram.lineBits).toEqual(result.changedLineBits.slice(3, 6));
+        if (result.changeStatus === 'CHANGING') {
+          expect(result.changedLowerTrigram?.lineBits).toEqual(result.changedLineBits?.slice(0, 3));
+          expect(result.changedUpperTrigram?.lineBits).toEqual(result.changedLineBits?.slice(3, 6));
+        } else {
+          expect(result.changedLineBits).toBeNull();
+          expect(result.changedLowerTrigram).toBeNull();
+          expect(result.changedUpperTrigram).toBeNull();
+        }
         expect(result).toEqual(repeated);
         expect(originalLines).toEqual(before);
 
@@ -57,7 +63,9 @@ describe('hexagram property invariants', () => {
           const originalBit = value === 6 || value === 8 ? 0 : 1;
           const changedBit = value === 6 ? 1 : value === 9 ? 0 : originalBit;
           expect(result.primaryLineBits[index]).toBe(originalBit);
-          expect(result.changedLineBits[index]).toBe(changedBit);
+          if (result.changeStatus === 'CHANGING') {
+            expect(result.changedLineBits[index]).toBe(changedBit);
+          }
         });
       }),
       { numRuns: 400 },
