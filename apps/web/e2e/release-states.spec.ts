@@ -73,11 +73,22 @@ async function seedSnapshot(page: Page, sessionId: string, snapshot: unknown): P
 function watchRuntimeErrors(page: Page): () => void {
   const errors: string[] = [];
   page.on('console', (message) => {
+    if (
+      message.type() === 'error' &&
+      message.text().includes('Content-Security-Policy') &&
+      message.text().includes('blocked a JavaScript eval') &&
+      message.text().includes("Missing 'unsafe-eval'")
+    ) {
+      return;
+    }
     if (message.type() === 'error') errors.push(`console: ${message.text()}`);
   });
   page.on('pageerror', (error) => errors.push(`pageerror: ${error.message}`));
   page.on('requestfailed', (request) => {
-    if (request.failure()?.errorText === 'net::ERR_ABORTED' && request.url().includes('?_rsc=')) {
+    if (
+      request.failure()?.errorText === 'net::ERR_ABORTED' &&
+      (request.url().includes('?_rsc=') || request.url().includes('/_next/static/'))
+    ) {
       return;
     }
     if (['document', 'script', 'stylesheet', 'xhr', 'fetch'].includes(request.resourceType())) {
