@@ -5,6 +5,20 @@ import { readFile } from 'node:fs/promises';
 test('anonymous visitor can lock a six-line casting and inspect verified structures', async ({
   page,
 }) => {
+  const runtimeErrors: string[] = [];
+  page.on('console', (message) => {
+    if (message.type() === 'error') runtimeErrors.push(`console: ${message.text()}`);
+  });
+  page.on('pageerror', (error) => runtimeErrors.push(`pageerror: ${error.message}`));
+  page.on('requestfailed', (request) => {
+    if (request.failure()?.errorText === 'net::ERR_ABORTED' && request.url().includes('?_rsc=')) {
+      return;
+    }
+    if (['document', 'script', 'stylesheet', 'xhr', 'fetch'].includes(request.resourceType())) {
+      runtimeErrors.push(`request: ${request.url()} — ${request.failure()?.errorText ?? 'failed'}`);
+    }
+  });
+
   await page.goto('/', { waitUntil: 'networkidle' });
   await Promise.all([
     page.waitForURL('**/casting'),
@@ -22,8 +36,11 @@ test('anonymous visitor can lock a six-line casting and inspect verified structu
   await expect(page.getByText('6 / 6 爻')).toBeVisible();
   await expect(page.getByRole('heading', { name: '六爻已成，等待锁定' })).toBeVisible();
   await expect(page.getByRole('heading', { name: /第 7 爻/ })).toHaveCount(0);
-  await page.getByRole('button', { name: '锁定并查看结构结果' }).click();
-  await expect(page.getByText('已锁定的结构结果')).toBeVisible();
+  await Promise.all([
+    page.waitForURL('**/result/**'),
+    page.getByRole('button', { name: '锁定并查看结构结果' }).click(),
+  ]);
+  await expect(page.getByText('已锁定的结构结果')).toBeVisible({ timeout: 15_000 });
   await expect(page.getByRole('heading', { name: '本次问题', exact: true })).toBeVisible();
   await expect(page.getByText('本次起卦原始记录')).toBeVisible();
   await expect(page.getByRole('heading', { name: '原文与解释' })).toBeVisible();
@@ -66,11 +83,13 @@ test('anonymous visitor can lock a six-line casting and inspect verified structu
   await expect(page.getByRole('heading', { name: '方法与证据' })).toBeVisible();
   await expect(page.getByText('未发布功能的启用条件')).toBeVisible();
   await expect(page.getByText('专业六爻排盘')).toBeVisible();
+  expect(runtimeErrors, runtimeErrors.join('\n')).toEqual([]);
 });
 
 test('critical public pages have no automatically detectable accessibility violations', async ({
   page,
 }) => {
+  test.setTimeout(60_000);
   for (const path of ['/', '/casting', '/hexagrams', '/methodology']) {
     await page.goto(path);
     await expect(page.getByRole('heading', { level: 1 }).first()).toBeVisible();

@@ -19,7 +19,7 @@ import {
 } from '@liuyao/content';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useMemo, useSyncExternalStore } from 'react';
 
 import { ResultActions } from '../../../components/result-actions';
 import { loadWebCastingSnapshot, type WebCastingSnapshot } from '../../../lib/session-storage';
@@ -144,8 +144,14 @@ function AuthorizedDatasetSection({ result }: { result: HexagramCalculationResul
 }
 
 export function ResultView({ sessionId }: { sessionId: string }) {
-  const [view] = useState<ResultState | null>(() => {
-    if (typeof window === 'undefined') return null;
+  const storageToken = useSyncExternalStore(
+    () => () => {},
+    () => sessionStorage.getItem(`liuyao:web:session:${sessionId}`) ?? '__missing__',
+    () => '__loading__',
+  );
+
+  const view = useMemo<ResultState | null>(() => {
+    if (storageToken === '__loading__' || storageToken === '__missing__') return null;
     const snapshot = loadWebCastingSnapshot(sessionStorage, sessionId);
     if (snapshot === null || snapshot.session.status !== 'locked') return null;
     try {
@@ -163,7 +169,15 @@ export function ResultView({ sessionId }: { sessionId: string }) {
     } catch {
       return null;
     }
-  });
+  }, [sessionId, storageToken]);
+
+  if (storageToken === '__loading__') {
+    return (
+      <section className="card loading-shell" aria-live="polite">
+        <p>正在读取本次匿名结果…</p>
+      </section>
+    );
+  }
 
   if (view === null) {
     return (
