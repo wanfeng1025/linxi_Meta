@@ -84,7 +84,10 @@ function watchRuntimeErrors(page: Page): () => void {
     if (message.type() === 'error') errors.push(`console: ${message.text()}`);
   });
   page.on('pageerror', (error) => {
-    if (error.message.includes('due to access control checks') && error.message.includes('?_rsc=')) {
+    if (
+      error.message.includes('due to access control checks') &&
+      error.message.includes('?_rsc=')
+    ) {
       return;
     }
     errors.push(`pageerror: ${error.message}`);
@@ -92,7 +95,9 @@ function watchRuntimeErrors(page: Page): () => void {
   page.on('requestfailed', (request) => {
     const errorText = request.failure()?.errorText;
     if (
-      ['net::ERR_ABORTED', 'NS_BINDING_ABORTED', 'Load request cancelled'].includes(errorText ?? '') &&
+      ['net::ERR_ABORTED', 'NS_BINDING_ABORTED', 'Load request cancelled'].includes(
+        errorText ?? '',
+      ) &&
       (request.url().includes('?_rsc=') || request.url().includes('/_next/static/'))
     ) {
       return;
