@@ -98,4 +98,52 @@ describe('page application flow', () => {
       confirmedFields: ['primaryHexagram', 'changedHexagram', 'movingLines'],
     });
   });
+
+  it('persists a static cast without a changed hexagram', async () => {
+    const castingRepository = new SQLiteCastingSessionRepository(database);
+    const historyRepository = new SQLiteDivinationSessionRepository(database, hashProvider);
+    const timestamps = Array.from({ length: 10 }, (_, index) =>
+      new Date(Date.UTC(2026, 6, 20, 1, 0, index)).toISOString(),
+    );
+    let timeIndex = 0;
+    let idIndex = 0;
+    const service = new PageApplicationService({
+      castingService: new CastingService({
+        repository: castingRepository,
+        randomSource: new SequenceRandomSource(
+          Array.from({ length: 18 }, (_, index) => (index % 3 === 2 ? 3 : 2)),
+        ),
+        inputSchemaVersion: CASTING_INPUT_SCHEMA_VERSION,
+        rulesetVersion: CASTING_RULESET_VERSION,
+      }),
+      castingRepository,
+      historyRepository,
+      settingsRepository: new SQLiteSettingsRepository(database),
+      catalog: createProductionHexagramCatalog(),
+      appVersion: 'page-test-v1',
+      databaseSchemaVersion: 'sqlite-schema-v8',
+      now: () => timestamps[timeIndex++] ?? timestamps.at(-1)!,
+      createId: () => `static-page-id-${++idIndex}`,
+      timezone: () => 'Asia/Shanghai',
+      professionalChartPort: new UnavailableProfessionalChartAdapter(),
+    });
+
+    let session = await service.start({
+      question: '静卦兼容性测试',
+      category: 'general-decision',
+      timeHorizon: 'within-week',
+      askingFor: 'self',
+      mode: 'simple',
+      method: 'tap',
+      notes: '',
+    });
+    for (let index = 0; index < 6; index += 1) {
+      session = await service.castNext(session.sessionId, index);
+    }
+
+    const result = await service.lockAndSave(session.sessionId, 6);
+    expect(result.snapshot.changeStatus).toBe('STATIC');
+    expect(result.snapshot.changedHexagram).toBeNull();
+    expect((await historyRepository.getById(session.sessionId))?.changedHexagramId).toBeNull();
+  });
 });

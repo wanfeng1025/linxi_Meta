@@ -54,7 +54,7 @@ describe('database migrations', () => {
             'six_spirits', 'branch_relation_members', 'content_import_reports')`,
       );
 
-      expect(rows.map((row) => row.version)).toEqual([1, 2, 3, 4, 5, 6, 7]);
+      expect(rows.map((row) => row.version)).toEqual([1, 2, 3, 4, 5, 6, 7, 8]);
       expect(requiredTables).toHaveLength(25);
       const quarantineTables = await database.getAll<{ name: string }>(
         `SELECT name FROM sqlite_master
@@ -187,10 +187,14 @@ describe('database migrations', () => {
       const snapshot = await database.getFirst<{ payload_json: string }>(
         `SELECT payload_json FROM analysis_snapshots WHERE snapshot_id = 'upgrade-snapshot'`,
       );
+      const staticChangedId = await database.getFirst<{ changed_hexagram_id: string | null }>(
+        `SELECT changed_hexagram_id FROM divination_sessions WHERE session_id = 'upgrade-history'`,
+      );
       expect(version?.record_count).toBe(3);
       expect(setting?.setting_value).toBe('dark');
       expect(historyLines?.count).toBe(6);
       expect(snapshot?.payload_json).toBe('{"fixture":true}');
+      expect(staticChangedId?.changed_hexagram_id).toBeNull();
     } finally {
       await database.close();
     }
@@ -204,7 +208,7 @@ describe('database migrations', () => {
       const count = await database.getFirst<{ count: number }>(
         'SELECT COUNT(*) AS count FROM schema_migrations',
       );
-      expect(count?.count).toBe(7);
+      expect(count?.count).toBe(8);
     } finally {
       await database.close();
     }
@@ -314,7 +318,7 @@ describe('database migrations', () => {
       const contentCount = await database.getFirst<{ count: number }>(
         'SELECT COUNT(*) AS count FROM content_versions',
       );
-      expect(migrationCount?.count).toBe(7);
+      expect(migrationCount?.count).toBe(8);
       expect(contentCount?.count).toBe(0);
     } finally {
       await database.close();

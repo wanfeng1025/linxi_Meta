@@ -174,7 +174,7 @@ export interface DivinationSessionRecordDto {
   readonly randomAlgorithmVersion: string;
   readonly contentVersion: string;
   readonly primaryHexagramId: string;
-  readonly changedHexagramId: string;
+  readonly changedHexagramId: string | null;
   readonly createdAt: string;
   readonly lines: readonly StoredCastLineDto[];
   readonly analysisSnapshots: readonly AnalysisSnapshotDto[];

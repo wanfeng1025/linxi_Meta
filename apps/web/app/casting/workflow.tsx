@@ -9,9 +9,9 @@ import {
   type CastingSession,
 } from '@liuyao/domain';
 import { verifiedHexagramCatalog } from '@liuyao/content';
-import Link from 'next/link';
+import { gsap } from 'gsap';
 import { useRouter } from 'next/navigation';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
 import {
   loadActiveWebCastingSnapshot,
@@ -21,24 +21,6 @@ import {
 import { createWebCryptoRandomSource } from '../../lib/web-crypto-random';
 
 const now = () => new Date().toISOString();
-
-const questionStarters = [
-  {
-    id: 'situation',
-    title: '明确一个情境',
-    template: '我想梳理的具体情境是：',
-  },
-  {
-    id: 'choice',
-    title: '写下正在权衡的选择',
-    template: '我正在权衡的选择是：',
-  },
-  {
-    id: 'review-window',
-    title: '设定回看时间',
-    template: '我希望在以下时间范围内回看这个问题：',
-  },
-] as const;
 
 function createSnapshot(
   question: string,
@@ -62,6 +44,16 @@ export function CastingWorkflow() {
   );
   const [error, setError] = useState<string | null>(null);
   const [isCasting, setIsCasting] = useState(false);
+  const [castPhase, setCastPhase] = useState<
+    'idle' | 'ready' | 'casting' | 'result' | 'completed' | 'error'
+  >(
+    restoredSnapshot === null
+      ? 'idle'
+      : restoredSnapshot.session.status === 'complete'
+        ? 'completed'
+        : 'ready',
+  );
+  const stageRef = useRef<HTMLDivElement>(null);
 
   const persist = (
     nextSession: CastingSession,
@@ -86,6 +78,7 @@ export function CastingWorkflow() {
       persist(created, true);
       setSession(created);
       setError(null);
+      setCastPhase('ready');
     } catch {
       setError('无法创建本次起卦会话。请确认浏览器允许本地会话存储后重试。');
     }
@@ -94,13 +87,16 @@ export function CastingWorkflow() {
   const cast = async () => {
     if (session === null || isCasting) return;
     setIsCasting(true);
+    setCastPhase('casting');
     try {
       const next = castNextLine(session, await drawThreeCoins(randomSource), now());
       persist(next, true);
       setSession(next);
       setError(null);
+      setCastPhase(next.status === 'complete' ? 'completed' : 'result');
     } catch {
       setError('本次起爻未能保存，请重试。');
+      setCastPhase('error');
     } finally {
       setIsCasting(false);
     }
@@ -117,19 +113,87 @@ export function CastingWorkflow() {
       });
       persist(locked, false, result);
       setSession(locked);
+      setCastPhase('completed');
       router.push(`/result/${locked.sessionId}`);
     } catch {
       setError('结果未能锁定或保存。请返回后重新开始一次起卦。');
+      setCastPhase('error');
     }
   };
 
   const latestLine = session?.lines.at(-1);
 
+  useEffect(() => {
+    const stage = stageRef.current;
+    if (stage === null || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!window.matchMedia('(pointer: fine)').matches) return;
+
+    const move = (event: PointerEvent) => {
+      const bounds = stage.getBoundingClientRect();
+      const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+      const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+      gsap.to(stage, {
+        rotateX: y * -2.5,
+        rotateY: x * 2.5,
+        duration: 0.45,
+        ease: 'power2.out',
+        transformPerspective: 900,
+      });
+    };
+    const leave = () => gsap.to(stage, { rotateX: 0, rotateY: 0, duration: 0.5 });
+
+    stage.addEventListener('pointermove', move);
+    stage.addEventListener('pointerleave', leave);
+    return () => {
+      stage.removeEventListener('pointermove', move);
+      stage.removeEventListener('pointerleave', leave);
+      gsap.killTweensOf(stage);
+    };
+  }, []);
+
+  useEffect(() => {
+    const stage = stageRef.current;
+    if (stage === null || latestLine === undefined) return;
+
+    const media = gsap.matchMedia();
+    media.add('(prefers-reduced-motion: no-preference)', () => {
+      const context = gsap.context(() => {
+        gsap.fromTo(
+          '.coin',
+          { y: -72, rotateX: -360, rotateZ: -18, opacity: 0 },
+          {
+            y: 0,
+            rotateX: 0,
+            rotateZ: 0,
+            opacity: 1,
+            duration: 0.8,
+            stagger: 0.09,
+            ease: 'back.out(1.5)',
+          },
+        );
+        gsap.fromTo(
+          `.line-slot[data-position="${latestLine.position}"]`,
+          { scaleX: 0, opacity: 0.2 },
+          { scaleX: 1, opacity: 1, duration: 0.55, ease: 'power2.out' },
+        );
+      }, stage);
+      return () => context.revert();
+    });
+
+    return () => media.revert();
+  }, [latestLine]);
+
   return (
-    <section className="grid">
-      <div className="card">
+    <section className="casting-layout">
+      <div className="card casting-card">
         <p className="eyebrow">匿名起卦</p>
-        <h1>{session === null ? '写下你的问题（可选）' : `第 ${session.lines.length + 1} 爻`}</h1>
+        <h1>
+          {session === null
+            ? '写下你的问题（可选）'
+            : session.status === 'complete'
+              ? '六爻已成，等待锁定'
+              : `第 ${session.lines.length + 1} 爻`}
+        </h1>
         {session === null ? (
           <>
             <label htmlFor="casting-question">
@@ -142,33 +206,7 @@ export function CastingWorkflow() {
                 maxLength={1000}
               />
             </label>
-            <section className="question-guide" aria-labelledby="question-guide-title">
-              <h2 id="question-guide-title">让问题更容易回看（可选）</h2>
-              <p className="muted">
-                先写明情境、选择或回看时间。这里不会生成吉凶或建议，只帮助你保留这次匿名记录的上下文。
-              </p>
-              <div className="prompt-actions">
-                {questionStarters.map((starter) => (
-                  <button
-                    className="prompt-chip"
-                    key={starter.id}
-                    type="button"
-                    onClick={() =>
-                      setQuestion((current) =>
-                        current.trim().length > 0
-                          ? `${current.trimEnd()}\n${starter.template}`
-                          : starter.template,
-                      )
-                    }
-                  >
-                    {starter.title}
-                  </button>
-                ))}
-              </div>
-            </section>
-            <p className="notice">
-              数据不会上传云端，也不能跨设备同步；关闭浏览器会话或清除网站数据后可能丢失。
-            </p>
+            <p className="privacy-line">问题仅保存在本次浏览器会话。</p>
             <button className="button" type="button" onClick={begin}>
               开始起卦
             </button>
@@ -177,24 +215,57 @@ export function CastingWorkflow() {
           <>
             <div className="progress" aria-live="polite">
               <strong>{session.lines.length} / 6 爻</strong>
+              <span className={`cast-phase phase-${castPhase}`}>
+                {castPhase === 'casting'
+                  ? '铜钱翻转中'
+                  : castPhase === 'completed'
+                    ? '六爻已成'
+                    : castPhase === 'result'
+                      ? '本爻已落定'
+                      : '准备起爻'}
+              </span>
               <span className="muted">初爻在最下方</span>
             </div>
-            <div className="coins" aria-label="最近一次三枚铜钱的原始数值">
-              {(latestLine?.coins ?? [null, null, null]).map((coin, index) => (
-                <div
-                  className="coin"
-                  key={index}
-                  aria-label={`第 ${index + 1} 枚铜钱：${coin ?? '尚未起爻'}`}
-                >
-                  {coin ?? '—'}
-                </div>
-              ))}
+            <div
+              className={`casting-stage phase-${castPhase}`}
+              ref={stageRef}
+              data-phase={castPhase}
+            >
+              <div className="coins" aria-label="最近一次三枚铜钱的原始数值">
+                {(latestLine?.coins ?? [null, null, null]).map((coin, index) => (
+                  <div
+                    className={`coin${coin === null ? ' is-empty' : ''}`}
+                    key={index}
+                    data-coin-index={index + 1}
+                    aria-label={`第 ${index + 1} 枚铜钱：${coin ?? '尚未起爻'}`}
+                  >
+                    <span className="coin-value">{coin ?? '—'}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="line-progress" aria-hidden="true">
+                {[6, 5, 4, 3, 2, 1].map((position) => {
+                  const line = session.lines.find((candidate) => candidate.position === position);
+                  return (
+                    <span
+                      className={`line-slot${line === undefined ? '' : ' filled'}${line?.movement === 'moving' ? ' moving' : ''}`}
+                      data-position={position}
+                      key={position}
+                    />
+                  );
+                })}
+              </div>
             </div>
-            <p>
+            <p className="cast-readout" role="status" aria-live="polite">
               {latestLine === undefined
                 ? '点击按钮，由三枚独立铜钱生成第一爻。'
-                : `最近一爻：${latestLine.value}，${latestLine.movement === 'moving' ? '动爻' : '静爻'}`}
+                : `第 ${latestLine.position} 爻已落定：${latestLine.value}，${latestLine.movement === 'moving' ? '动爻' : '静爻'}`}
             </p>
+            {session.status === 'complete' && (
+              <p className="completion-message" role="status">
+                六次起爻已经完成。锁定后将查看本卦、变卦与动爻结构。
+              </p>
+            )}
             {session.status === 'complete' ? (
               <button className="button" type="button" onClick={lock}>
                 锁定并查看结构结果
@@ -213,12 +284,6 @@ export function CastingWorkflow() {
         )}
         {error !== null && <p role="alert">{error}</p>}
       </div>
-      <aside className="card" aria-label="功能发布状态">
-        <h2>起卦的范围</h2>
-        <p>每次点击只生成一爻：三枚独立铜钱的和值为 6、7、8 或 9；第 1 次为初爻，第 6 次为上爻。</p>
-        <p>专业六爻排盘、真实解卦与 AI 文本均保持关闭，避免未经核验的规则或内容被当作结论。</p>
-        <Link href="/methodology">查看方法与发布状态</Link>
-      </aside>
     </section>
   );
 }

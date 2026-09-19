@@ -78,16 +78,18 @@ export function deriveHexagramStructure(
   const rulesetVersion = readRulesetVersion(rulesetVersionValue);
   const facts = originalLines.map((line) => getLineFacts(line.value, rulesetVersion));
   const primaryLineBits = createHexagramBits(facts.map((line) => polarityToBit(line.polarity)));
-  const changedLineBits = createHexagramBits(
-    facts.map((line) => polarityToBit(line.changedPolarity)),
-  );
   const movingLines = Object.freeze(
     originalLines
       .filter((_line, index) => facts[index]?.movement === 'moving')
       .map((line) => line.position),
   );
+  const changeStatus = movingLines.length === 0 ? 'STATIC' : 'CHANGING';
+  const changedLineBits =
+    changeStatus === 'CHANGING'
+      ? createHexagramBits(facts.map((line) => polarityToBit(line.changedPolarity)))
+      : null;
   const primaryTrigrams = splitHexagramBits(primaryLineBits);
-  const changedTrigrams = splitHexagramBits(changedLineBits);
+  const changedTrigrams = changedLineBits === null ? null : splitHexagramBits(changedLineBits);
 
   return Object.freeze({
     originalLines,
@@ -95,9 +97,12 @@ export function deriveHexagramStructure(
     primaryLowerTrigram: createTrigramPattern(primaryTrigrams.lower),
     primaryUpperTrigram: createTrigramPattern(primaryTrigrams.upper),
     movingLines,
+    changeStatus,
     changedLineBits,
-    changedLowerTrigram: createTrigramPattern(changedTrigrams.lower),
-    changedUpperTrigram: createTrigramPattern(changedTrigrams.upper),
+    changedLowerTrigram:
+      changedTrigrams === null ? null : createTrigramPattern(changedTrigrams.lower),
+    changedUpperTrigram:
+      changedTrigrams === null ? null : createTrigramPattern(changedTrigrams.upper),
     encodingVersion: HEXAGRAM_ENCODING_VERSION,
     rulesetVersion,
   });
@@ -112,6 +117,37 @@ export interface CalculateHexagramInput {
 export function calculateHexagram(input: CalculateHexagramInput): HexagramCalculationResult {
   const structure = deriveHexagramStructure(input.originalLines, input.rulesetVersion);
   const primary = resolveHexagramByBits(input.catalog, structure.primaryLineBits);
+
+  if (structure.changeStatus === 'STATIC') {
+    return Object.freeze({
+      originalLines: structure.originalLines,
+      primaryLineBits: structure.primaryLineBits,
+      lowerTrigram: primary.lowerTrigram,
+      upperTrigram: primary.upperTrigram,
+      primaryHexagram: primary.hexagram,
+      movingLines: structure.movingLines,
+      changeStatus: 'STATIC',
+      changedLineBits: null,
+      changedLowerTrigram: null,
+      changedUpperTrigram: null,
+      changedHexagram: null,
+      encodingVersion: structure.encodingVersion,
+      rulesetVersion: structure.rulesetVersion,
+      mappingDataVersion: input.catalog.dataVersion,
+    });
+  }
+
+  if (
+    structure.changedLineBits === null ||
+    structure.changedLowerTrigram === null ||
+    structure.changedUpperTrigram === null
+  ) {
+    throw new HexagramDomainError(
+      'INVALID_STRUCTURE',
+      'A changing hexagram must include changed line bits and trigrams.',
+    );
+  }
+
   const changed = resolveHexagramByBits(input.catalog, structure.changedLineBits);
 
   return Object.freeze({
@@ -121,6 +157,7 @@ export function calculateHexagram(input: CalculateHexagramInput): HexagramCalcul
     upperTrigram: primary.upperTrigram,
     primaryHexagram: primary.hexagram,
     movingLines: structure.movingLines,
+    changeStatus: 'CHANGING',
     changedLineBits: structure.changedLineBits,
     changedLowerTrigram: changed.lowerTrigram,
     changedUpperTrigram: changed.upperTrigram,

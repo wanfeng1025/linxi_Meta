@@ -48,6 +48,7 @@ coverage/
 .pnpm-store/
 __pycache__/
 apps/web/test-results/
+apps/web/artifacts/
 apps/web/playwright-report/
 
 # machine-local, portable development runtimes
@@ -56,3 +57,6 @@ apps/web/playwright-report/
 # generated native folders
 /ios
 /android
+
+.vercel
+.env*

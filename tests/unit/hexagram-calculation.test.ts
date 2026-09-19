@@ -44,10 +44,11 @@ describe('primary, moving, and changed hexagrams', () => {
       catalog,
     });
 
+    expect(result.changeStatus).toBe('STATIC');
     expect(result.primaryLineBits).toEqual([1, 1, 1, 1, 1, 1]);
-    expect(result.changedLineBits).toEqual(result.primaryLineBits);
+    expect(result.changedLineBits).toBeNull();
     expect(result.primaryHexagram.id).toBe('test-hexagram-qian');
-    expect(result.changedHexagram.id).toBe('test-hexagram-qian');
+    expect(result.changedHexagram).toBeNull();
     expect(result.movingLines).toEqual([]);
     expect(result.encodingVersion).toBe(HEXAGRAM_ENCODING_VERSION);
     expect(result.mappingDataVersion).toBe(catalog.dataVersion);
@@ -60,6 +61,7 @@ describe('primary, moving, and changed hexagrams', () => {
       catalog,
     });
 
+    expect(result.changeStatus).toBe('CHANGING');
     expect(result.primaryLineBits).toEqual([0, 0, 0, 0, 0, 0]);
     expect(result.changedLineBits).toEqual([1, 1, 1, 1, 1, 1]);
     expect(result.primaryHexagram.id).toBe('test-hexagram-kun');
@@ -74,6 +76,7 @@ describe('primary, moving, and changed hexagrams', () => {
       catalog,
     });
 
+    expect(result.changeStatus).toBe('CHANGING');
     expect(result.primaryHexagram.id).toBe('test-hexagram-qian');
     expect(result.changedHexagram.id).toBe('test-hexagram-kun');
     expect(result.movingLines).toEqual([1, 2, 3, 4, 5, 6]);
@@ -87,6 +90,7 @@ describe('primary, moving, and changed hexagrams', () => {
     expect(result.primaryLineBits).toEqual([0, 1, 0, 1, 0, 1]);
     expect(result.primaryLowerTrigram.code).toBe('010');
     expect(result.primaryUpperTrigram.code).toBe('101');
+    expect(result.changeStatus).toBe('CHANGING');
     expect(result.changedLineBits).toEqual([1, 1, 0, 0, 1, 0]);
     expect(result.movingLines).toEqual([1, 4, 5, 6]);
     expect(JSON.stringify(originalLines)).toBe(before);

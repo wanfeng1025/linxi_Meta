@@ -12,11 +12,30 @@ const STORAGE_PREFIX = 'liuyao:web:session:';
 const ACTIVE_SESSION_KEY = 'liuyao:web:active-session-id';
 
 const StoredSnapshotSchema = z.object({
-  schemaVersion: z.literal(WEB_SESSION_STORAGE_SCHEMA_VERSION),
-  question: z.string().max(1_000),
+  schemaVersion: z.string(),
+  question: z.string().max(1_000).optional().default(''),
   session: z.unknown(),
-  result: z.unknown().nullable(),
+  result: z.unknown().nullable().optional().default(null),
 });
+
+function isRecord(value: unknown): value is Readonly<Record<string, unknown>> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
+
+/**
+ * Result snapshots are advisory only: the session's raw coins are the source
+ * of truth and are recalculated before rendering. This boundary keeps old
+ * static records from resurrecting a fake changed hexagram and drops unknown
+ * result shapes without making the result page fail to load.
+ */
+function normalizeStoredResult(value: unknown): HexagramCalculationResult | null {
+  if (!isRecord(value)) return null;
+  if (value.changeStatus === 'STATIC') return null;
+  if (value.changeStatus !== 'CHANGING') return null;
+  if (!Array.isArray(value.movingLines) || value.movingLines.length === 0) return null;
+  if (!isRecord(value.changedHexagram) || !Array.isArray(value.changedLineBits)) return null;
+  return value as unknown as HexagramCalculationResult;
+}
 
 export interface WebCastingSnapshot {
   readonly schemaVersion: typeof WEB_SESSION_STORAGE_SCHEMA_VERSION;
@@ -43,7 +62,7 @@ export function saveWebCastingSnapshot(
     schemaVersion: WEB_SESSION_STORAGE_SCHEMA_VERSION,
     question: snapshot.question,
     session,
-    result: snapshot.result,
+    result: normalizeStoredResult(snapshot.result),
   };
 
   storage.setItem(sessionStorageKey(session.sessionId), JSON.stringify(normalized));
@@ -64,15 +83,21 @@ export function loadWebCastingSnapshot(
 
   try {
     const parsed = StoredSnapshotSchema.parse(JSON.parse(raw));
+    if (
+      parsed.schemaVersion !== WEB_SESSION_STORAGE_SCHEMA_VERSION &&
+      parsed.schemaVersion !== 'web-casting-session-v0'
+    ) {
+      throw new Error('Unsupported web session snapshot version.');
+    }
     const session = restoreCastingSession(parsed.session);
     if (session.sessionId !== sessionId) {
       throw new Error('Stored session id does not match its storage key.');
     }
     return Object.freeze({
-      schemaVersion: parsed.schemaVersion,
+      schemaVersion: WEB_SESSION_STORAGE_SCHEMA_VERSION,
       question: parsed.question,
       session,
-      result: parsed.result as HexagramCalculationResult | null,
+      result: normalizeStoredResult(parsed.result),
     });
   } catch {
     storage.removeItem(key);

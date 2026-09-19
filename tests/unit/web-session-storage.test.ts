@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { createCastingSession } from '../../src/domain/casting';
+import { castNextLine, createCastingSession, lockCastingSession } from '../../src/domain/casting';
 import {
   clearWebCastingSnapshot,
   loadActiveWebCastingSnapshot,
@@ -49,6 +49,14 @@ function draftSession() {
   });
 }
 
+function lockedStaticSession() {
+  let session = draftSession();
+  for (let index = 0; index < 6; index += 1) {
+    session = castNextLine(session, [2, 2, 3], `2026-07-25T00:00:0${index + 1}.000Z`);
+  }
+  return lockCastingSession(session, '2026-07-25T00:00:07.000Z');
+}
+
 describe('web session storage', () => {
   it('round-trips a versioned active anonymous draft', () => {
     const storage = new MemoryStorage();
@@ -76,6 +84,27 @@ describe('web session storage', () => {
     storage.setItem(sessionStorageKey('broken'), '{not json');
     expect(loadWebCastingSnapshot(storage, 'broken')).toBeNull();
     expect(storage.getItem(sessionStorageKey('broken'))).toBeNull();
+
+    const legacySession = lockedStaticSession();
+    storage.setItem(
+      sessionStorageKey(legacySession.sessionId),
+      JSON.stringify({
+        schemaVersion: 'web-casting-session-v0',
+        question: '',
+        session: legacySession,
+        result: {
+          changeStatus: 'STATIC',
+          movingLines: [],
+          changedHexagram: { id: 'legacy-static-pseudo' },
+          changedLineBits: [1, 1, 1, 1, 1, 1],
+        },
+      }),
+    );
+    expect(loadWebCastingSnapshot(storage, legacySession.sessionId)).toMatchObject({
+      schemaVersion: WEB_SESSION_STORAGE_SCHEMA_VERSION,
+      session: { status: 'locked' },
+      result: null,
+    });
 
     storage.setItem(
       sessionStorageKey('old-version'),

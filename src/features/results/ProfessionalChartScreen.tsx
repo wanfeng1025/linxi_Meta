@@ -31,9 +31,10 @@ export function ProfessionalChartScreen() {
       <Card>
         <Tag label="基础结构可用" tone="success" />
         <Text style={[theme.typography.body, { color: theme.colors.ink }]}>
-          可确认：本卦 {result.snapshot.primaryHexagram.name}、变卦{' '}
-          {result.snapshot.changedHexagram.name}、动爻{' '}
-          {result.snapshot.movingLines.length ? result.snapshot.movingLines.join('、') : '无'}
+          可确认：本卦 {result.snapshot.primaryHexagram.name}；{' '}
+          {result.snapshot.changeStatus === 'CHANGING'
+            ? `变卦 ${result.snapshot.changedHexagram?.name}、动爻 ${result.snapshot.movingLines.join('、')}`
+            : '静卦，无动爻，不产生独立变卦'}
           。六爻内部仍按初爻到上爻保存。
         </Text>
         {availability.missingCapabilities.map((item) => (

@@ -20,6 +20,8 @@ export type TrigramCode = '000' | '001' | '010' | '011' | '100' | '101' | '110' 
 export type HexagramCode =
   `${YinYangBit}${YinYangBit}${YinYangBit}${YinYangBit}${YinYangBit}${YinYangBit}`;
 
+export type HexagramChangeStatus = 'STATIC' | 'CHANGING';
+
 export type TrigramPatternId = `trigram-pattern-${TrigramCode}`;
 
 export interface TrigramPattern {
@@ -69,28 +71,44 @@ export interface HexagramStructureResult {
   readonly primaryLowerTrigram: TrigramPattern;
   readonly primaryUpperTrigram: TrigramPattern;
   readonly movingLines: readonly LinePosition[];
-  readonly changedLineBits: HexagramBits;
-  readonly changedLowerTrigram: TrigramPattern;
-  readonly changedUpperTrigram: TrigramPattern;
+  readonly changeStatus: HexagramChangeStatus;
+  readonly changedLineBits: HexagramBits | null;
+  readonly changedLowerTrigram: TrigramPattern | null;
+  readonly changedUpperTrigram: TrigramPattern | null;
   readonly encodingVersion: string;
   readonly rulesetVersion: string;
 }
 
-export interface HexagramCalculationResult {
+export interface HexagramCalculationBase {
   readonly originalLines: readonly OriginalLineValue[];
   readonly primaryLineBits: HexagramBits;
   readonly lowerTrigram: TrigramDefinition;
   readonly upperTrigram: TrigramDefinition;
   readonly primaryHexagram: HexagramDefinition;
   readonly movingLines: readonly LinePosition[];
-  readonly changedLineBits: HexagramBits;
-  readonly changedLowerTrigram: TrigramDefinition;
-  readonly changedUpperTrigram: TrigramDefinition;
-  readonly changedHexagram: HexagramDefinition;
   readonly encodingVersion: string;
   readonly rulesetVersion: string;
   readonly mappingDataVersion: string;
 }
+
+export interface StaticHexagramCalculationResult extends HexagramCalculationBase {
+  readonly changeStatus: 'STATIC';
+  readonly changedLineBits: null;
+  readonly changedLowerTrigram: null;
+  readonly changedUpperTrigram: null;
+  readonly changedHexagram: null;
+}
+
+export interface ChangingHexagramCalculationResult extends HexagramCalculationBase {
+  readonly changeStatus: 'CHANGING';
+  readonly changedLineBits: HexagramBits;
+  readonly changedLowerTrigram: TrigramDefinition;
+  readonly changedUpperTrigram: TrigramDefinition;
+  readonly changedHexagram: HexagramDefinition;
+}
+
+export type HexagramCalculationResult =
+  StaticHexagramCalculationResult | ChangingHexagramCalculationResult;
 
 export interface ResolvedHexagram {
   readonly lowerTrigram: TrigramDefinition;

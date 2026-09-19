@@ -35,7 +35,7 @@ export function filterHistory(
     if (filter.favoritesOnly && !item.favorite) return false;
     if (since !== null && Date.parse(item.castAt) < since) return false;
     if (query.length === 0) return true;
-    return `${item.question} ${item.primaryName} ${item.changedName}`
+    return `${item.question} ${item.primaryName} ${item.changedName ?? ''}`
       .toLocaleLowerCase('zh-Hans')
       .includes(query);
   });

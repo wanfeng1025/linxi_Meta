@@ -11,6 +11,7 @@ module.exports = defineConfig([
     'node_modules/**',
     'apps/web/playwright-report/**',
     'apps/web/test-results/**',
+    'apps/web/next-env.d.ts',
   ]),
   expoConfig,
   {

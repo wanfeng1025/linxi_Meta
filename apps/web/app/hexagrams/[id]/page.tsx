@@ -1,10 +1,21 @@
 import { notFound } from 'next/navigation';
-import { getClassicalQuoteBundle, verifiedHexagrams } from '@liuyao/content';
+import {
+  getClassicalQuoteBundle,
+  verifiedHexagramCatalog,
+  verifiedHexagrams,
+} from '@liuyao/content';
 export default async function HexagramPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const hexagram = verifiedHexagrams.find((item) => item.id === id);
   if (!hexagram) notFound();
   const quotes = getClassicalQuoteBundle(hexagram.id);
+  const lowerTrigram = verifiedHexagramCatalog.trigrams.find(
+    (trigram) => trigram.id === hexagram.lowerTrigramId,
+  );
+  const upperTrigram = verifiedHexagramCatalog.trigrams.find(
+    (trigram) => trigram.id === hexagram.upperTrigramId,
+  );
+  if (lowerTrigram === undefined || upperTrigram === undefined) notFound();
   return (
     <section className="card">
       <p className="eyebrow">第 {hexagram.kingWenSequence} 卦</p>
@@ -13,13 +24,13 @@ export default async function HexagramPage({ params }: { params: Promise<{ id: s
       </h1>
       <dl>
         <dt>下卦</dt>
-        <dd>{hexagram.lowerTrigramId}</dd>
+        <dd>
+          {lowerTrigram.name} {lowerTrigram.symbol}
+        </dd>
         <dt>上卦</dt>
-        <dd>{hexagram.upperTrigramId}</dd>
-        <dt>结构编码</dt>
-        <dd>{hexagram.code}</dd>
-        <dt>内容版本</dt>
-        <dd>{hexagram.dataVersion}</dd>
+        <dd>
+          {upperTrigram.name} {upperTrigram.symbol}
+        </dd>
       </dl>
       <section className="classical-quotes" aria-labelledby="hexagram-quote-title">
         <p className="eyebrow">已授权数据集 · 原文对照</p>

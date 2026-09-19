@@ -1,66 +1,57 @@
-# Vercel Preview 部署
+# 灵犀 Meta｜Vercel 部署
 
-## 约束
+## 项目边界
 
-- 仅部署 Preview，禁止选择 Production。
-- 不写入 API key、Supabase service role 或用户起卦数据。
-- Web 应用使用 `sessionStorage`；Vercel 不保存问题、铜钱或历史记录。
-- Windows 本地 Next SWC 的当前状态是 `BLOCKED`；以 GitHub Actions Ubuntu 的构建结果为准。
+- Vercel 项目名：`linxi-meta`。
+- GitHub 仓库：`wanfeng1025/linxi_Meta`。
+- Root Directory：`apps/web`，并允许构建访问 monorepo 根目录中的 workspace 包。
+- Preview 用于 PR 验收；质量门禁通过后发布 Production。
+- Production 暂用 Vercel 默认域名 `https://linxi-meta.vercel.app`。
+- Web 应用使用 `sessionStorage`；Vercel 不保存用户问题、铜钱或历史记录。
+- 不写入 API key、数据库凭据或用户起卦数据。
+
+## 项目设置
+
+| 设置             | 值                               |
+| ---------------- | -------------------------------- |
+| Framework Preset | Next.js                          |
+| Root Directory   | `apps/web`                       |
+| Install Command  | `pnpm install --frozen-lockfile` |
+| Build Command    | `pnpm run build`                 |
+| Output Directory | `.next`                          |
+| Node.js          | 22.x                             |
+
+仓库根目录的 `pnpm-lock.yaml` 必须作为部署锁文件；`apps/web` 通过 workspace 引用
+`@liuyao/domain`、`@liuyao/content` 和 `@liuyao/shared`，因此不能只上传 Web 子目录。
+`.vercel/` 只保存本机项目关联信息，已被 Git 忽略，不得提交。
 
 ## 首次关联
-
-在仓库根目录、完成 Linux CI 后执行：
-
-```powershell
-pnpm dlx vercel@latest login
-pnpm dlx vercel@latest link
-```
-
-在交互式提示中创建或选择 Vercel 项目，并保留仓库根目录作为 Root Directory。项目设置为：
-
-| 设置             | 值                                       |
-| ---------------- | ---------------------------------------- |
-| Install Command  | `pnpm install --frozen-lockfile --force` |
-| Build Command    | `pnpm --filter @liuyao/web run build`    |
-| Output Directory | `apps/web/.next`                         |
-| Node.js          | 22.x                                     |
-
-`.vercel/` 只包含本机项目关联信息，已被 Git 忽略，不得提交。
-
-### 已验证的根目录 Monorepo 配置
-
-当 Root Directory 保持仓库根目录并由过滤命令构建 Web 包时，Next 的产物会位于
-`apps/web/.next`。Vercel 项目必须选择 `Next.js` Framework Preset，并把上表的
-Output Directory 显式设为 `apps/web/.next`；留空会让部署在仓库根查找 `.next`。
-一次只调整一个设置后查看最新 Build Log，不要将 Framework、Root Directory、
-Node 版本、安装命令和构建命令同时改动。
-
-### 已验证的公开 Preview 配置
-
-当 Vercel 的依赖缓存缺少 pnpm workspace 链接时，`pnpm install` 可能错误地显示
-已完成，而 Web 包无法解析 `@liuyao/domain` 与 `@liuyao/content`。因此本项目的
-Install Command 固定为 `pnpm install --frozen-lockfile --force`，以在每次 Preview
-构建时重建工作区链接。
-
-若目标是让未登录访客访问 Preview，项目的 SSO Deployment Protection 必须关闭。
-可用以下命令核验状态，确认 `ssoProtection` 为 `null`：
-
-```powershell
-pnpm dlx vercel@latest project protection liuyao-app --scope wanan3 --format json
-```
-
-这只影响 Preview 访问保护，不会将任何部署提升为 Production。
-
-## Preview
 
 在仓库根目录执行：
 
 ```powershell
-pnpm dlx vercel@latest
+pnpm dlx vercel@latest login
+pnpm dlx vercel@latest link --project linxi-meta --scope wanan3
 ```
 
-确认交互输出是 Preview URL 后，打开该 URL 并验证：首页、匿名六次起卦、锁定结果、64 卦目录和未发布能力提示。不得使用 `--prod`。
+若使用 Vercel 控制台导入 GitHub 仓库，应选择 `wanfeng1025/linxi_Meta`，再按上表设置
+Root Directory。若 Vercel 要求扩大 GitHub App 仓库权限，必须在最终授权动作前由项目负责人确认。
 
-## 必需的人工作业
+## Preview 与 Production
 
-如果 `vercel login` 要求浏览器登录、团队授权或项目权限，请完成授权后重新执行上述命令。部署报告必须在实际访问成功前保留 `HUMAN_VERCEL_LOGIN_REQUIRED`，不得猜测或伪造 URL。
+分支推送和 PR 应自动产生 Preview。CLI 手动验证命令如下：
+
+```powershell
+pnpm dlx vercel@latest
+pnpm dlx vercel@latest --prod
+```
+
+Production 只能在 `pnpm run check`、生产构建、跨浏览器 E2E、无障碍检查和 Preview 验收
+均通过后发布。发布后再次核验：首页、匿名六次起卦、锁定结果、JSON/PNG 导出、清除会话、
+64 卦目录、`robots.txt`、`sitemap.xml`、manifest、图标与安全响应头。
+
+## 站点 URL
+
+默认站点 URL 由 `apps/web/lib/site-url.ts` 集中提供。若实际 Vercel 域名与默认值不同，
+在 Vercel 中设置 `NEXT_PUBLIC_SITE_URL` 为最终 HTTPS Origin，避免 canonical、Open Graph、
+robots 与 sitemap 出现不一致。

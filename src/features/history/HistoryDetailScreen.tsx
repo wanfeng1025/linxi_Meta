@@ -43,7 +43,10 @@ export function HistoryDetailScreen() {
           {snapshot.metadata.values.question}
         </Text>
         <Text style={[theme.typography.body, { color: theme.colors.muted }]}>
-          {snapshot.primaryHexagram.name} → {snapshot.changedHexagram.name}
+          {snapshot.primaryHexagram.name}
+          {snapshot.changeStatus === 'CHANGING'
+            ? ` → ${snapshot.changedHexagram?.name}`
+            : ' · 静卦 · 无动爻'}
         </Text>
         <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap' }}>
           <Tag label={`${result.snapshotCount} 个快照`} tone="success" />
