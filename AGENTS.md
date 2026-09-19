@@ -140,3 +140,4 @@ pnpm run check
 - 部署边界：Vercel 项目保持公开默认域名，账号、AI 解卦、AR、社区、商城和云端记录仍为预留模块，不得伪称已实现。
 - UI/UX 重构基线：提交 `f8ff782`（现代东方编辑式 UI、墨绿/朱砂/玄黑 token、移动导航、六十四卦搜索筛选、起卦状态反馈），格式修复提交 `51e6545`；设计审计与动效规范位于 `docs/design/`。
 - 最新 Production：部署 `dpl_86rAhZaygNf9P4R48vRqDyBvpwDo`，别名 `https://linxi-meta.vercel.app`，目标为 `production`；线上 Edge/390px 首页、六次起卦锁定结果、六十四卦目录均通过，无横向滚动和 console error。
+- 首页玄黑视觉重构 Production：提交 `e21385d`，部署 `dpl_2vHGtRerVBiecMgCdSfRz4HMepVj`，别名仍为 `https://linxi-meta.vercel.app`；远端 Web build、Stable quality gates、Vercel Preview/Comments 均通过，线上版本包含水墨首页主视觉、方孔铜钱筹片和结果页原文/解释对照布局。
