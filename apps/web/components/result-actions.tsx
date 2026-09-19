@@ -195,7 +195,7 @@ export function ResultActions({ stored, result }: ResultActionsProps) {
   };
 
   return (
-    <section className="card" aria-labelledby="result-actions-title">
+    <section className="card result-actions-card" aria-labelledby="result-actions-title">
       <p className="eyebrow">本机数据控制</p>
       <h2 id="result-actions-title">导出或清除本次结果</h2>
       <p className="muted">

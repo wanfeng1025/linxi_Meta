@@ -10,7 +10,6 @@ import {
 } from '@liuyao/domain';
 import { verifiedHexagramCatalog } from '@liuyao/content';
 import { gsap } from 'gsap';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
@@ -22,24 +21,6 @@ import {
 import { createWebCryptoRandomSource } from '../../lib/web-crypto-random';
 
 const now = () => new Date().toISOString();
-
-const questionStarters = [
-  {
-    id: 'situation',
-    title: '明确一个情境',
-    template: '我想梳理的具体情境是：',
-  },
-  {
-    id: 'choice',
-    title: '写下正在权衡的选择',
-    template: '我正在权衡的选择是：',
-  },
-  {
-    id: 'review-window',
-    title: '设定回看时间',
-    template: '我希望在以下时间范围内回看这个问题：',
-  },
-] as const;
 
 function createSnapshot(
   question: string,
@@ -203,8 +184,8 @@ export function CastingWorkflow() {
   }, [latestLine]);
 
   return (
-    <section className="grid">
-      <div className="card">
+    <section className="casting-layout">
+      <div className="card casting-card">
         <p className="eyebrow">匿名起卦</p>
         <h1>
           {session === null
@@ -225,33 +206,7 @@ export function CastingWorkflow() {
                 maxLength={1000}
               />
             </label>
-            <section className="question-guide" aria-labelledby="question-guide-title">
-              <h2 id="question-guide-title">让问题更容易回看（可选）</h2>
-              <p className="muted">
-                先写明情境、选择或回看时间。这里不会生成吉凶或建议，只帮助你保留这次匿名记录的上下文。
-              </p>
-              <div className="prompt-actions">
-                {questionStarters.map((starter) => (
-                  <button
-                    className="prompt-chip"
-                    key={starter.id}
-                    type="button"
-                    onClick={() =>
-                      setQuestion((current) =>
-                        current.trim().length > 0
-                          ? `${current.trimEnd()}\n${starter.template}`
-                          : starter.template,
-                      )
-                    }
-                  >
-                    {starter.title}
-                  </button>
-                ))}
-              </div>
-            </section>
-            <p className="notice">
-              数据不会上传云端，也不能跨设备同步；关闭浏览器会话或清除网站数据后可能丢失。
-            </p>
+            <p className="privacy-line">问题仅保存在本次浏览器会话。</p>
             <button className="button" type="button" onClick={begin}>
               开始起卦
             </button>
@@ -279,11 +234,12 @@ export function CastingWorkflow() {
               <div className="coins" aria-label="最近一次三枚铜钱的原始数值">
                 {(latestLine?.coins ?? [null, null, null]).map((coin, index) => (
                   <div
-                    className="coin"
+                    className={`coin${coin === null ? ' is-empty' : ''}`}
                     key={index}
+                    data-coin-index={index + 1}
                     aria-label={`第 ${index + 1} 枚铜钱：${coin ?? '尚未起爻'}`}
                   >
-                    <span>{coin ?? '—'}</span>
+                    <span className="coin-value">{coin ?? '—'}</span>
                   </div>
                 ))}
               </div>
@@ -328,12 +284,6 @@ export function CastingWorkflow() {
         )}
         {error !== null && <p role="alert">{error}</p>}
       </div>
-      <aside className="card" aria-label="功能发布状态">
-        <h2>起卦的范围</h2>
-        <p>每次点击只生成一爻：三枚独立铜钱的和值为 6、7、8 或 9；第 1 次为初爻，第 6 次为上爻。</p>
-        <p>专业六爻排盘、真实解卦与 AI 文本均保持关闭，避免未经核验的规则或内容被当作结论。</p>
-        <Link href="/methodology">查看方法与发布状态</Link>
-      </aside>
     </section>
   );
 }

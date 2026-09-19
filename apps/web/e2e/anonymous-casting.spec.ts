@@ -10,7 +10,8 @@ test('anonymous visitor can lock a six-line casting and inspect verified structu
     page.waitForURL('**/casting'),
     page.getByRole('link', { name: '开始匿名起卦' }).click(),
   ]);
-  await expect(page.getByText('让问题更容易回看（可选）')).toBeVisible();
+  await expect(page.getByText('问题仅保存在本次浏览器会话。')).toBeVisible();
+  await expect(page.getByText('起卦的范围')).toHaveCount(0);
   await page.getByLabel('问题仅保存在当前浏览器会话').fill('测试会话不会上传');
   await page.getByRole('button', { name: '开始起卦' }).click();
 
@@ -25,11 +26,13 @@ test('anonymous visitor can lock a six-line casting and inspect verified structu
   await expect(page.getByText('已锁定的结构结果')).toBeVisible();
   await expect(page.getByRole('heading', { name: '本次问题', exact: true })).toBeVisible();
   await expect(page.getByText('本次起卦原始记录')).toBeVisible();
-  await expect(page.getByRole('heading', { name: '古籍原文引用' })).toBeVisible();
-  await expect(page.getByRole('heading', { name: '白话释义' })).toBeVisible();
-  await expect(page.getByText('不是自动解卦、吉凶判断或现实决策建议。')).toBeVisible();
+  await expect(page.getByRole('heading', { name: '原文与解释' })).toBeVisible();
+  await expect(
+    page.getByText('原文保持核验版本，白话解释只用于学习参考，不生成针对本次问题的结论。'),
+  ).toBeVisible();
+  await expect(page.getByText(/定位：/)).toHaveCount(0);
   await expect(page.getByRole('link', { name: '浏览本卦结构' })).toBeVisible();
-  await expect(page.getByText('自动解卦、AI 和专业六爻规则尚未发布。')).toBeVisible();
+  await expect(page.getByText('功能状态')).toHaveCount(0);
   await expect(page.getByLabel(/导出时包含我填写的问题/)).not.toBeChecked();
   await expect(page.getByText(/trigram-/)).toHaveCount(0);
 
@@ -96,7 +99,7 @@ test('mobile navigation exposes an accessible menu and returns focus on Escape',
     'aria-expanded',
     'true',
   );
-  await expect(page.getByRole('link', { name: '方法与证据' })).toBeVisible();
+  await expect(page.getByRole('link', { name: '方法与证据', exact: true })).toBeVisible();
   await page.keyboard.press('Escape');
   await expect(page.getByRole('button', { name: '打开菜单' })).toBeFocused();
 });
